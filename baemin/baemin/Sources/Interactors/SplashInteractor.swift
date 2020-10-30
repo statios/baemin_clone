@@ -9,13 +9,14 @@ import RxSwift
 import RxCocoa
 
 protocol SplashInteractable {
-  func requestHome() -> Single<BaeminResponse<Home>>
+  var baeminService: BaeminService { get set }
+  func requestHome() -> Single<BaeminResponse<Splash>>
 }
 
 class SplashInteractor: SplashInteractable {
   @Injected var baeminService: BaeminService
   
-  func requestHome() -> Single<BaeminResponse<Home>> {
-    return baeminService.request(to: .home, type: Home.self)
+  func requestHome() -> Single<BaeminResponse<Splash>> {
+    return baeminService.request(to: .splash, type: Splash.self)
   }
 }

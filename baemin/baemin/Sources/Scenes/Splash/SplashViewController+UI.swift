@@ -34,6 +34,21 @@ extension SplashViewController {
         make.width.equalTo(128)
         make.height.equalTo(64)
       }.origin
+    
+    UIButton().asChainable()
+      .add(to: view)
+      .makeConstraints { (make) in
+        make.trailing.equalToSuperview()
+        make.size.equalTo(100)
+        make.centerY.equalToSuperview()
+      }
+      .background(color: .red)
+      .origin
+      .rx.tap
+      .subscribe(onNext: {
+        self.navigator.presentMainScene(target: self)
+      })
+    
   }
 }
 

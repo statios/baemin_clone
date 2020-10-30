@@ -10,6 +10,7 @@ import UIKit
 
 class Application: NSObject {
   static let shared = Application()
+  @Injected var splashScene: SplashViewController
 }
 
 extension Application: UIApplicationDelegate {
@@ -17,24 +18,25 @@ extension Application: UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil)
   -> Bool {
-    
-    Dependencies {
-      Dependency { SplashViewModel() }
-      Dependency { SplashNavigator() }
-      Dependency { SplashInteractor() }
-      Dependency { BaeminService() }
-    }.build()
-    
     return true
   }
 }
 
 extension Application {
   func createKeyWindow() -> UIWindow {
+    
+    Dependencies {
+      Dependency { SplashViewController() }
+      Dependency { SplashViewModel() }
+      Dependency { SplashInteractor() }
+      Dependency { SplashNavigator() }
+      Dependency { BaeminService() }
+    }.build()
+    
     let window = UIWindow(frame: UIScreen.main.bounds)
-    window.rootViewController = SplashViewController()
+    window.rootViewController = splashScene
     window.makeKeyAndVisible()
-
     return window
   }
+  
 }

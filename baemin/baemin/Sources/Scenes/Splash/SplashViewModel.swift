@@ -18,6 +18,7 @@ extension SplashViewModel {
   }
   
   struct State {
+    let showMain: Driver<Void>
     let errorMessage: Driver<String>
   }
   
@@ -26,6 +27,7 @@ extension SplashViewModel {
     let splashSuccess = splashRequest.filter { $0.isSuccess }.compactMap { $0.data }
     let splashFailure = splashRequest.filter { !$0.isSuccess}.compactMap { $0.message }
     return State(
+      showMain: splashSuccess.void().asDriver(),
       errorMessage: splashFailure.asDriver(onErrorJustReturn: "-")
     )
   }

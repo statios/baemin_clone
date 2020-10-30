@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF6CBCCF254B2701000B2AA7 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */; };
+		AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */; };
+		AF6CBCD9254B271B000B2AA7 /* MainViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCD8254B271B000B2AA7 /* MainViewController+UI.swift */; };
+		AF6CBCDE254B272B000B2AA7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */; };
+		AF6CBCE4254B2811000B2AA7 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCE3254B2811000B2AA7 /* Padding.swift */; };
+		AF6CBCEC254B2825000B2AA7 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCEB254B2825000B2AA7 /* Font.swift */; };
+		AF6CBCF1254B282D000B2AA7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCF0254B282D000B2AA7 /* Color.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Assets.xcassets */; };
@@ -40,7 +47,6 @@
 		AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */; };
 		AFE11DEB254AA9D3003EB6E5 /* SplashViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DEA254AA9D3003EB6E5 /* SplashViewController+UI.swift */; };
 		AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DEF254AAA51003EB6E5 /* SplashNavigator.swift */; };
-		AFE11E06254AB1E9003EB6E5 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E05254AB1E9003EB6E5 /* AppConstant.swift */; };
 		AFE11E0B254AB300003EB6E5 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E0A254AB300003EB6E5 /* BaseImageView.swift */; };
 		AFE11E15254AB880003EB6E5 /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E14254AB880003EB6E5 /* RxSwift.swift */; };
 		AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E1A254AB93B003EB6E5 /* BaeminAPI.swift */; };
@@ -68,6 +74,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AF6CBCD8254B271B000B2AA7 /* MainViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UI.swift"; sourceTree = "<group>"; };
+		AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		AF6CBCE3254B2811000B2AA7 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		AF6CBCEB254B2825000B2AA7 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		AF6CBCF0254B282D000B2AA7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +113,6 @@
 		AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		AFE11DEA254AA9D3003EB6E5 /* SplashViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashViewController+UI.swift"; sourceTree = "<group>"; };
 		AFE11DEF254AAA51003EB6E5 /* SplashNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashNavigator.swift; sourceTree = "<group>"; };
-		AFE11E05254AB1E9003EB6E5 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		AFE11E0A254AB300003EB6E5 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
 		AFE11E14254AB880003EB6E5 /* RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift.swift; sourceTree = "<group>"; };
 		AFE11E1A254AB93B003EB6E5 /* BaeminAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminAPI.swift; sourceTree = "<group>"; };
@@ -142,6 +154,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF6CBCE2254B27F2000B2AA7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AF6CBCE3254B2811000B2AA7 /* Padding.swift */,
+				AF6CBCEB254B2825000B2AA7 /* Font.swift */,
+				AF6CBCF0254B282D000B2AA7 /* Color.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		AFE11CCB254A8F37003EB6E5 = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +239,6 @@
 			children = (
 				AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */,
 				AFE11D88254AA273003EB6E5 /* Application.swift */,
-				AFE11E05254AB1E9003EB6E5 /* AppConstant.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -276,6 +297,7 @@
 		AFE11D6C254AA19A003EB6E5 /* Uitilities */ = {
 			isa = PBXGroup;
 			children = (
+				AF6CBCE2254B27F2000B2AA7 /* Constants */,
 				AFE11D6E254AA1BF003EB6E5 /* Property wrappers */,
 				AFE11DB8254AA45D003EB6E5 /* Dependency */,
 				AFE11D6D254AA1B5003EB6E5 /* Chainable */,
@@ -389,6 +411,10 @@
 		AFE11E0F254AB773003EB6E5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */,
+				AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */,
+				AF6CBCD8254B271B000B2AA7 /* MainViewController+UI.swift */,
+				AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -576,7 +602,9 @@
 			files = (
 				AFE11D70254AA1D7003EB6E5 /* Chainable.swift in Sources */,
 				AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */,
+				AF6CBCEC254B2825000B2AA7 /* Font.swift in Sources */,
 				AFE11D4E254A9F83003EB6E5 /* SplashViewModel.swift in Sources */,
+				AF6CBCD9254B271B000B2AA7 /* MainViewController+UI.swift in Sources */,
 				AFE11D89254AA273003EB6E5 /* Application.swift in Sources */,
 				AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */,
 				AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */,
@@ -589,13 +617,15 @@
 				AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */,
 				AFE11D60254AA187003EB6E5 /* SplashInteractor.swift in Sources */,
 				AFE11D75254AA1ED003EB6E5 /* UIView+Chainable.swift in Sources */,
+				AF6CBCF1254B282D000B2AA7 /* Color.swift in Sources */,
 				AFE11D81254AA257003EB6E5 /* BaseViewController.swift in Sources */,
 				AFE11DB0254AA370003EB6E5 /* Keyboard.swift in Sources */,
+				AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */,
 				AFE11DBF254AA49C003EB6E5 /* Dependency.swift in Sources */,
 				AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */,
 				AFE11E28254ABE14003EB6E5 /* BaeminResponse.swift in Sources */,
-				AFE11E06254AB1E9003EB6E5 /* AppConstant.swift in Sources */,
 				AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */,
+				AF6CBCCF254B2701000B2AA7 /* MainNavigator.swift in Sources */,
 				AFE11D9B254AA2F7003EB6E5 /* Thread.swift in Sources */,
 				AFE11DC9254AA4DD003EB6E5 /* Injected.swift in Sources */,
 				AFE11D7A254AA21C003EB6E5 /* UIViewController+Chainable.swift in Sources */,
@@ -603,6 +633,8 @@
 				AFE11DEB254AA9D3003EB6E5 /* SplashViewController+UI.swift in Sources */,
 				AFE11D5A254AA155003EB6E5 /* BaeminService.swift in Sources */,
 				AFE11D68254AA192003EB6E5 /* MainInteractor.swift in Sources */,
+				AF6CBCDE254B272B000B2AA7 /* MainViewModel.swift in Sources */,
+				AF6CBCE4254B2811000B2AA7 /* Padding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

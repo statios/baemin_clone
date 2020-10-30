@@ -19,3 +19,11 @@ extension ObservableType {
   }
   
 }
+
+extension ObservableConvertibleType where Element == Void {
+
+  func asDriver() -> Driver<Element> {
+    return self.asDriver(onErrorJustReturn: Void())
+  }
+
+}

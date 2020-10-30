@@ -1,5 +1,9 @@
 {
   "code": 0,
   "message": "",
-  "data": null
+  "data": {
+    "callMasterUid": 0,
+    "documentId": "document",
+    "maxPushCount": 1
+  }
 }

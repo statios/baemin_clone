@@ -6,5 +6,7 @@
 //
 
 struct Splash: Codable {
-  
+  let callMasterUid: Int
+  let documentId: String
+  let maxPushCount: Int
 }

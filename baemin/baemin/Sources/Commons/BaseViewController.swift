@@ -33,7 +33,8 @@ class BaseViewController: UIViewController {
   }
   
   @objc dynamic func setupUI() {
-
+    view.asChainable()
+      .background(color: Color.white)
   }
   
   @objc dynamic func setupBinding() {
