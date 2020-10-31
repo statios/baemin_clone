@@ -16,10 +16,15 @@ class MainViewController: BaseViewController {
 }
 
 extension MainViewController {
+  override func setupUI() {
+    super.setupUI()
+  }
+}
+
+extension MainViewController {
   override func setupBinding() {
     super.setupBinding()
     let event = MainViewModel.Event()
     let state = viewModel.reduce(event: event)
   }
 }
-

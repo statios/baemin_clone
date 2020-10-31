@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		AF6CBCCF254B2701000B2AA7 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */; };
 		AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */; };
-		AF6CBCD9254B271B000B2AA7 /* MainViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCD8254B271B000B2AA7 /* MainViewController+UI.swift */; };
 		AF6CBCDE254B272B000B2AA7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */; };
 		AF6CBCE4254B2811000B2AA7 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCE3254B2811000B2AA7 /* Padding.swift */; };
 		AF6CBCEC254B2825000B2AA7 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCEB254B2825000B2AA7 /* Font.swift */; };
 		AF6CBCF1254B282D000B2AA7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCF0254B282D000B2AA7 /* Color.swift */; };
+		AF6CBCFD254D20F7000B2AA7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCFC254D20F7000B2AA7 /* Log.swift */; };
+		AF6CBD05254D2215000B2AA7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBD04254D2215000B2AA7 /* Date.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Assets.xcassets */; };
@@ -45,7 +46,6 @@
 		AFE11DC9254AA4DD003EB6E5 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DC8254AA4DD003EB6E5 /* Injected.swift */; };
 		AFE11DD1254AA5CC003EB6E5 /* BaseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DD0254AA5CC003EB6E5 /* BaseNavigator.swift */; };
 		AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */; };
-		AFE11DEB254AA9D3003EB6E5 /* SplashViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DEA254AA9D3003EB6E5 /* SplashViewController+UI.swift */; };
 		AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DEF254AAA51003EB6E5 /* SplashNavigator.swift */; };
 		AFE11E0B254AB300003EB6E5 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E0A254AB300003EB6E5 /* BaseImageView.swift */; };
 		AFE11E15254AB880003EB6E5 /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E14254AB880003EB6E5 /* RxSwift.swift */; };
@@ -76,11 +76,12 @@
 /* Begin PBXFileReference section */
 		AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		AF6CBCD8254B271B000B2AA7 /* MainViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UI.swift"; sourceTree = "<group>"; };
 		AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		AF6CBCE3254B2811000B2AA7 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		AF6CBCEB254B2825000B2AA7 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		AF6CBCF0254B282D000B2AA7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AF6CBCFC254D20F7000B2AA7 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		AF6CBD04254D2215000B2AA7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		AFE11DC8254AA4DD003EB6E5 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		AFE11DD0254AA5CC003EB6E5 /* BaseNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigator.swift; sourceTree = "<group>"; };
 		AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		AFE11DEA254AA9D3003EB6E5 /* SplashViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashViewController+UI.swift"; sourceTree = "<group>"; };
 		AFE11DEF254AAA51003EB6E5 /* SplashNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashNavigator.swift; sourceTree = "<group>"; };
 		AFE11E0A254AB300003EB6E5 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
 		AFE11E14254AB880003EB6E5 /* RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift.swift; sourceTree = "<group>"; };
@@ -162,6 +162,14 @@
 				AF6CBCF0254B282D000B2AA7 /* Color.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		AF6CBD17254D2B48000B2AA7 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				AF6CBCFC254D20F7000B2AA7 /* Log.swift */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 		AFE11CCB254A8F37003EB6E5 = {
@@ -297,6 +305,7 @@
 		AFE11D6C254AA19A003EB6E5 /* Uitilities */ = {
 			isa = PBXGroup;
 			children = (
+				AF6CBD17254D2B48000B2AA7 /* Logging */,
 				AF6CBCE2254B27F2000B2AA7 /* Constants */,
 				AFE11D6E254AA1BF003EB6E5 /* Property wrappers */,
 				AFE11DB8254AA45D003EB6E5 /* Dependency */,
@@ -369,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE11D9A254AA2F7003EB6E5 /* Thread.swift */,
+				AF6CBD04254D2215000B2AA7 /* Date.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -395,7 +405,6 @@
 			children = (
 				AFE11DEF254AAA51003EB6E5 /* SplashNavigator.swift */,
 				AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */,
-				AFE11DEA254AA9D3003EB6E5 /* SplashViewController+UI.swift */,
 				AFE11D4D254A9F83003EB6E5 /* SplashViewModel.swift */,
 			);
 			path = Splash;
@@ -413,7 +422,6 @@
 			children = (
 				AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */,
 				AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */,
-				AF6CBCD8254B271B000B2AA7 /* MainViewController+UI.swift */,
 				AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */,
 			);
 			path = Main;
@@ -604,7 +612,6 @@
 				AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */,
 				AF6CBCEC254B2825000B2AA7 /* Font.swift in Sources */,
 				AFE11D4E254A9F83003EB6E5 /* SplashViewModel.swift in Sources */,
-				AF6CBCD9254B271B000B2AA7 /* MainViewController+UI.swift in Sources */,
 				AFE11D89254AA273003EB6E5 /* Application.swift in Sources */,
 				AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */,
 				AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */,
@@ -615,6 +622,7 @@
 				AFE11E50254AC915003EB6E5 /* Splash.swift in Sources */,
 				AFE11D96254AA2F1003EB6E5 /* Rx+UIViewController.swift in Sources */,
 				AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */,
+				AF6CBCFD254D20F7000B2AA7 /* Log.swift in Sources */,
 				AFE11D60254AA187003EB6E5 /* SplashInteractor.swift in Sources */,
 				AFE11D75254AA1ED003EB6E5 /* UIView+Chainable.swift in Sources */,
 				AF6CBCF1254B282D000B2AA7 /* Color.swift in Sources */,
@@ -630,7 +638,7 @@
 				AFE11DC9254AA4DD003EB6E5 /* Injected.swift in Sources */,
 				AFE11D7A254AA21C003EB6E5 /* UIViewController+Chainable.swift in Sources */,
 				AFE11DC4254AA4CB003EB6E5 /* UserDefault.swift in Sources */,
-				AFE11DEB254AA9D3003EB6E5 /* SplashViewController+UI.swift in Sources */,
+				AF6CBD05254D2215000B2AA7 /* Date.swift in Sources */,
 				AFE11D5A254AA155003EB6E5 /* BaeminService.swift in Sources */,
 				AFE11D68254AA192003EB6E5 /* MainInteractor.swift in Sources */,
 				AF6CBCDE254B272B000B2AA7 /* MainViewModel.swift in Sources */,

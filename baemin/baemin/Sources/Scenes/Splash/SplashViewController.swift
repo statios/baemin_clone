@@ -19,6 +19,37 @@ class SplashViewController: BaseViewController {
 }
 
 extension SplashViewController {
+  override func setupUI() {
+    super.setupUI()
+    
+    view.asChainable()
+      .background(color: Color.white)
+    
+    midLogoImageView = BaseImageView()
+      .asChainable()
+      .background(color: Color.empty)
+      .add(to: view)
+      .makeConstraints { make in
+        make.center.equalToSuperview()
+        make.width.equalTo(160)
+        make.height.equalTo(72)
+      }.origin
+    
+    bottomLogoImageView = BaseImageView()
+      .asChainable()
+      .background(color: Color.empty)
+      .add(to: view)
+      .makeConstraints { make in
+        make.centerX.equalToSuperview()
+        make.bottom.equalToSuperview().offset(-Padding.large)
+        make.width.equalTo(128)
+        make.height.equalTo(64)
+      }.origin
+    
+  }
+}
+
+extension SplashViewController {
   override func setupBinding() {
     super.setupBinding()
     let event = SplashViewModel.Event(

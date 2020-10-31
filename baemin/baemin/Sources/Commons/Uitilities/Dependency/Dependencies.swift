@@ -26,14 +26,7 @@ class Dependencies {
   
   static private(set) var shared = Dependencies()
   
-  fileprivate var dependencies = [Dependency]() {
-    didSet {
-      dependencies.forEach {
-        print($0.name)
-      }
-      print("--------------------------")
-    }
-  }
+  fileprivate var dependencies = [Dependency]()
   
   func register(_ dependency: Dependency) {
     // Avoid duplicates

@@ -12,6 +12,14 @@ class SplashNavigator: BaseNavigator {
   @Injected var mainScene: MainViewController
   
   func presentMainScene(target: UIViewController) {
+    Dependencies {
+      Dependency { MainViewModel() }
+      Dependency { MainViewController() }
+      Dependency { MainNavigator() }
+      Dependency { MainInteractor() }
+      Dependency { BaeminService() }
+    }.build()
+    
     //resolve dependency
     target.present(mainScene, animated: true)
   }
