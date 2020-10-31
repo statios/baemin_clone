@@ -19,8 +19,6 @@ class SplashNavigator: BaseNavigator {
       Dependency { MainInteractor() }
       Dependency { BaeminService() }
     }.build()
-    
-    //resolve dependency
     target.present(mainScene, animated: true)
   }
 }

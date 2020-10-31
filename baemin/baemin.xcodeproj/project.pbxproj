@@ -15,6 +15,8 @@
 		AF6CBCF1254B282D000B2AA7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCF0254B282D000B2AA7 /* Color.swift */; };
 		AF6CBCFD254D20F7000B2AA7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCFC254D20F7000B2AA7 /* Log.swift */; };
 		AF6CBD05254D2215000B2AA7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBD04254D2215000B2AA7 /* Date.swift */; };
+		AF6CBD2A254D2F2D000B2AA7 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBD29254D2F2D000B2AA7 /* NetworkProvider.swift */; };
+		AF6CBD3F254D38B5000B2AA7 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBD3E254D38B5000B2AA7 /* NetworkLoggerPlugin.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		AF6CBCF0254B282D000B2AA7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AF6CBCFC254D20F7000B2AA7 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		AF6CBD04254D2215000B2AA7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		AF6CBD29254D2F2D000B2AA7 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		AF6CBD3E254D38B5000B2AA7 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,33 @@
 				AF6CBCFC254D20F7000B2AA7 /* Log.swift */,
 			);
 			path = Logging;
+			sourceTree = "<group>";
+		};
+		AF6CBD32254D37B0000B2AA7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AF6CBD33254D37D2000B2AA7 /* APIs */,
+				AF6CBD37254D37F2000B2AA7 /* Samples */,
+				AF6CBD29254D2F2D000B2AA7 /* NetworkProvider.swift */,
+				AF6CBD3E254D38B5000B2AA7 /* NetworkLoggerPlugin.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AF6CBD33254D37D2000B2AA7 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				AFE11E1A254AB93B003EB6E5 /* BaeminAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		AF6CBD37254D37F2000B2AA7 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				AFE11E3F254AC6F5003EB6E5 /* Splash.json */,
+			);
+			path = Samples;
 			sourceTree = "<group>";
 		};
 		AFE11CCB254A8F37003EB6E5 = {
@@ -288,7 +319,7 @@
 		AFE11D58254AA132003EB6E5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AFE11E19254AB930003EB6E5 /* Baemin */,
+				AFE11D59254AA155003EB6E5 /* BaeminService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -305,6 +336,7 @@
 		AFE11D6C254AA19A003EB6E5 /* Uitilities */ = {
 			isa = PBXGroup;
 			children = (
+				AF6CBD32254D37B0000B2AA7 /* Networking */,
 				AF6CBD17254D2B48000B2AA7 /* Logging */,
 				AF6CBCE2254B27F2000B2AA7 /* Constants */,
 				AFE11D6E254AA1BF003EB6E5 /* Property wrappers */,
@@ -432,24 +464,6 @@
 			children = (
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		AFE11E19254AB930003EB6E5 /* Baemin */ = {
-			isa = PBXGroup;
-			children = (
-				AFE11D59254AA155003EB6E5 /* BaeminService.swift */,
-				AFE11E1A254AB93B003EB6E5 /* BaeminAPI.swift */,
-				AFE11E22254ABAA1003EB6E5 /* Samples */,
-			);
-			path = Baemin;
-			sourceTree = "<group>";
-		};
-		AFE11E22254ABAA1003EB6E5 /* Samples */ = {
-			isa = PBXGroup;
-			children = (
-				AFE11E3F254AC6F5003EB6E5 /* Splash.json */,
-			);
-			path = Samples;
 			sourceTree = "<group>";
 		};
 		AFE11E26254ABE08003EB6E5 /* Models */ = {
@@ -611,6 +625,7 @@
 				AFE11D70254AA1D7003EB6E5 /* Chainable.swift in Sources */,
 				AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */,
 				AF6CBCEC254B2825000B2AA7 /* Font.swift in Sources */,
+				AF6CBD2A254D2F2D000B2AA7 /* NetworkProvider.swift in Sources */,
 				AFE11D4E254A9F83003EB6E5 /* SplashViewModel.swift in Sources */,
 				AFE11D89254AA273003EB6E5 /* Application.swift in Sources */,
 				AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */,
@@ -631,6 +646,7 @@
 				AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */,
 				AFE11DBF254AA49C003EB6E5 /* Dependency.swift in Sources */,
 				AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */,
+				AF6CBD3F254D38B5000B2AA7 /* NetworkLoggerPlugin.swift in Sources */,
 				AFE11E28254ABE14003EB6E5 /* BaeminResponse.swift in Sources */,
 				AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */,
 				AF6CBCCF254B2701000B2AA7 /* MainNavigator.swift in Sources */,

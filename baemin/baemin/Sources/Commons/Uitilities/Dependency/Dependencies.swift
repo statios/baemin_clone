@@ -31,7 +31,7 @@ class Dependencies {
   func register(_ dependency: Dependency) {
     // Avoid duplicates
     guard dependencies.firstIndex(where: { $0.name == dependency.name }) == nil else {
-      print("\(String(describing: dependency.name)) already registered, ignoring")
+      Log.info("\(String(describing: dependency.name)) already registered, ignoring")
       return
     }
     dependencies.append(dependency)
