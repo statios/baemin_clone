@@ -14,34 +14,38 @@ class MainNavigator: BaseNavigator {
   @Injected var mainViewModel: MainViewModel
   
   func setViewControllers(target: MainViewController) {
+
     Dependencies {
       Dependency { self.baeminService }
       Dependency { self.mainInteractor }
       Dependency { self.mainViewModel }
-      Dependency { HomeViewController() }
       Dependency { HomeViewModel() }
       Dependency { HomeInteractor() }
-      Dependency { SuggestViewController() }
       Dependency { SuggestViewModel() }
       Dependency { SuggestInteractor() }
-      Dependency { ListViewController() }
       Dependency { ListViewModel() }
       Dependency { ListInteractor() }
-      Dependency { LikeViewController() }
       Dependency { LikeViewModel() }
       Dependency { LikeInteractor() }
-      Dependency { UserViewController() }
       Dependency { UserViewModel() }
       Dependency { UserInteractor() }
+      Dependency { HomeViewController() }
+      Dependency { SuggestViewController() }
+      Dependency { ListViewController() }
+      Dependency { LikeViewController() }
+      Dependency { UserViewController() }
     }.resolvedViewControllers { viewControllers in
-      let navigationControllers = viewControllers.map { viewController -> BaseNavigationController in
-        let navigationController = BaseNavigationController(rootViewController: viewController)
-        viewController.title = "hi"
-        return navigationController
-      }
+      let navigationControllers = viewControllers.enumerated()
+        .map { (offset, viewController) -> BaseNavigationController in
+          let navigationController = BaseNavigationController(rootViewController: viewController)
+          let mainTabBarItems = MainTabBarItem.allCases
+          viewController.title = mainTabBarItems[offset].title
+          viewController.tabBarItem.image = mainTabBarItems[offset].image
+          viewController.tabBarItem.selectedImage = mainTabBarItems[offset].selectedImage
+          return navigationController
+        }
       target.setViewControllers(navigationControllers, animated: true)
     }
-    
   }
 }
 

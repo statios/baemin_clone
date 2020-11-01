@@ -11,6 +11,10 @@ import RxSwift
 class HomeViewController: BaseViewController {
   @Injected var viewModel: HomeViewModel
   @Injected var navigator: HomeNavigator
+  override func initialize() {
+    super.initialize()
+    
+  }
 }
 
 extension HomeViewController {

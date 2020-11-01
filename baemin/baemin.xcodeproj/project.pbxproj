@@ -43,6 +43,7 @@
 		AF6CBDD0254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */; };
 		AF6CBDD5254EEAC8000B2AA7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDD4254EEAC8000B2AA7 /* Image.swift */; };
 		AF6CBDDF254F012E000B2AA7 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */; };
+		AF6CBDEA254F2177000B2AA7 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDE9254F2177000B2AA7 /* MainTabBarItem.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Images.xcassets */; };
@@ -137,6 +138,7 @@
 		AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Chainable.swift"; sourceTree = "<group>"; };
 		AF6CBDD4254EEAC8000B2AA7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		AF6CBDE9254F2177000B2AA7 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 		AFE11E0F254AB773003EB6E5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AF6CBDE9254F2177000B2AA7 /* MainTabBarItem.swift */,
 				AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */,
 				AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */,
 				AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */,
@@ -765,6 +768,7 @@
 				AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */,
 				AF6CBDBC254D440E000B2AA7 /* ListInteractor.swift in Sources */,
 				AF6CBD83254D4077000B2AA7 /* LikeNavigator.swift in Sources */,
+				AF6CBDEA254F2177000B2AA7 /* MainTabBarItem.swift in Sources */,
 				AF6CBDD0254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift in Sources */,
 				AF6CBD3F254D38B5000B2AA7 /* NetworkLoggerPlugin.swift in Sources */,
 				AFE11E28254ABE14003EB6E5 /* BaeminResponse.swift in Sources */,

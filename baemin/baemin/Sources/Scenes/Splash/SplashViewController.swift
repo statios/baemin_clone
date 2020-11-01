@@ -9,21 +9,19 @@ import UIKit
 import RxSwift
 
 class SplashViewController: BaseViewController {
-  
   @Injected var viewModel: SplashViewModel
   @Injected var navigator: SplashNavigator
   
   var midLogoImageView: BaseImageView!
   var bottomLogoImageView: BaseImageView!
-  
 }
 
 extension SplashViewController {
+  override func initialize() {
+    title = "splash"
+  }
   override func setupUI() {
     super.setupUI()
-    view.asChainable()
-      .background(color: Color.white)
-    
     midLogoImageView = BaseImageView()
       .asChainable()
       .background(color: Color.empty)
@@ -33,7 +31,6 @@ extension SplashViewController {
         make.width.equalTo(160)
         make.height.equalTo(72)
       }.origin
-    
     bottomLogoImageView = BaseImageView()
       .asChainable()
       .background(color: Color.empty)
@@ -44,7 +41,6 @@ extension SplashViewController {
         make.width.equalTo(128)
         make.height.equalTo(64)
       }.origin
-    
   }
 }
 
@@ -52,10 +48,9 @@ extension SplashViewController {
   override func setupBinding() {
     super.setupBinding()
     let event = SplashViewModel.Event(
-      onAppear: rx.viewDidAppear.void()
+      onAppear: rx.viewWillAppear.void()
     )
     let state = viewModel.reduce(event: event)
-    
     state.showMain
       .drive(onNext: { [weak self] in
         self?.navigator.presentMainScene(target: self)

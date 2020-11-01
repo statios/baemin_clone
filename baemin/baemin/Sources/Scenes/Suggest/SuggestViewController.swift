@@ -16,11 +16,6 @@ class SuggestViewController: BaseViewController {
 extension SuggestViewController {
   override func setupUI() {
     super.setupUI()
-    viewController.asChainable()
-      .title("Suggest")
-    tabBarItem.asChainable()
-      .selectedImage(Image.Icon.home)
-      .image(Image.Icon.home)
   }
 }
 
