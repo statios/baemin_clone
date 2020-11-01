@@ -11,14 +11,24 @@ class SplashNavigator: BaseNavigator {
   
   @Injected var mainScene: MainViewController
   
-  func presentMainScene(target: UIViewController) {
+  // already registered objects
+  @Injected var baeminService: BaeminService
+  
+  func presentMainScene(target: UIViewController?) {
     Dependencies {
       Dependency { MainViewModel() }
-      Dependency { MainViewController() }
       Dependency { MainNavigator() }
+      Dependency { MainViewController() }
       Dependency { MainInteractor() }
-      Dependency { BaeminService() }
+      Dependency { self.baeminService }
     }.build()
-    target.present(mainScene, animated: true)
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      self.mainScene.modalPresentationStyle = .fullScreen
+      self.mainScene.modalTransitionStyle = .crossDissolve
+      target?.present(self.mainScene, animated: true)
+    }
+    
   }
 }
+

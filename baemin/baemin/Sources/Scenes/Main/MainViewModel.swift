@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 
 class MainViewModel: ViewModel {
-  @Injected var MainInteractor: MainInteractable
+  @Injected var mainInteractor: MainInteractable
 }
 
 extension MainViewModel {
@@ -20,6 +20,7 @@ extension MainViewModel {
   }
   
   func reduce(event: Event) -> State {
+    print(mainInteractor.baeminService)
     return State()
   }
 }

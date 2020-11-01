@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 
 protocol MainInteractable {
-  
+  var baeminService: BaeminService { get set }
 }
 
 class MainInteractor: MainInteractable {

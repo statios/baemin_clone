@@ -34,6 +34,7 @@ class Dependencies {
       Log.info("\(String(describing: dependency.name)) already registered, ignoring")
       return
     }
+    Log.info("\(dependency.name) registered")
     dependencies.append(dependency)
   }
   

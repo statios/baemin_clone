@@ -31,7 +31,7 @@ final class NetworkProvider<Target: TargetType>: MoyaProvider<Target> {
   
   func request(
     _ target: Target,
-    indicator: Bool = false)
+    indicator: Bool)
   -> Single<Response> {
     return self.rx.request(target)
       .showIndicator(indicator)
