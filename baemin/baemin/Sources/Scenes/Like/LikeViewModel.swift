@@ -9,7 +9,8 @@ import RxSwift
 import RxCocoa
 
 class LikeViewModel: ViewModel {
-  
+  @Injected var mainInteractor: MainInteractable
+  @Injected var likeInteractor: LikeInteractable
 }
 
 extension LikeViewModel {

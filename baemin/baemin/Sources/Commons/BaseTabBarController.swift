@@ -12,6 +12,10 @@ class BaseTabBarController: UITabBarController {
   
   var disposeBag = DisposeBag()
   
+  var viewController: UIViewController {
+    return self
+  }
+  
   init() {
     super.init(nibName: nil, bundle: nil)
   }
@@ -24,6 +28,12 @@ class BaseTabBarController: UITabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setupUI()
+    setupBinding()
   }
   
   @objc dynamic func setupUI() {

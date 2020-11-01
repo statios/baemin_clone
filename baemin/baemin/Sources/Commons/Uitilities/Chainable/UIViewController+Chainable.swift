@@ -17,4 +17,10 @@ extension Chain where Origin: UIViewController {
     return self
   }
   
+  @discardableResult
+  func setTabBarItem(_ tabBarItem: UITabBarItem) -> Chain {
+    self.origin.tabBarItem = tabBarItem
+    return self
+  }
+  
 }

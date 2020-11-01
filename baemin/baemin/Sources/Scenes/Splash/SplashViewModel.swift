@@ -23,11 +23,12 @@ extension SplashViewModel {
   }
   
   func reduce(event: Event) -> State {
+    let delay = event.onAppear.delay(.seconds(5), scheduler: MainScheduler.instance)
     let splashRequest = requestHome(trigger: event.onAppear)
     let splashSuccess = splashRequest.filter { $0.isSuccess }.compactMap { $0.data }
     let splashFailure = splashRequest.filter { !$0.isSuccess}.compactMap { $0.message }
     return State(
-      showMain: splashSuccess.void().asDriver(),
+      showMain: Observable.zip(delay, splashSuccess).void().asDriver(),
       errorMessage: splashFailure.asDriver(onErrorJustReturn: "-")
     )
   }

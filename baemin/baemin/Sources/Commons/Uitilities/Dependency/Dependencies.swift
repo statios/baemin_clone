@@ -5,6 +5,8 @@
 //  Created by Stat.So on 2020/10/29.
 //
 
+import UIKit
+
 ///Dependency Container
 ///Dependency container will manage added Depenedency objects.
 class Dependencies {
@@ -43,6 +45,25 @@ class Dependencies {
       dependencies[index].resolve()
     }
     Self.shared = self
+  }
+  
+  func resolvedViewController(completion: (UIViewController) -> (Void)) {
+    for index in dependencies.startIndex..<dependencies.endIndex {
+      dependencies[index].resolve()
+    }
+    Self.shared = self
+    if let viewContorller = dependencies.compactMap({ $0.value as? UIViewController }).first {
+      completion(viewContorller)
+    }
+  }
+  
+  func resolvedViewControllers(completion: ([UIViewController]) -> (Void)) {
+    for index in dependencies.startIndex..<dependencies.endIndex {
+      dependencies[index].resolve()
+    }
+    Self.shared = self
+    let viewContorllers = dependencies.compactMap({ $0.value as? UIViewController })
+    completion(viewContorllers)
   }
   
   func resolve<T>() -> T {

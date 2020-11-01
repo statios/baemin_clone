@@ -9,7 +9,8 @@ import RxSwift
 import RxCocoa
 
 class ListViewModel: ViewModel {
-  
+  @Injected var mainInteractor: MainInteractable
+  @Injected var listInteractor: ListInteractable
 }
 
 extension ListViewModel {

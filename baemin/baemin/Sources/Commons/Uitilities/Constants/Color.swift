@@ -8,6 +8,8 @@
 import UIKit
 
 struct Color {
-  static let empty: UIColor = UIColor(named: "empty") ?? UIColor()
-  static let white: UIColor = UIColor.white
+  static let empty = UIColor(named: "empty") ?? UIColor()
+  static let cyan = UIColor(named: "cyan") ?? UIColor()
+  static let black = UIColor.black
+  static let white = UIColor.white
 }

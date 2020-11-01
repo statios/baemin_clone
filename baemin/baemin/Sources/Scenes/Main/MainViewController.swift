@@ -8,24 +8,15 @@
 import UIKit
 import RxSwift
 
-class MainViewController: BaseViewController {
-  
+class MainViewController: BaseTabBarController {
   @Injected var viewModel: MainViewModel
   @Injected var navigator: MainNavigator
-
-  var tabBar: UITabBar!
-  
 }
 
 extension MainViewController {
   override func setupUI() {
     super.setupUI()
-    tabBar = UITabBar()
-    view.addSubview(tabBar)
-    tabBar.snp.makeConstraints { (make) in
-      make.leading.trailing.bottom.equalToSuperview()
-      make.height.equalTo(88)
-    }
+    navigator.setViewControllers(target: self)
   }
 }
 

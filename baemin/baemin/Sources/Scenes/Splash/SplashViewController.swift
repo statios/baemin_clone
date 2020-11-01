@@ -21,7 +21,6 @@ class SplashViewController: BaseViewController {
 extension SplashViewController {
   override func setupUI() {
     super.setupUI()
-    
     view.asChainable()
       .background(color: Color.white)
     

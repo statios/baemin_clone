@@ -9,10 +9,8 @@ import UIKit
 import RxSwift
 
 class UserViewController: BaseViewController {
-  
   @Injected var viewModel: UserViewModel
   @Injected var navigator: UserNavigator
-  
 }
 
 extension UserViewController {

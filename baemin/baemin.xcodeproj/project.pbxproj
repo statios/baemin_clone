@@ -39,6 +39,10 @@
 		AF6CBDBC254D440E000B2AA7 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDBB254D440E000B2AA7 /* ListInteractor.swift */; };
 		AF6CBDC1254D4415000B2AA7 /* LikeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDC0254D4415000B2AA7 /* LikeInteractor.swift */; };
 		AF6CBDC6254D441B000B2AA7 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDC5254D441B000B2AA7 /* UserInteractor.swift */; };
+		AF6CBDCB254EC010000B2AA7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDCA254EC010000B2AA7 /* BaseNavigationController.swift */; };
+		AF6CBDD0254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */; };
+		AF6CBDD5254EEAC8000B2AA7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDD4254EEAC8000B2AA7 /* Image.swift */; };
+		AF6CBDDF254F012E000B2AA7 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Images.xcassets */; };
@@ -60,7 +64,6 @@
 		AFE11D75254AA1ED003EB6E5 /* UIView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D74254AA1ED003EB6E5 /* UIView+Chainable.swift */; };
 		AFE11D7A254AA21C003EB6E5 /* UIViewController+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D79254AA21C003EB6E5 /* UIViewController+Chainable.swift */; };
 		AFE11D81254AA257003EB6E5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D80254AA257003EB6E5 /* BaseViewController.swift */; };
-		AFE11D89254AA273003EB6E5 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D88254AA273003EB6E5 /* Application.swift */; };
 		AFE11D96254AA2F1003EB6E5 /* Rx+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D95254AA2F1003EB6E5 /* Rx+UIViewController.swift */; };
 		AFE11D9B254AA2F7003EB6E5 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D9A254AA2F7003EB6E5 /* Thread.swift */; };
 		AFE11DB0254AA370003EB6E5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DAF254AA370003EB6E5 /* Keyboard.swift */; };
@@ -130,6 +133,10 @@
 		AF6CBDBB254D440E000B2AA7 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		AF6CBDC0254D4415000B2AA7 /* LikeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeInteractor.swift; sourceTree = "<group>"; };
 		AF6CBDC5254D441B000B2AA7 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		AF6CBDCA254EC010000B2AA7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Chainable.swift"; sourceTree = "<group>"; };
+		AF6CBDD4254EEAC8000B2AA7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -150,7 +157,6 @@
 		AFE11D74254AA1ED003EB6E5 /* UIView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Chainable.swift"; sourceTree = "<group>"; };
 		AFE11D79254AA21C003EB6E5 /* UIViewController+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Chainable.swift"; sourceTree = "<group>"; };
 		AFE11D80254AA257003EB6E5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		AFE11D88254AA273003EB6E5 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		AFE11D95254AA2F1003EB6E5 /* Rx+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+UIViewController.swift"; sourceTree = "<group>"; };
 		AFE11D9A254AA2F7003EB6E5 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		AFE11DAF254AA370003EB6E5 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 				AF6CBCE3254B2811000B2AA7 /* Padding.swift */,
 				AF6CBCEB254B2825000B2AA7 /* Font.swift */,
 				AF6CBCF0254B282D000B2AA7 /* Color.swift */,
+				AF6CBDD4254EEAC8000B2AA7 /* Image.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -364,7 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */,
-				AFE11D88254AA273003EB6E5 /* Application.swift */,
+				AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -436,6 +443,7 @@
 				AFE11D6F254AA1D7003EB6E5 /* Chainable.swift */,
 				AFE11D74254AA1ED003EB6E5 /* UIView+Chainable.swift */,
 				AFE11D79254AA21C003EB6E5 /* UIViewController+Chainable.swift */,
+				AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */,
 			);
 			path = Chainable;
 			sourceTree = "<group>";
@@ -463,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE11D80254AA257003EB6E5 /* BaseViewController.swift */,
+				AF6CBDCA254EC010000B2AA7 /* BaseNavigationController.swift */,
 				AF6CBDA3254D43A5000B2AA7 /* BaseTabBarController.swift */,
 				AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */,
 				AFE11DD0254AA5CC003EB6E5 /* BaseNavigator.swift */,
@@ -715,17 +724,18 @@
 			files = (
 				AFE11D70254AA1D7003EB6E5 /* Chainable.swift in Sources */,
 				AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */,
+				AF6CBDDF254F012E000B2AA7 /* AppNavigator.swift in Sources */,
 				AF6CBCEC254B2825000B2AA7 /* Font.swift in Sources */,
 				AF6CBDC1254D4415000B2AA7 /* LikeInteractor.swift in Sources */,
 				AF6CBD5D254D403D000B2AA7 /* HomeViewModel.swift in Sources */,
 				AF6CBD2A254D2F2D000B2AA7 /* NetworkProvider.swift in Sources */,
 				AFE11D4E254A9F83003EB6E5 /* SplashViewModel.swift in Sources */,
 				AF6CBD62254D4045000B2AA7 /* SuggestNavigator.swift in Sources */,
-				AFE11D89254AA273003EB6E5 /* Application.swift in Sources */,
 				AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */,
 				AF6CBD9F254D40A6000B2AA7 /* UserViewModel.swift in Sources */,
 				AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */,
 				AFE11E35254AC206003EB6E5 /* Home.swift in Sources */,
+				AF6CBDCB254EC010000B2AA7 /* BaseNavigationController.swift in Sources */,
 				AFE11DD1254AA5CC003EB6E5 /* BaseNavigator.swift in Sources */,
 				AFE11E0B254AB300003EB6E5 /* BaseImageView.swift in Sources */,
 				AF6CBD58254D4037000B2AA7 /* HomeViewController.swift in Sources */,
@@ -737,6 +747,7 @@
 				AF6CBCFD254D20F7000B2AA7 /* Log.swift in Sources */,
 				AF6CBD7E254D4070000B2AA7 /* ListViewModel.swift in Sources */,
 				AFE11D60254AA187003EB6E5 /* SplashInteractor.swift in Sources */,
+				AF6CBDD5254EEAC8000B2AA7 /* Image.swift in Sources */,
 				AF6CBD9A254D40A0000B2AA7 /* UserViewController.swift in Sources */,
 				AF6CBD6F254D405C000B2AA7 /* SuggestViewModel.swift in Sources */,
 				AF6CBD8B254D408C000B2AA7 /* LikeViewController.swift in Sources */,
@@ -754,6 +765,7 @@
 				AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */,
 				AF6CBDBC254D440E000B2AA7 /* ListInteractor.swift in Sources */,
 				AF6CBD83254D4077000B2AA7 /* LikeNavigator.swift in Sources */,
+				AF6CBDD0254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift in Sources */,
 				AF6CBD3F254D38B5000B2AA7 /* NetworkLoggerPlugin.swift in Sources */,
 				AFE11E28254ABE14003EB6E5 /* BaeminResponse.swift in Sources */,
 				AF6CBDC6254D441B000B2AA7 /* UserInteractor.swift in Sources */,

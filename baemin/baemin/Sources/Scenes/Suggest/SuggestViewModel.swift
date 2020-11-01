@@ -9,7 +9,8 @@ import RxSwift
 import RxCocoa
 
 class SuggestViewModel: ViewModel {
-  
+  @Injected var mainInteractor: MainInteractable
+  @Injected var suggestInteractor: SuggestInteractable
 }
 
 extension SuggestViewModel {

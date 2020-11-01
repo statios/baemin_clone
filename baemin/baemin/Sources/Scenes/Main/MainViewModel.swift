@@ -20,7 +20,6 @@ extension MainViewModel {
   }
   
   func reduce(event: Event) -> State {
-    print(mainInteractor.baeminService)
     return State()
   }
 }

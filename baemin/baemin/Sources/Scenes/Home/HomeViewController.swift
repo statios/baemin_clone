@@ -9,10 +9,8 @@ import UIKit
 import RxSwift
 
 class HomeViewController: BaseViewController {
-  
   @Injected var viewModel: HomeViewModel
   @Injected var navigator: HomeNavigator
-  
 }
 
 extension HomeViewController {
@@ -28,4 +26,3 @@ extension HomeViewController {
     let state = viewModel.reduce(event: event)
   }
 }
-

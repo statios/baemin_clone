@@ -9,7 +9,8 @@ import RxSwift
 import RxCocoa
 
 class HomeViewModel: ViewModel {
-  
+  @Injected var mainInteractor: MainInteractable
+  @Injected var homeInteractor: HomeInteractable
 }
 
 extension HomeViewModel {

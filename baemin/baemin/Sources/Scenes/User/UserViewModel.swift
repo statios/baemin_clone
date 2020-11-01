@@ -9,7 +9,8 @@ import RxSwift
 import RxCocoa
 
 class UserViewModel: ViewModel {
-  
+  @Injected var mainInteractor: MainInteractable
+  @Injected var userInteractor: UserInteractable
 }
 
 extension UserViewModel {

@@ -11,15 +11,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
-  var application: Application = Application.shared
   
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
   -> Bool {
     
-    _ = self.application.application(application,
-                                     didFinishLaunchingWithOptions: launchOptions)
-    window = self.application.createKeyWindow()
+    window = UIWindow(frame: UIScreen.main.bounds)
+    AppNavigator.shared.presentSplashScene(target: window)
     
     return true
   }

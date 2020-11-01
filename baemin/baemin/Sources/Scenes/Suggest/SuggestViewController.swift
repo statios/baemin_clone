@@ -9,15 +9,18 @@ import UIKit
 import RxSwift
 
 class SuggestViewController: BaseViewController {
-  
   @Injected var viewModel: SuggestViewModel
   @Injected var navigator: SuggestNavigator
-  
 }
 
 extension SuggestViewController {
   override func setupUI() {
     super.setupUI()
+    viewController.asChainable()
+      .title("Suggest")
+    tabBarItem.asChainable()
+      .selectedImage(Image.Icon.home)
+      .image(Image.Icon.home)
   }
 }
 
