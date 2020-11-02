@@ -9,9 +9,7 @@ import UIKit
 import RxSwift
 
 class DeliveryViewController: BaseViewController {
-  
   @Injected var viewModel: DeliveryViewModel
-  
 }
 
 extension DeliveryViewController {

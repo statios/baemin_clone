@@ -17,7 +17,6 @@ extension MainViewController {
   override func setupUI() {
     super.setupUI()
     navigator.setViewController(target: self)
-    tabBar.tintColor = Color.cyan
   }
 }
 

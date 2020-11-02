@@ -12,8 +12,8 @@ class BasePageViewController: UIPageViewController {
   
   var disposeBag = DisposeBag()
   var pageViewControllers = [UIViewController]()
-  
-  var pageBar: UIView!
+  var pageBar: PageBar!
+  var currentIndex: Int = 0
   
   init() {
     super.init(transitionStyle: .scroll,
@@ -39,15 +39,13 @@ class BasePageViewController: UIPageViewController {
   }
   
   @objc dynamic func setupUI() {
-    pageBar = UIView().asChainable()
-      .add(to: view)
-      .makeConstraints { (make) in
-        make.leading.trailing.equalToSuperview()
-        make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-        make.height.equalTo(44)
-      }
-      .background(color: .systemTeal)
-      .origin
+    pageBar = PageBar().asChainable()
+    .add(to: view)
+    .makeConstraints { (make) in
+      make.leading.trailing.equalToSuperview()
+      make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+      make.height.equalTo(44)
+    }.origin
   }
   
   @objc dynamic func setupBinding() {
@@ -60,6 +58,8 @@ class BasePageViewController: UIPageViewController {
                        direction: .forward,
                        animated: true,
                        completion: nil)
+    let scrollView = view.subviews.filter { $0 is UIScrollView }.first as! UIScrollView
+    scrollView.delegate = self
   }
   
 }
@@ -72,11 +72,9 @@ extension BasePageViewController: UIPageViewControllerDataSource, UIPageViewCont
     guard let index = pageViewControllers.firstIndex(of: viewController) else {
       return nil
     }
+    currentIndex = index
     let previousIndex = index - 1
     guard previousIndex >= 0 else {
-      return pageViewControllers.last
-    }
-    guard pageViewControllers.count > previousIndex else {
       return nil
     }
     return pageViewControllers[previousIndex]
@@ -89,13 +87,17 @@ extension BasePageViewController: UIPageViewControllerDataSource, UIPageViewCont
     guard let index = pageViewControllers.firstIndex(of: viewController) else {
       return nil
     }
+    currentIndex = index
     let nextIndex = index + 1
-    guard nextIndex < pageViewControllers.count else {
-      return pageViewControllers.first
-    }
-    guard pageViewControllers.count > nextIndex else {
+    guard pageViewControllers.count-1 >= nextIndex else {
       return nil
     }
     return pageViewControllers[nextIndex]
+  }
+}
+
+extension BasePageViewController: UIScrollViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
   }
 }

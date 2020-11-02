@@ -38,6 +38,13 @@ class BaseTabBarController: UITabBarController {
   @objc dynamic func setupUI() {
     view.asChainable()
       .background(color: Color.white)
+    tabBar.asChainable()
+      .tint(color: Color.cyan)
+      .unselectedItemTint(color: Color.doveGray)
+      .barTint(color: Color.wildSand)
+    tabBar.tintColor = Color.cyan
+    tabBar.unselectedItemTintColor = Color.doveGray
+    tabBar.barTintColor = Color.wildSand
   }
   
   @objc dynamic func setupBinding() {

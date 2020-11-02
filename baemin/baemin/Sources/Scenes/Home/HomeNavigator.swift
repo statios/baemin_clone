@@ -7,8 +7,6 @@
 
 class HomeNavigator: BaseNavigator {
   
-  @Injected var baeminService: BaeminService
-  
   @Injected var deliveryViewController: DeliveryViewController
   @Injected var visitViewController: VisitViewController
   
