@@ -17,9 +17,6 @@ class SplashViewController: BaseViewController {
 }
 
 extension SplashViewController {
-  override func initialize() {
-    title = "splash"
-  }
   override func setupUI() {
     super.setupUI()
     midLogoImageView = BaseImageView()

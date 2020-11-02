@@ -17,11 +17,11 @@ enum MainTabBarItem: CaseIterable {
 extension MainTabBarItem {
   var title: String {
     switch self {
-    case .home: return "Home"
-    case .suggest: return "Suggest"
-    case .list: return "List"
-    case .like: return "Like"
-    case .user: return "User"
+    case .home: return Text.home
+    case .suggest: return Text.whatToEat
+    case .list: return Text.orderHistory
+    case .like: return Text.favoriteStore
+    case .user: return Text.myBaemin
     }
   }
   var image: UIImage? {

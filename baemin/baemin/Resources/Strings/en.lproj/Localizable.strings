@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  baemin
+
+  Created by Stat.So on 2020/11/02.
+  
+*/
+
+"home" = "Home";
+"what_to_eat" = "Recommend";
+"favorite_store" = "Favorite";
+"order_history" = "History";
+"my_baemin" = "MyBaemin";

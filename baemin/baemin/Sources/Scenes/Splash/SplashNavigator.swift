@@ -8,21 +8,28 @@
 import UIKit
 
 class SplashNavigator: BaseNavigator {
-  
+  @Injected var mainNavigator: MainNavigator
+  @Injected var mainViewController: MainViewController
+  @Injected var mainViewModel: MainViewModel
+  @Injected var mainInteractor: MainInteractable
   @Injected var baeminService: BaeminService
-  
-  func presentMainScene(target: UIViewController?) {
+}
+
+extension SplashNavigator {
+  private func build() {
     Dependencies {
-      Dependency { MainViewModel() }
       Dependency { MainNavigator() }
       Dependency { MainViewController() }
+      Dependency { MainViewModel() }
       Dependency { MainInteractor() }
-      Dependency { self.baeminService }
-    }.resolvedViewController { viewController in
-      viewController.modalTransitionStyle = .crossDissolve
-      viewController.modalPresentationStyle = .fullScreen
-      target?.present(viewController, animated: true)
-    }
+      Dependency { BaeminService() }
+    }.build()
+  }
+  func presentMainScene(target: UIViewController?) {
+    build()
+    mainViewController.modalTransitionStyle = .crossDissolve
+    mainViewController.modalPresentationStyle = .overFullScreen
+    target?.present(mainViewController, animated: true)
   }
 }
 

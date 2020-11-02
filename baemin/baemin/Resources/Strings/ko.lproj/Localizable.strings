@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  baemin
+
+  Created by Stat.So on 2020/11/02.
+  
+*/
+
+"home" = "홈";
+"what_to_eat" = "뭐먹지";
+"favorite_store" = "찜한가게";
+"order_history" = "주문내역";
+"my_baemin" = "my배민";

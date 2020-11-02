@@ -28,12 +28,11 @@ class BaseTabBarController: UITabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    setupUI()
-    setupBinding()
+    rx.viewWillAppear.take(1)
+      .subscribe(onNext: { [weak self] _ in 
+        self?.setupUI()
+        self?.setupBinding()
+      }).disposed(by: disposeBag)
   }
   
   @objc dynamic func setupUI() {

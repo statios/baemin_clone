@@ -44,6 +44,14 @@
 		AF6CBDD5254EEAC8000B2AA7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDD4254EEAC8000B2AA7 /* Image.swift */; };
 		AF6CBDDF254F012E000B2AA7 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */; };
 		AF6CBDEA254F2177000B2AA7 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDE9254F2177000B2AA7 /* MainTabBarItem.swift */; };
+		AF6CBE03254F9BBA000B2AA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF6CBE05254F9BBA000B2AA7 /* Localizable.strings */; };
+		AF6CBE0D254F9D0A000B2AA7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE0C254F9D0A000B2AA7 /* String.swift */; };
+		AF6CBE15254F9D26000B2AA7 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE14254F9D26000B2AA7 /* Text.swift */; };
+		AF6CBE1D254FC146000B2AA7 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE1C254FC146000B2AA7 /* DeliveryViewController.swift */; };
+		AF6CBE22254FC151000B2AA7 /* DeliveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE21254FC151000B2AA7 /* DeliveryViewModel.swift */; };
+		AF6CBE27254FC15B000B2AA7 /* VisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE26254FC15B000B2AA7 /* VisitViewController.swift */; };
+		AF6CBE2C254FC164000B2AA7 /* VisitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */; };
+		AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Images.xcassets */; };
@@ -139,6 +147,16 @@
 		AF6CBDD4254EEAC8000B2AA7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		AF6CBDE9254F2177000B2AA7 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
+		AF6CBDF6254F9B37000B2AA7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AF6CBE0A254F9C2D000B2AA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AF6CBE0B254F9C60000B2AA7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AF6CBE0C254F9D0A000B2AA7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		AF6CBE14254F9D26000B2AA7 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		AF6CBE1C254FC146000B2AA7 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		AF6CBE21254FC151000B2AA7 /* DeliveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewModel.swift; sourceTree = "<group>"; };
+		AF6CBE26254FC15B000B2AA7 /* VisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewController.swift; sourceTree = "<group>"; };
+		AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewModel.swift; sourceTree = "<group>"; };
+		AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +235,7 @@
 				AF6CBCEB254B2825000B2AA7 /* Font.swift */,
 				AF6CBCF0254B282D000B2AA7 /* Color.swift */,
 				AF6CBDD4254EEAC8000B2AA7 /* Image.swift */,
+				AF6CBE14254F9D26000B2AA7 /* Text.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -300,6 +319,32 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		AF6CBDFA254F9B7A000B2AA7 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				AF6CBE05254F9BBA000B2AA7 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		AF6CBE19254FC0FB000B2AA7 /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				AF6CBE1C254FC146000B2AA7 /* DeliveryViewController.swift */,
+				AF6CBE21254FC151000B2AA7 /* DeliveryViewModel.swift */,
+			);
+			path = Delivery;
+			sourceTree = "<group>";
+		};
+		AF6CBE1B254FC11D000B2AA7 /* Visit */ = {
+			isa = PBXGroup;
+			children = (
+				AF6CBE26254FC15B000B2AA7 /* VisitViewController.swift */,
+				AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */,
+			);
+			path = Visit;
+			sourceTree = "<group>";
+		};
 		AFE11CCB254A8F37003EB6E5 = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +395,7 @@
 		AFE11D10254A8FFF003EB6E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF6CBDFA254F9B7A000B2AA7 /* Strings */,
 				AFE11D46254A949E003EB6E5 /* plists */,
 				AFE11D45254A9496003EB6E5 /* Storyboards */,
 				AFE11D44254A948E003EB6E5 /* Assets */,
@@ -474,6 +520,7 @@
 			children = (
 				AFE11D80254AA257003EB6E5 /* BaseViewController.swift */,
 				AF6CBDCA254EC010000B2AA7 /* BaseNavigationController.swift */,
+				AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */,
 				AF6CBDA3254D43A5000B2AA7 /* BaseTabBarController.swift */,
 				AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */,
 				AFE11DD0254AA5CC003EB6E5 /* BaseNavigator.swift */,
@@ -506,6 +553,7 @@
 			children = (
 				AFE11D9A254AA2F7003EB6E5 /* Thread.swift */,
 				AF6CBD04254D2215000B2AA7 /* Date.swift */,
+				AF6CBE0C254F9D0A000B2AA7 /* String.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -564,6 +612,8 @@
 				AF6CBD57254D4037000B2AA7 /* HomeViewController.swift */,
 				AF6CBD5C254D403D000B2AA7 /* HomeViewModel.swift */,
 				AF6CBDB1254D43F4000B2AA7 /* HomeInteractor.swift */,
+				AF6CBE19254FC0FB000B2AA7 /* Delivery */,
+				AF6CBE1B254FC11D000B2AA7 /* Visit */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -674,6 +724,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = AFE11CCB254A8F37003EB6E5;
 			packageReferences = (
@@ -697,6 +748,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6CBE03254F9BBA000B2AA7 /* Localizable.strings in Resources */,
 				AFE11CE4254A8F39003EB6E5 /* LaunchScreen.storyboard in Resources */,
 				AF6CBD44254D3DB9000B2AA7 /* Colors.xcassets in Resources */,
 				AFE11CE1254A8F39003EB6E5 /* Images.xcassets in Resources */,
@@ -727,6 +779,7 @@
 			files = (
 				AFE11D70254AA1D7003EB6E5 /* Chainable.swift in Sources */,
 				AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */,
+				AF6CBE1D254FC146000B2AA7 /* DeliveryViewController.swift in Sources */,
 				AF6CBDDF254F012E000B2AA7 /* AppNavigator.swift in Sources */,
 				AF6CBCEC254B2825000B2AA7 /* Font.swift in Sources */,
 				AF6CBDC1254D4415000B2AA7 /* LikeInteractor.swift in Sources */,
@@ -735,8 +788,10 @@
 				AFE11D4E254A9F83003EB6E5 /* SplashViewModel.swift in Sources */,
 				AF6CBD62254D4045000B2AA7 /* SuggestNavigator.swift in Sources */,
 				AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */,
+				AF6CBE15254F9D26000B2AA7 /* Text.swift in Sources */,
 				AF6CBD9F254D40A6000B2AA7 /* UserViewModel.swift in Sources */,
 				AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */,
+				AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */,
 				AFE11E35254AC206003EB6E5 /* Home.swift in Sources */,
 				AF6CBDCB254EC010000B2AA7 /* BaseNavigationController.swift in Sources */,
 				AFE11DD1254AA5CC003EB6E5 /* BaseNavigator.swift in Sources */,
@@ -763,13 +818,17 @@
 				AFE11DB0254AA370003EB6E5 /* Keyboard.swift in Sources */,
 				AF6CBD6A254D4056000B2AA7 /* SuggestViewController.swift in Sources */,
 				AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */,
+				AF6CBE22254FC151000B2AA7 /* DeliveryViewModel.swift in Sources */,
 				AFE11DBF254AA49C003EB6E5 /* Dependency.swift in Sources */,
+				AF6CBE0D254F9D0A000B2AA7 /* String.swift in Sources */,
+				AF6CBE27254FC15B000B2AA7 /* VisitViewController.swift in Sources */,
 				AF6CBD74254D4064000B2AA7 /* ListNavigator.swift in Sources */,
 				AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */,
 				AF6CBDBC254D440E000B2AA7 /* ListInteractor.swift in Sources */,
 				AF6CBD83254D4077000B2AA7 /* LikeNavigator.swift in Sources */,
 				AF6CBDEA254F2177000B2AA7 /* MainTabBarItem.swift in Sources */,
 				AF6CBDD0254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift in Sources */,
+				AF6CBE2C254FC164000B2AA7 /* VisitViewModel.swift in Sources */,
 				AF6CBD3F254D38B5000B2AA7 /* NetworkLoggerPlugin.swift in Sources */,
 				AFE11E28254ABE14003EB6E5 /* BaeminResponse.swift in Sources */,
 				AF6CBDC6254D441B000B2AA7 /* UserInteractor.swift in Sources */,
@@ -822,10 +881,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AF6CBE05254F9BBA000B2AA7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF6CBE0A254F9C2D000B2AA7 /* en */,
+				AF6CBE0B254F9C60000B2AA7 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		AFE11CE2254A8F39003EB6E5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AFE11CE3254A8F39003EB6E5 /* Base */,
+				AF6CBDF6254F9B37000B2AA7 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -837,6 +906,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -898,6 +968,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

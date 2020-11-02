@@ -8,43 +8,53 @@
 import UIKit
 
 class MainNavigator: BaseNavigator {
-  
-  @Injected var baeminService: BaeminService
-  @Injected var mainInteractor: MainInteractable
-  @Injected var mainViewModel: MainViewModel
-  
-  func setViewControllers(target: MainViewController) {
+  @Injected var homeViewController: HomeViewController
+  @Injected var suggestViewController: SuggestViewController
+  @Injected var listViewController: ListViewController
+  @Injected var likeViewController: LikeViewController
+  @Injected var userViewController: UserViewController
+}
 
+extension MainNavigator {
+  private func build() {
     Dependencies {
-      Dependency { self.baeminService }
-      Dependency { self.mainInteractor }
-      Dependency { self.mainViewModel }
+      Dependency { HomeNavigator() }
+      Dependency { HomeViewController() }
       Dependency { HomeViewModel() }
       Dependency { HomeInteractor() }
+      Dependency { SuggestNavigator() }
+      Dependency { SuggestViewController() }
       Dependency { SuggestViewModel() }
       Dependency { SuggestInteractor() }
+      Dependency { ListNavigator() }
+      Dependency { ListViewController() }
       Dependency { ListViewModel() }
       Dependency { ListInteractor() }
+      Dependency { LikeNavigator() }
+      Dependency { LikeViewController() }
       Dependency { LikeViewModel() }
       Dependency { LikeInteractor() }
+      Dependency { UserNavigator() }
+      Dependency { UserViewController() }
       Dependency { UserViewModel() }
       Dependency { UserInteractor() }
-      Dependency { HomeViewController() }
-      Dependency { SuggestViewController() }
-      Dependency { ListViewController() }
-      Dependency { LikeViewController() }
-      Dependency { UserViewController() }
-    }.resolvedViewControllers { viewControllers in
-      let mainTabBarItems = MainTabBarItem.allCases
-      let navigationControllers = viewControllers.enumerated()
-        .map { (offset, viewController) -> BaseNavigationController in
-          let navigationController = BaseNavigationController(rootViewController: viewController)
-          viewController.title = mainTabBarItems[offset].title
-          viewController.tabBarItem.image = mainTabBarItems[offset].image
-          return navigationController
-        }
-      target.setViewControllers(navigationControllers, animated: true)
-    }
+    }.add()
+  }
+  func setViewController(target: MainViewController) {
+    build()
+    let mainTabBarItmes = MainTabBarItem.allCases
+    let navigationControllers = [homeViewController,
+                                 suggestViewController,
+                                 listViewController,
+                                 likeViewController,
+                                 userViewController]
+      .enumerated().map { (offset, viewController) -> BaseNavigationController in
+        let navigationController = BaseNavigationController(rootViewController: viewController)
+        viewController.title = mainTabBarItmes[offset].title
+        viewController.tabBarItem.image = mainTabBarItmes[offset].image
+        return navigationController
+      }
+    target.setViewControllers(navigationControllers, animated: true)
   }
 }
 

@@ -8,18 +8,15 @@
 import UIKit
 import RxSwift
 
-class HomeViewController: BaseViewController {
+class HomeViewController: BasePageViewController {
   @Injected var viewModel: HomeViewModel
   @Injected var navigator: HomeNavigator
-  override func initialize() {
-    super.initialize()
-    
-  }
 }
 
 extension HomeViewController {
   override func setupUI() {
     super.setupUI()
+    navigator.setPageViewControllers(target: self)
   }
 }
 

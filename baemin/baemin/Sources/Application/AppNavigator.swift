@@ -10,18 +10,27 @@ import UIKit
 class AppNavigator {
   static let shared = AppNavigator()
   
-  func presentSplashScene(target: UIWindow?) {
+  @Injected var splashNavigator: SplashNavigator
+  @Injected var splashViewController: SplashViewController
+  @Injected var splashViewModel: SplashViewModel
+  @Injected var splashInteractor: SplashInteractable
+  @Injected var baeminService: BaeminService
+  
+  private func build() {
     Dependencies {
       Dependency { BaeminService() }
       Dependency { SplashInteractor() }
-      Dependency { SplashViewModel() }
       Dependency { SplashNavigator() }
+      Dependency { SplashViewModel() }
       Dependency { SplashViewController() }
-    }.resolvedViewController { (viewController) in
-      target?.backgroundColor = Color.white
-      target?.rootViewController = viewController
-      target?.makeKeyAndVisible()
-    }
+    }.build()
+  }
+  
+  func presentSplashScene(target: UIWindow?) {
+    build()
+    target?.rootViewController = splashViewController
+    target?.backgroundColor = .white
+    target?.makeKeyAndVisible()
   }
   
 }
