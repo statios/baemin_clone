@@ -35,10 +35,10 @@ class MainNavigator: BaseNavigator {
       Dependency { LikeViewController() }
       Dependency { UserViewController() }
     }.resolvedViewControllers { viewControllers in
+      let mainTabBarItems = MainTabBarItem.allCases
       let navigationControllers = viewControllers.enumerated()
         .map { (offset, viewController) -> BaseNavigationController in
           let navigationController = BaseNavigationController(rootViewController: viewController)
-          let mainTabBarItems = MainTabBarItem.allCases
           viewController.title = mainTabBarItems[offset].title
           viewController.tabBarItem.image = mainTabBarItems[offset].image
           viewController.tabBarItem.selectedImage = mainTabBarItems[offset].selectedImage
