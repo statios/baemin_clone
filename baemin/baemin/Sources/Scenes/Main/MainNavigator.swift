@@ -41,7 +41,6 @@ class MainNavigator: BaseNavigator {
           let navigationController = BaseNavigationController(rootViewController: viewController)
           viewController.title = mainTabBarItems[offset].title
           viewController.tabBarItem.image = mainTabBarItems[offset].image
-          viewController.tabBarItem.selectedImage = mainTabBarItems[offset].selectedImage
           return navigationController
         }
       target.setViewControllers(navigationControllers, animated: true)

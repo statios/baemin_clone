@@ -26,20 +26,11 @@ extension MainTabBarItem {
   }
   var image: UIImage? {
     switch self {
-    case .home: return UIImage()
-    case .suggest: return UIImage()
-    case .list: return UIImage()
-    case .like: return UIImage()
-    case .user: return UIImage()
-    }
-  }
-  var selectedImage: UIImage? {
-    switch self {
-    case .home: return UIImage()
-    case .suggest: return UIImage()
-    case .list: return UIImage()
-    case .like: return UIImage()
-    case .user: return UIImage()
+    case .home: return Image.Icon.home
+    case .suggest: return Image.Icon.video
+    case .list: return Image.Icon.list
+    case .like: return Image.Icon.like
+    case .user: return Image.Icon.user
     }
   }
 }
