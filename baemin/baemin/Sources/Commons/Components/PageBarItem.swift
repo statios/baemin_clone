@@ -19,6 +19,7 @@ class PageBarItem: BaseView {
   var unselectedFont: UIFont? = Font.small
   
   var button = UIButton()
+  var fullAreaButton = UIButton()
 }
 
 extension PageBarItem {
@@ -26,6 +27,11 @@ extension PageBarItem {
     super.setupUI()
     button.asChainable()
       .color(Color.black, for: .normal)
+      .add(to: self)
+      .makeConstraints { (make) in
+        make.center.equalToSuperview()
+      }
+    fullAreaButton.asChainable()
       .add(to: self)
       .makeConstraints { (make) in
         make.edges.equalToSuperview()

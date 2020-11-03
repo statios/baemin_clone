@@ -56,7 +56,11 @@ class BasePageViewController: UIPageViewController {
   }
   
   @objc dynamic func setupBinding() {
-    
+    pageBar.selectedPage
+      .subscribe(onNext: { [weak self] in
+        self?.pageBar.currentPage.accept($0)
+        self?.moveTo(page: $0)
+      }).disposed(by: disposeBag)
   }
   
   func setPageViewControllers(_ viewControllers: [UIViewController]) {
@@ -69,32 +73,44 @@ class BasePageViewController: UIPageViewController {
     let scrollView = view.subviews.filter { $0 is UIScrollView }.first as! UIScrollView
     scrollView.delegate = self
   }
-  func setSelectedText(_ color: UIColor?) {
+  func selectedText(color: UIColor?) {
+    pageBar.selectedBarView.backgroundColor = color
     pageBar.pageBarItems.enumerated().forEach { (offset, pageBarItem) in
       pageBarItem.selectedFontColor = color
       pageBarItem.isSelected.accept(offset == currentPage.value)
     }
   }
   
-  func setUnselectedText(_ color: UIColor?) {
+  func unselectedText(color: UIColor?) {
     pageBar.pageBarItems.enumerated().forEach { (offset, pageBarItem) in
       pageBarItem.unselectedFontColor = color
       pageBarItem.isSelected.accept(offset == currentPage.value)
     }
   }
   
-  func setSelected(_ font: UIFont?) {
+  func selected(font: UIFont?) {
     pageBar.pageBarItems.enumerated().forEach { (offset, pageBarItem) in
       pageBarItem.selectedFont = font
       pageBarItem.isSelected.accept(offset == currentPage.value)
     }
   }
-  
-  func setUnselected(_ font: UIFont?) {
+
+  func unselected(font: UIFont?) {
     pageBar.pageBarItems.enumerated().forEach { (offset, pageBarItem) in
       pageBarItem.unselectedFont = font
       pageBarItem.isSelected.accept(offset == currentPage.value)
     }
+  }
+  
+  func pageBar(style: PageBarStyle) {
+    pageBar.pageBarStyle.accept(style)
+  }
+  
+  func moveTo(page: Int) {
+    self.setViewControllers([pageViewControllers[page]],
+                            direction: .forward,
+                            animated: true,
+                            completion: nil)
   }
 }
 

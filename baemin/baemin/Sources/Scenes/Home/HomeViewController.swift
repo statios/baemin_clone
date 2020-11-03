@@ -17,10 +17,11 @@ extension HomeViewController {
   override func setupUI() {
     super.setupUI()
     navigator.setPageViewControllers(target: self)
-    setSelectedText(Color.cyan)
-    setUnselectedText(Color.black)
-    setSelected(Font.medium.bold())
-    setUnselected(Font.medium)
+    pageBar(style: .fit)
+    selectedText(color: Color.cyan)
+    unselectedText(color: Color.black)
+    selected(font: Font.medium.bold())
+    unselected(font: Font.medium)
   }
 }
 
