@@ -21,6 +21,11 @@ class HomeNavigator: BaseNavigator {
   
   func setPageViewControllers(target: HomeViewController) {
     build()
-    target.setPageViewControllers([deliveryViewController, visitViewController])
+    let homePageBarItems = HomePageBarItem.allCases
+    let viewControllers = [deliveryViewController, visitViewController]
+    viewControllers.enumerated().forEach { (offset, viewController) in
+      viewController.title = homePageBarItems[offset].title
+    }
+    target.setPageViewControllers(viewControllers)
   }
 }

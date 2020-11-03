@@ -26,11 +26,14 @@ class PageBar: UIView {
       .makeConstraints { (make) in
         make.edges.equalToSuperview()
       }.origin
-    
-    pageBar.addArrangedSubview(PageBarItem(title: "Hello"))
-    pageBar.addArrangedSubview(PageBarItem(title: "gohyunsil"))
   }
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  func setPageBarItems(_ viewControllers: [UIViewController]) {
+    viewControllers
+      .map { PageBarItem(title: $0.title) }
+      .forEach { contentView.addArrangedSubview($0) }
   }
 }

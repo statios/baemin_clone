@@ -42,15 +42,11 @@ class BaseTabBarController: UITabBarController {
       .tint(color: Color.cyan)
       .unselectedItemTint(color: Color.doveGray)
       .barTint(color: Color.wildSand)
-    tabBar.tintColor = Color.cyan
-    tabBar.unselectedItemTintColor = Color.doveGray
-    tabBar.barTintColor = Color.wildSand
   }
   
   @objc dynamic func setupBinding() {
 
   }
-
 }
 
 

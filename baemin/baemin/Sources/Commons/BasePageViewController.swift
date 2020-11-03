@@ -58,6 +58,7 @@ class BasePageViewController: UIPageViewController {
                        direction: .forward,
                        animated: true,
                        completion: nil)
+    pageBar.setPageBarItems(viewControllers)
     let scrollView = view.subviews.filter { $0 is UIScrollView }.first as! UIScrollView
     scrollView.delegate = self
   }

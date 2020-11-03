@@ -58,6 +58,7 @@
 		AF6CBE27254FC15B000B2AA7 /* VisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE26254FC15B000B2AA7 /* VisitViewController.swift */; };
 		AF6CBE2C254FC164000B2AA7 /* VisitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */; };
 		AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */; };
+		AF8041DC2550DF0E0050E35D /* HomePageBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Images.xcassets */; };
@@ -169,6 +170,7 @@
 		AF6CBE26254FC15B000B2AA7 /* VisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewController.swift; sourceTree = "<group>"; };
 		AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewModel.swift; sourceTree = "<group>"; };
 		AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
+		AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageBarItem.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -634,6 +636,7 @@
 		AFE11E10254AB77C003EB6E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */,
 				AF6CBD4F254D4031000B2AA7 /* HomeNavigator.swift */,
 				AF6CBD57254D4037000B2AA7 /* HomeViewController.swift */,
 				AF6CBD5C254D403D000B2AA7 /* HomeViewModel.swift */,
@@ -803,6 +806,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8041DC2550DF0E0050E35D /* HomePageBarItem.swift in Sources */,
 				AFE11D70254AA1D7003EB6E5 /* Chainable.swift in Sources */,
 				AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */,
 				AF6CBE1D254FC146000B2AA7 /* DeliveryViewController.swift in Sources */,

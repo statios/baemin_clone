@@ -11,4 +11,6 @@ struct Text {
   static let favoriteStore = "favorite_store".localized
   static let orderHistory = "order_history".localized
   static let myBaemin = "my_baemin".localized
+  static let delivery = "delivery".localized
+  static let packVisit = "pack_visit".localized
 }

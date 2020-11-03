@@ -28,4 +28,3 @@ extension ListViewController {
     let state = viewModel.reduce(event: event)
   }
 }
-
