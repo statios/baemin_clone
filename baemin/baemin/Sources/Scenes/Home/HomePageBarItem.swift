@@ -5,7 +5,7 @@
 //  Created by Stat.So on 2020/11/03.
 //
 
-import Foundation
+import UIKit
 
 enum HomePageBarItem: CaseIterable {
   case delivery

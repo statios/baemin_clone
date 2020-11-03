@@ -6,24 +6,46 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class PageBarItem: UIView {
+class PageBarItem: BaseView {
   
-  var titleLabel: UILabel!
+  let title = PublishRelay<String?>()
+  let isSelected = PublishRelay<Bool>()
+  var selectedFontColor: UIColor? = Color.black
+  var unselectedFontColor: UIColor? = Color.doveGray
+  var selectedFont: UIFont? = Font.small.bold()
+  var unselectedFont: UIFont? = Font.small
   
-  init(title: String?) {
-    super.init(frame: .zero)
-    titleLabel = UILabel().asChainable()
-      .text(title)
-      .textAlignment(.center)
+  var button = UIButton()
+}
+
+extension PageBarItem {
+  override func setupUI() {
+    super.setupUI()
+    button.asChainable()
+      .color(Color.black, for: .normal)
       .add(to: self)
       .makeConstraints { (make) in
         make.edges.equalToSuperview()
-      }.origin
+      }
   }
   
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+  override func setupBinding() {
+    super.setupBinding()
+    title
+      .bind(to: button.rx.title())
+      .disposed(by: disposeBag)
+    isSelected
+      .subscribe(onNext: { [weak self] in
+        self?.button.setTitleColor(
+          $0 ? self?.selectedFontColor
+             : self?.unselectedFontColor,
+          for: .normal)
+        self?.button.titleLabel?.font =
+          $0 ? self?.selectedFont
+             : self?.unselectedFont
+      }).disposed(by: disposeBag)
   }
-  
 }

@@ -44,6 +44,8 @@ class BaseNavigationController: UINavigationController {
   
   @objc dynamic func setupUI() {
     navigationBar.barTintColor = Color.white
+    navigationBar.isTranslucent = false
+    navigationBar.shadowImage = UIImage()
   }
   
   @objc dynamic func setupBinding() {

@@ -10,11 +10,7 @@ import UIKit
 class AppNavigator {
   static let shared = AppNavigator()
   
-  @Injected var splashNavigator: SplashNavigator
   @Injected var splashViewController: SplashViewController
-  @Injected var splashViewModel: SplashViewModel
-  @Injected var splashInteractor: SplashInteractable
-  @Injected var baeminService: BaeminService
   
   private func build() {
     Dependencies {
