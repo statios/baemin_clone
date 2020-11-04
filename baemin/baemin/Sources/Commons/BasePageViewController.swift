@@ -20,7 +20,7 @@ class BasePageViewController: UIPageViewController {
   var currentPage = BehaviorRelay<Int>(value: 0)
   
   var pageViewControllers = [UIViewController]()
-  var pageBar: PageBar!
+  var pageBar = PageBar()
   
   init() {
     super.init(transitionStyle: .scroll,
@@ -46,13 +46,13 @@ class BasePageViewController: UIPageViewController {
   }
   
   @objc dynamic func setupUI() {
-    pageBar = PageBar().asChainable()
+    pageBar.asChainable()
       .add(to: view)
       .makeConstraints { (make) in
         make.leading.trailing.equalToSuperview()
         make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         make.height.equalTo(Metric.pageBarHeight)
-      }.origin
+      }
   }
   
   @objc dynamic func setupBinding() {

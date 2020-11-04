@@ -18,7 +18,6 @@ class ListViewController: BasePageViewController {
 extension ListViewController {
   override func setupUI() {
     super.setupUI()
-    navigator.setPageViewControllers(target: self)
     pageBar(style: .fit)
     selectedText(color: Color.black)
     unselectedText(color: Color.doveGray)

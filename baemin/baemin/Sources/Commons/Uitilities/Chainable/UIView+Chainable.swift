@@ -31,6 +31,12 @@ extension Chain where Origin: UIView {
   }
   
   @discardableResult
+  func remakeConstraints(closure: (ConstraintMaker) -> Void) -> Chain {
+    self.origin.snp.remakeConstraints(closure)
+    return self
+  }
+  
+  @discardableResult
   func border(color: UIColor?) -> Chain {
     self.origin.layer.borderColor = color?.cgColor
     return self

@@ -18,7 +18,6 @@ class LikeViewController: BasePageViewController {
 extension LikeViewController {
   override func setupUI() {
     super.setupUI()
-    navigator.setPageViewControllers(target: self)
     pageBar(style: .fit)
     selectedText(color: Color.black)
     unselectedText(color: Color.doveGray)

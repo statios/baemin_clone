@@ -13,6 +13,9 @@ class MainNavigator: BaseNavigator {
   @Injected var listViewController: ListViewController
   @Injected var likeViewController: LikeViewController
   @Injected var userViewController: UserViewController
+  @Injected var homeNavigator: HomeNavigator
+  @Injected var likeNavigator: LikeNavigator
+  @Injected var listNavigator: ListNavigator
 }
 
 extension MainNavigator {
@@ -54,6 +57,9 @@ extension MainNavigator {
         viewController.tabBarItem.image = mainTabBarItmes[offset].image
         return navigationController
       }
+    homeNavigator.setPageViewControllers(target: homeViewController)
+    likeNavigator.setPageViewControllers(target: likeViewController)
+    listNavigator.setPageViewControllers(target: listViewController)
     target.setViewControllers(navigationControllers, animated: true)
   }
 }

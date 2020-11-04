@@ -19,7 +19,6 @@ class HomeViewController: BasePageViewController {
 extension HomeViewController {
   override func setupUI() {
     super.setupUI()
-    navigator.setPageViewControllers(target: self)
     pageBar(style: .fill)
     selectedText(color: Color.cyan)
     unselectedText(color: Color.black)

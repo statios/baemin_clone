@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
 
 enum PageBarStyle {
   case fill
@@ -29,6 +30,9 @@ class PageBar: BaseView {
   var contentView: UIStackView!
   var pageBarItems = [PageBarItem]()
 
+  var leadingConstraint: Constraint? = nil
+  var trailingConstraint: Constraint? = nil
+  
 }
 
 extension PageBar {
@@ -45,8 +49,8 @@ extension PageBar {
       }.origin
     selectedBarView = UIView()
       .asChainable()
-      .corner(radius: 1)
       .add(to: self)
+      .corner(radius: 1)
       .origin
   }
   override func setupBinding() {
@@ -76,30 +80,18 @@ extension PageBar {
       .forEach { item in
         contentView.addArrangedSubview(item)
       }
-    contentView.layoutIfNeeded()
     Observable.combineLatest(currentPage, pageBarStyle)
       .subscribe(onNext: { [weak self] (page, style) in
         guard let `self` = self else { return }
         guard let pageBarItem = self.contentView.subviews[page] as? PageBarItem else { return }
-        pageBarItem.layoutIfNeeded()
-        let itemLeading = pageBarItem.frame.origin.x
-        let textLeading = pageBarItem.button.frame.origin.x
-        let itemWidth = pageBarItem.frame.width
-        let textWidth = pageBarItem.button.frame.width
-        if style == .fill {
-          UIView.animate(withDuration: 0.2) {
-            self.selectedBarView.frame = CGRect(x: itemLeading,
-                                                y:  Metric.selectedBarY,
-                                                width: itemWidth,
-                                                height: Metric.selectedBarHeight)
-          }
-        } else {
-          UIView.animate(withDuration: 0.2) {
-            self.selectedBarView.frame = CGRect(x: itemLeading + textLeading,
-                                                y:  Metric.selectedBarY,
-                                                width: textWidth,
-                                                height: Metric.selectedBarHeight)
-          }
+        let targetView = style == .fill ? pageBarItem : pageBarItem.button
+        self.selectedBarView.snp.remakeConstraints { (make) in
+          make.leading.trailing.equalTo(targetView)
+          make.bottom.equalToSuperview()
+          make.height.equalTo(Metric.selectedBarHeight)
+        }
+        UIView.animate(withDuration: 0.2) {
+          self.selectedBarView.superview?.layoutIfNeeded()
         }
       }).disposed(by: disposeBag)
     
