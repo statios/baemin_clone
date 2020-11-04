@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class LikeViewController: BaseViewController {
+class LikeViewController: BasePageViewController {
   
   @Injected var viewModel: LikeViewModel
   @Injected var navigator: LikeNavigator
@@ -18,6 +18,12 @@ class LikeViewController: BaseViewController {
 extension LikeViewController {
   override func setupUI() {
     super.setupUI()
+    navigator.setPageViewControllers(target: self)
+    pageBar(style: .fit)
+    selectedText(color: Color.black)
+    unselectedText(color: Color.doveGray)
+    selected(font: Font.medium.bold())
+    unselected(font: Font.medium)
   }
 }
 

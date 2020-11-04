@@ -28,4 +28,8 @@ class HomeNavigator: BaseNavigator {
     }
     target.setPageViewControllers(viewControllers)
   }
+  
+  func pushToAlarmScene(target: HomeViewController) {
+    
+  }
 }

@@ -45,7 +45,7 @@ extension PageBar {
       }.origin
     selectedBarView = UIView()
       .asChainable()
-      .corner(radius: 2)
+      .corner(radius: 1)
       .add(to: self)
       .origin
   }
@@ -81,6 +81,7 @@ extension PageBar {
       .subscribe(onNext: { [weak self] (page, style) in
         guard let `self` = self else { return }
         guard let pageBarItem = self.contentView.subviews[page] as? PageBarItem else { return }
+        pageBarItem.layoutIfNeeded()
         let itemLeading = pageBarItem.frame.origin.x
         let textLeading = pageBarItem.button.frame.origin.x
         let itemWidth = pageBarItem.frame.width

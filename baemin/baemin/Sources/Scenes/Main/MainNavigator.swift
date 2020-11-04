@@ -45,8 +45,8 @@ extension MainNavigator {
     let mainTabBarItmes = MainTabBarItem.allCases
     let navigationControllers = [homeViewController,
                                  suggestViewController,
-                                 listViewController,
                                  likeViewController,
+                                 listViewController,
                                  userViewController]
       .enumerated().map { (offset, viewController) -> BaseNavigationController in
         let navigationController = BaseNavigationController(rootViewController: viewController)

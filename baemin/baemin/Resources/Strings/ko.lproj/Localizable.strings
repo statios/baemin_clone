@@ -13,3 +13,7 @@
 "my_baemin" = "my배민";
 "delivery" = "배달";
 "pack_visit" = "포장/방문";
+"direct_payment" = "바로결제";
+"phone_order" = "전화주문";
+"delivery_pack_visit" = "배달·포장/방문";
+"b_mart" = "B마트";

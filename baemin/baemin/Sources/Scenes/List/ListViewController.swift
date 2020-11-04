@@ -8,16 +8,26 @@
 import UIKit
 import RxSwift
 
-class ListViewController: BaseViewController {
-  
+class ListViewController: BasePageViewController {
   @Injected var viewModel: ListViewModel
   @Injected var navigator: ListNavigator
   
+  let refreshButton = UIButton()
 }
 
 extension ListViewController {
   override func setupUI() {
     super.setupUI()
+    navigator.setPageViewControllers(target: self)
+    pageBar(style: .fit)
+    selectedText(color: Color.black)
+    unselectedText(color: Color.doveGray)
+    selected(font: Font.medium.bold())
+    unselected(font: Font.medium)
+    
+    refreshButton.asChainable()
+      .image(Image.Icon.refresh24, for: .normal)
+      .addBarButtonItem(self, position: .right)
   }
 }
 

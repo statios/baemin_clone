@@ -15,13 +15,20 @@ class HomeViewModel: ViewModel {
 
 extension HomeViewModel {
   struct Event {
+    let tapAlarm: Observable<Void>
+    let tapQrcode: Observable<Void>
   }
   
   struct State {
+    let pushToAlarm: Driver<Void>
+    let pushToQrcode: Driver<Void>
   }
   
   func reduce(event: Event) -> State {
-    return State()
+    return State(
+      pushToAlarm: event.tapAlarm.asDriver(),
+      pushToQrcode: event.tapQrcode.asDriver()
+    )
   }
 }
 

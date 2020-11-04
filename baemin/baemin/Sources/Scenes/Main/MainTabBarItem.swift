@@ -10,8 +10,8 @@ import UIKit
 enum MainTabBarItem: CaseIterable {
   case home
   case suggest
-  case list
   case like
+  case list
   case user
 }
 extension MainTabBarItem {
@@ -19,8 +19,8 @@ extension MainTabBarItem {
     switch self {
     case .home: return Text.home
     case .suggest: return Text.whatToEat
-    case .list: return Text.orderHistory
     case .like: return Text.favoriteStore
+    case .list: return Text.orderHistory
     case .user: return Text.myBaemin
     }
   }
@@ -28,8 +28,8 @@ extension MainTabBarItem {
     switch self {
     case .home: return Image.Icon.home
     case .suggest: return Image.Icon.video
-    case .list: return Image.Icon.list
     case .like: return Image.Icon.like
+    case .list: return Image.Icon.list
     case .user: return Image.Icon.user
     }
   }

@@ -57,9 +57,11 @@ class BasePageViewController: UIPageViewController {
   
   @objc dynamic func setupBinding() {
     pageBar.selectedPage
-      .subscribe(onNext: { [weak self] in
-        self?.pageBar.currentPage.accept($0)
-        self?.moveTo(page: $0)
+      .withPrevious(startWith: 0)
+      .subscribe(onNext: { [weak self] (previous, current) in
+        let direction: NavigationDirection = previous <= current ? .forward : .reverse
+        self?.pageBar.currentPage.accept(current)
+        self?.moveTo(page: current, direction: direction)
       }).disposed(by: disposeBag)
   }
   
@@ -106,9 +108,9 @@ class BasePageViewController: UIPageViewController {
     pageBar.pageBarStyle.accept(style)
   }
   
-  func moveTo(page: Int) {
+  func moveTo(page: Int, direction: NavigationDirection) {
     self.setViewControllers([pageViewControllers[page]],
-                            direction: .forward,
+                            direction: direction,
                             animated: true,
                             completion: nil)
   }

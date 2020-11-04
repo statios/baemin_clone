@@ -10,6 +10,10 @@
 "what_to_eat" = "Recommend";
 "favorite_store" = "Favorite";
 "order_history" = "History";
-"my_baemin" = "MyBaemin";
+"my_baemin" = "My Baemin";
 "delivery" = "Delivery";
 "pack_visit" = "Pack/Visit";
+"direct_payment" = "Direct Payment";
+"phone_order" = "Phone Order";
+"delivery_pack_visit" = "Delivery·Pack/Visit";
+"b_mart" = "B Mart";

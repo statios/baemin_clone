@@ -13,4 +13,8 @@ struct Text {
   static let myBaemin = "my_baemin".localized
   static let delivery = "delivery".localized
   static let packVisit = "pack_visit".localized
+  static let directPayment = "direct_payment".localized
+  static let phoneOrder = "phone_order".localized
+  static let deliveryPackVisit = "delivery_pack_visit".localized
+  static let bMart = "b_mart".localized
 }

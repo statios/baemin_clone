@@ -14,5 +14,10 @@ struct Image {
     static let list = UIImage(named: "list")
     static let like = UIImage(named: "like")
     static let user = UIImage(named: "user")
+    static let alarm24 = UIImage(named: "alarm24")
+    static let qrcode24 = UIImage(named: "qrcode24")
+    static let back24 = UIImage(named: "back24")
+    static let close24 = UIImage(named: "close24")
+    static let refresh24 = UIImage(named: "refresh24")
   }
 }

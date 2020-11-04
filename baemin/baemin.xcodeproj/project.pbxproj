@@ -10,7 +10,6 @@
 		AF19453E25512927004AE30A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19453D25512927004AE30A /* BaseView.swift */; };
 		AF19454325516217004AE30A /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19454225516217004AE30A /* BaseButton.swift */; };
 		AF19454825516530004AE30A /* UIButton+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19454725516530004AE30A /* UIButton+Chainable.swift */; };
-		AF3113FD255013970005F6E7 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3113FC255013970005F6E7 /* ViewControllerType.swift */; };
 		AF3114052550190C0005F6E7 /* UITabBar+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3114042550190C0005F6E7 /* UITabBar+Chainable.swift */; };
 		AF31140B25501C000005F6E7 /* PageBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31140A25501C000005F6E7 /* PageBarItem.swift */; };
 		AF31141325501CB40005F6E7 /* UILabel+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31141225501CB40005F6E7 /* UILabel+Chainable.swift */; };
@@ -100,6 +99,22 @@
 		AFE11E35254AC206003EB6E5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E34254AC206003EB6E5 /* Home.swift */; };
 		AFE11E40254AC6F5003EB6E5 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE11E3F254AC6F5003EB6E5 /* Splash.json */; };
 		AFE11E50254AC915003EB6E5 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E4F254AC915003EB6E5 /* Splash.swift */; };
+		AFE5BCFB25523FEC00C0F390 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BCFA25523FEC00C0F390 /* StoreViewController.swift */; };
+		AFE5BD0625523FF700C0F390 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD0525523FF700C0F390 /* StoreViewModel.swift */; };
+		AFE5BD0B25523FFF00C0F390 /* DirectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD0A25523FFF00C0F390 /* DirectViewController.swift */; };
+		AFE5BD102552400600C0F390 /* DirectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD0F2552400600C0F390 /* DirectViewModel.swift */; };
+		AFE5BD152552400E00C0F390 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD142552400E00C0F390 /* PhoneViewController.swift */; };
+		AFE5BD1A2552401B00C0F390 /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD192552401B00C0F390 /* PhoneViewModel.swift */; };
+		AFE5BD1F255240E600C0F390 /* LikePageBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD1E255240E600C0F390 /* LikePageBarItem.swift */; };
+		AFE5BD2D255245B000C0F390 /* ListPageBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD2C255245B000C0F390 /* ListPageBarItem.swift */; };
+		AFE5BD37255245F400C0F390 /* DeliveryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD36255245F400C0F390 /* DeliveryListViewController.swift */; };
+		AFE5BD3F255245FC00C0F390 /* DeliveryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD3E255245FC00C0F390 /* DeliveryListViewModel.swift */; };
+		AFE5BD442552460500C0F390 /* BmartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD432552460500C0F390 /* BmartListViewController.swift */; };
+		AFE5BD492552460E00C0F390 /* BmartListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD482552460E00C0F390 /* BmartListViewModel.swift */; };
+		AFE5BD4F25525D6B00C0F390 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD4E25525D6B00C0F390 /* UIViewController+Extension.swift */; };
+		AFE5BD5425525DD800C0F390 /* BarButtonItemStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD5325525DD800C0F390 /* BarButtonItemStyle.swift */; };
+		AFE5BD642552759300C0F390 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD632552759300C0F390 /* AlarmViewController.swift */; };
+		AFE5BD692552759900C0F390 /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD682552759900C0F390 /* AlarmViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +138,6 @@
 		AF19453D25512927004AE30A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AF19454225516217004AE30A /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		AF19454725516530004AE30A /* UIButton+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Chainable.swift"; sourceTree = "<group>"; };
-		AF3113FC255013970005F6E7 /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
 		AF3114042550190C0005F6E7 /* UITabBar+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Chainable.swift"; sourceTree = "<group>"; };
 		AF31140A25501C000005F6E7 /* PageBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBarItem.swift; sourceTree = "<group>"; };
 		AF31141225501CB40005F6E7 /* UILabel+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Chainable.swift"; sourceTree = "<group>"; };
@@ -214,6 +228,22 @@
 		AFE11E34254AC206003EB6E5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		AFE11E3F254AC6F5003EB6E5 /* Splash.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		AFE11E4F254AC915003EB6E5 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		AFE5BCFA25523FEC00C0F390 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		AFE5BD0525523FF700C0F390 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
+		AFE5BD0A25523FFF00C0F390 /* DirectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectViewController.swift; sourceTree = "<group>"; };
+		AFE5BD0F2552400600C0F390 /* DirectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectViewModel.swift; sourceTree = "<group>"; };
+		AFE5BD142552400E00C0F390 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		AFE5BD192552401B00C0F390 /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
+		AFE5BD1E255240E600C0F390 /* LikePageBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePageBarItem.swift; sourceTree = "<group>"; };
+		AFE5BD2C255245B000C0F390 /* ListPageBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageBarItem.swift; sourceTree = "<group>"; };
+		AFE5BD36255245F400C0F390 /* DeliveryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewController.swift; sourceTree = "<group>"; };
+		AFE5BD3E255245FC00C0F390 /* DeliveryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewModel.swift; sourceTree = "<group>"; };
+		AFE5BD432552460500C0F390 /* BmartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmartListViewController.swift; sourceTree = "<group>"; };
+		AFE5BD482552460E00C0F390 /* BmartListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmartListViewModel.swift; sourceTree = "<group>"; };
+		AFE5BD4E25525D6B00C0F390 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		AFE5BD5325525DD800C0F390 /* BarButtonItemStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemStyle.swift; sourceTree = "<group>"; };
+		AFE5BD632552759300C0F390 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		AFE5BD682552759900C0F390 /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,10 +348,13 @@
 		AF6CBD4C254D3F9D000B2AA7 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				AFE5BD2C255245B000C0F390 /* ListPageBarItem.swift */,
 				AF6CBD73254D4064000B2AA7 /* ListNavigator.swift */,
 				AF6CBD78254D406B000B2AA7 /* ListViewController.swift */,
 				AF6CBD7D254D4070000B2AA7 /* ListViewModel.swift */,
 				AF6CBDBB254D440E000B2AA7 /* ListInteractor.swift */,
+				AFE5BD35255245C700C0F390 /* Delivery List */,
+				AFE5BD34255245C500C0F390 /* Bmart List */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -329,10 +362,14 @@
 		AF6CBD4D254D3FB5000B2AA7 /* Like */ = {
 			isa = PBXGroup;
 			children = (
+				AFE5BD1E255240E600C0F390 /* LikePageBarItem.swift */,
 				AF6CBD82254D4077000B2AA7 /* LikeNavigator.swift */,
 				AF6CBD8A254D408C000B2AA7 /* LikeViewController.swift */,
 				AF6CBD8F254D4091000B2AA7 /* LikeViewModel.swift */,
 				AF6CBDC0254D4415000B2AA7 /* LikeInteractor.swift */,
+				AFE5BCF725523F8100C0F390 /* Store */,
+				AFE5BCF825523F9700C0F390 /* Direct */,
+				AFE5BCF925523F9900C0F390 /* Phone */,
 			);
 			path = Like;
 			sourceTree = "<group>";
@@ -460,8 +497,8 @@
 				AFE11E0F254AB773003EB6E5 /* Main */,
 				AFE11E10254AB77C003EB6E5 /* Home */,
 				AF6CBD4B254D3F8F000B2AA7 /* Suggest */,
-				AF6CBD4C254D3F9D000B2AA7 /* List */,
 				AF6CBD4D254D3FB5000B2AA7 /* Like */,
+				AF6CBD4C254D3F9D000B2AA7 /* List */,
 				AF6CBD4E254D3FBB000B2AA7 /* User */,
 			);
 			path = Scenes;
@@ -561,7 +598,6 @@
 				AFE11E0A254AB300003EB6E5 /* BaseImageView.swift */,
 				AF19453D25512927004AE30A /* BaseView.swift */,
 				AF19454225516217004AE30A /* BaseButton.swift */,
-				AF3113FC255013970005F6E7 /* ViewControllerType.swift */,
 			);
 			name = Bases;
 			sourceTree = "<group>";
@@ -626,6 +662,8 @@
 		AFE11E00254AB092003EB6E5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				AFE5BD5325525DD800C0F390 /* BarButtonItemStyle.swift */,
+				AFE5BD4E25525D6B00C0F390 /* UIViewController+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -650,6 +688,8 @@
 				AF6CBD57254D4037000B2AA7 /* HomeViewController.swift */,
 				AF6CBD5C254D403D000B2AA7 /* HomeViewModel.swift */,
 				AF6CBDB1254D43F4000B2AA7 /* HomeInteractor.swift */,
+				AFE5BD612552757D00C0F390 /* Alarm */,
+				AFE5BD622552758500C0F390 /* Qrcode */,
 				AF6CBE19254FC0FB000B2AA7 /* Delivery */,
 				AF6CBE1B254FC11D000B2AA7 /* Visit */,
 			);
@@ -664,6 +704,67 @@
 				AFE11E34254AC206003EB6E5 /* Home.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AFE5BCF725523F8100C0F390 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5BCFA25523FEC00C0F390 /* StoreViewController.swift */,
+				AFE5BD0525523FF700C0F390 /* StoreViewModel.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		AFE5BCF825523F9700C0F390 /* Direct */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5BD0A25523FFF00C0F390 /* DirectViewController.swift */,
+				AFE5BD0F2552400600C0F390 /* DirectViewModel.swift */,
+			);
+			path = Direct;
+			sourceTree = "<group>";
+		};
+		AFE5BCF925523F9900C0F390 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5BD142552400E00C0F390 /* PhoneViewController.swift */,
+				AFE5BD192552401B00C0F390 /* PhoneViewModel.swift */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
+		AFE5BD34255245C500C0F390 /* Bmart List */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5BD432552460500C0F390 /* BmartListViewController.swift */,
+				AFE5BD482552460E00C0F390 /* BmartListViewModel.swift */,
+			);
+			path = "Bmart List";
+			sourceTree = "<group>";
+		};
+		AFE5BD35255245C700C0F390 /* Delivery List */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5BD36255245F400C0F390 /* DeliveryListViewController.swift */,
+				AFE5BD3E255245FC00C0F390 /* DeliveryListViewModel.swift */,
+			);
+			path = "Delivery List";
+			sourceTree = "<group>";
+		};
+		AFE5BD612552757D00C0F390 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5BD632552759300C0F390 /* AlarmViewController.swift */,
+				AFE5BD682552759900C0F390 /* AlarmViewModel.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		AFE5BD622552758500C0F390 /* Qrcode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Qrcode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -824,6 +925,7 @@
 				AF19454825516530004AE30A /* UIButton+Chainable.swift in Sources */,
 				AF6CBDC1254D4415000B2AA7 /* LikeInteractor.swift in Sources */,
 				AF6CBD5D254D403D000B2AA7 /* HomeViewModel.swift in Sources */,
+				AFE5BD37255245F400C0F390 /* DeliveryListViewController.swift in Sources */,
 				AF6CBD2A254D2F2D000B2AA7 /* NetworkProvider.swift in Sources */,
 				AFE11D4E254A9F83003EB6E5 /* SplashViewModel.swift in Sources */,
 				AF6CBD62254D4045000B2AA7 /* SuggestNavigator.swift in Sources */,
@@ -833,6 +935,7 @@
 				AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */,
 				AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */,
 				AFE11E35254AC206003EB6E5 /* Home.swift in Sources */,
+				AFE5BD492552460E00C0F390 /* BmartListViewModel.swift in Sources */,
 				AF6CBDCB254EC010000B2AA7 /* BaseNavigationController.swift in Sources */,
 				AFE11DD1254AA5CC003EB6E5 /* BaseNavigator.swift in Sources */,
 				AFE11E0B254AB300003EB6E5 /* BaseImageView.swift in Sources */,
@@ -852,10 +955,12 @@
 				AFE11D75254AA1ED003EB6E5 /* UIView+Chainable.swift in Sources */,
 				AF6CBD79254D406B000B2AA7 /* ListViewController.swift in Sources */,
 				AF6CBDB7254D4400000B2AA7 /* SuggestInteractor.swift in Sources */,
+				AFE5BD0625523FF700C0F390 /* StoreViewModel.swift in Sources */,
 				AF6CBCF1254B282D000B2AA7 /* Color.swift in Sources */,
 				AF31141325501CB40005F6E7 /* UILabel+Chainable.swift in Sources */,
 				AFE11D81254AA257003EB6E5 /* BaseViewController.swift in Sources */,
 				AF6CBD90254D4091000B2AA7 /* LikeViewModel.swift in Sources */,
+				AFE5BD5425525DD800C0F390 /* BarButtonItemStyle.swift in Sources */,
 				AFE11DB0254AA370003EB6E5 /* Keyboard.swift in Sources */,
 				AF6CBD6A254D4056000B2AA7 /* SuggestViewController.swift in Sources */,
 				AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */,
@@ -864,12 +969,16 @@
 				AF6CBE0D254F9D0A000B2AA7 /* String.swift in Sources */,
 				AF6CBE27254FC15B000B2AA7 /* VisitViewController.swift in Sources */,
 				AF6CBD74254D4064000B2AA7 /* ListNavigator.swift in Sources */,
+				AFE5BD642552759300C0F390 /* AlarmViewController.swift in Sources */,
 				AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */,
+				AFE5BD4F25525D6B00C0F390 /* UIViewController+Extension.swift in Sources */,
 				AF6CBDBC254D440E000B2AA7 /* ListInteractor.swift in Sources */,
+				AFE5BD1A2552401B00C0F390 /* PhoneViewModel.swift in Sources */,
 				AF6CBD83254D4077000B2AA7 /* LikeNavigator.swift in Sources */,
 				AF6CBDEA254F2177000B2AA7 /* MainTabBarItem.swift in Sources */,
 				AF19454325516217004AE30A /* BaseButton.swift in Sources */,
 				AF6CBDD0254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift in Sources */,
+				AFE5BD3F255245FC00C0F390 /* DeliveryListViewModel.swift in Sources */,
 				AF19453E25512927004AE30A /* BaseView.swift in Sources */,
 				AF6CBE2C254FC164000B2AA7 /* VisitViewModel.swift in Sources */,
 				AF6CBD3F254D38B5000B2AA7 /* NetworkLoggerPlugin.swift in Sources */,
@@ -878,20 +987,27 @@
 				AF6CBDC6254D441B000B2AA7 /* UserInteractor.swift in Sources */,
 				AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */,
 				AF6CBCCF254B2701000B2AA7 /* MainNavigator.swift in Sources */,
+				AFE5BD102552400600C0F390 /* DirectViewModel.swift in Sources */,
 				AF6CBDB2254D43F4000B2AA7 /* HomeInteractor.swift in Sources */,
+				AFE5BD0B25523FFF00C0F390 /* DirectViewController.swift in Sources */,
 				AFE11D9B254AA2F7003EB6E5 /* Thread.swift in Sources */,
-				AF3113FD255013970005F6E7 /* ViewControllerType.swift in Sources */,
+				AFE5BD1F255240E600C0F390 /* LikePageBarItem.swift in Sources */,
+				AFE5BD152552400E00C0F390 /* PhoneViewController.swift in Sources */,
 				AFE11DC9254AA4DD003EB6E5 /* Injected.swift in Sources */,
+				AFE5BD692552759900C0F390 /* AlarmViewModel.swift in Sources */,
 				AF31140B25501C000005F6E7 /* PageBarItem.swift in Sources */,
+				AFE5BD442552460500C0F390 /* BmartListViewController.swift in Sources */,
 				AFE11D7A254AA21C003EB6E5 /* UIViewController+Chainable.swift in Sources */,
 				AF3114052550190C0005F6E7 /* UITabBar+Chainable.swift in Sources */,
 				AF31141D2550288E0005F6E7 /* PageBar.swift in Sources */,
 				AFE11DC4254AA4CB003EB6E5 /* UserDefault.swift in Sources */,
+				AFE5BD2D255245B000C0F390 /* ListPageBarItem.swift in Sources */,
 				AF6CBD05254D2215000B2AA7 /* Date.swift in Sources */,
 				AF6CBDA4254D43A5000B2AA7 /* BaseTabBarController.swift in Sources */,
 				AFE11D5A254AA155003EB6E5 /* BaeminService.swift in Sources */,
 				AF6CBD95254D4098000B2AA7 /* UserNavigator.swift in Sources */,
 				AFE11D68254AA192003EB6E5 /* MainInteractor.swift in Sources */,
+				AFE5BCFB25523FEC00C0F390 /* StoreViewController.swift in Sources */,
 				AF6CBCDE254B272B000B2AA7 /* MainViewModel.swift in Sources */,
 				AF6CBCE4254B2811000B2AA7 /* Padding.swift in Sources */,
 			);
