@@ -9,6 +9,7 @@ class HomeNavigator: BaseNavigator {
   
   @Injected var deliveryViewController: DeliveryViewController
   @Injected var visitViewController: VisitViewController
+  @Injected var alarmViewController: AlarmViewController
   
   private func build() {
     Dependencies {
@@ -17,6 +18,13 @@ class HomeNavigator: BaseNavigator {
       Dependency { VisitViewController() }
       Dependency { VisitViewModel() }
     }.add()
+  }
+  
+  private var alarmSceneDependencies: Dependencies {
+    Dependencies {
+      Dependency { AlarmViewController() }
+      Dependency { AlarmViewModel() }
+    }
   }
   
   func setPageViewControllers(target: HomeViewController) {
@@ -30,6 +38,12 @@ class HomeNavigator: BaseNavigator {
   }
   
   func pushToAlarmScene(target: HomeViewController) {
-    
+    alarmSceneDependencies.add()
+    target.navigationController?.pushViewController(alarmViewController, animated: true)
+  }
+  
+  func popToHome(from: AlarmViewController) {
+    alarmSceneDependencies.remove()
+    from.navigationController?.popViewController(animated: true)
   }
 }

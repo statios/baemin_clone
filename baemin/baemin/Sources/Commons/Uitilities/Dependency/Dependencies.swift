@@ -36,7 +36,6 @@ class Dependencies {
       Log.info("\(String(describing: dependency.name)) already registered, ignoring")
       return
     }
-    Log.info("\(dependency.name) registered")
     dependencies.append(dependency)
   }
   
@@ -50,8 +49,19 @@ class Dependencies {
   func add() {
     for index in dependencies.startIndex..<dependencies.endIndex {
       dependencies[index].resolve()
+      Log.info(dependencies[index].name)
     }
     Self.shared.dependencies.append(contentsOf: dependencies)
+  }
+  
+  func remove() {
+    dependencies.forEach { currentDependency in
+      Self.shared.dependencies.removeAll {
+        let bool = $0.name == currentDependency.name
+        if bool { Log.info($0.name) }
+        return bool
+      }
+    }
   }
   
   func resolve<T>() -> T {

@@ -26,7 +26,6 @@ extension HomeViewController {
     selected(font: Font.medium.bold())
     unselected(font: Font.medium)
     
-    
     alarmButton.asChainable()
       .image(Image.Icon.alarm24, for: .normal)
       .addBarButtonItem(self, position: .left)
@@ -45,6 +44,11 @@ extension HomeViewController {
       tapQrcode: qrcodeButton.rx.tap.void()
     )
     let state = viewModel.reduce(event: event)
-//    state.pushToAlarm
+    
+    state.pushToAlarm
+      .drive(onNext: { [weak self] in
+        guard let `self` = self else { return }
+        self.navigator.pushToAlarmScene(target: self)
+      }).disposed(by: disposeBag)
   }
 }

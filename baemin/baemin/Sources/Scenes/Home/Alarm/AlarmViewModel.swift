@@ -5,4 +5,28 @@
 //  Created by Stat.So on 2020/11/04.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
+
+class AlarmViewModel: ViewModel {
+}
+
+extension AlarmViewModel {
+  struct Event {
+    let tapBack: Observable<Void>
+  }
+  
+  struct State {
+    let popToHome: Driver<Void>
+  }
+  
+  func reduce(event: Event) -> State {
+    return State(
+      popToHome: event.tapBack.asDriver()
+    )
+  }
+}
+
+extension AlarmViewModel {
+}
+
