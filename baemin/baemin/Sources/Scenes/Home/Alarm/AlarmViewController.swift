@@ -19,6 +19,8 @@ extension AlarmViewController {
   override func setupUI() {
     super.setupUI()
     view.backgroundColor = .systemPurple
+    self.asChainable()
+      .title(Text.alarmCenter)
     backButton.asChainable()
       .image(Image.Icon.back24, for: .normal)
       .addBarButtonItem(self, position: .left)
@@ -32,10 +34,10 @@ extension AlarmViewController {
       tapBack: backButton.rx.tap.void()
     )
     let state = viewModel.reduce(event: event)
+    
     state.popToHome
       .drive(onNext: { [weak self] in
-        guard let `self` = self else { return }
-        self.navigator.popToHome(from: self)
+        self?.navigator.popToHomeFromAlarm()
       }).disposed(by: disposeBag)
   }
 }

@@ -46,8 +46,12 @@ extension HomeViewController {
     
     state.pushToAlarm
       .drive(onNext: { [weak self] in
-        guard let `self` = self else { return }
-        self.navigator.pushToAlarmScene(target: self)
+        self?.navigator.pushToAlarmScene()
+      }).disposed(by: disposeBag)
+    
+    state.pushToQrcode
+      .drive(onNext: { [weak self] in
+        self?.navigator.pushToQrcodeScene()
       }).disposed(by: disposeBag)
   }
 }

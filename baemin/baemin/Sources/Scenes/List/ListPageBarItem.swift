@@ -14,7 +14,7 @@ extension ListPageBarItem {
   var title: String {
     switch self {
     case .delivery: return Text.deliveryPackVisit
-    case .bmart: return Text.bMart
+    case .bmart: return Text.bmart
     }
   }
 }

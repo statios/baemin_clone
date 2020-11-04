@@ -16,5 +16,7 @@ struct Text {
   static let directPayment = "direct_payment".localized
   static let phoneOrder = "phone_order".localized
   static let deliveryPackVisit = "delivery_pack_visit".localized
-  static let bMart = "b_mart".localized
+  static let bmart = "b_mart".localized
+  static let alarmCenter = "alarm_center".localized
+  static let qrcodeOrder = "qrcode_order".localized
 }
