@@ -101,6 +101,11 @@
 		AFE11E50254AC915003EB6E5 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E4F254AC915003EB6E5 /* Splash.swift */; };
 		AFE59BE42552F49500A18003 /* QrcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE59BE32552F49500A18003 /* QrcodeViewController.swift */; };
 		AFE59BE92552F49B00A18003 /* QrcodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE59BE82552F49B00A18003 /* QrcodeViewModel.swift */; };
+		AFE59BF0255397D400A18003 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AFE59BEF255397D400A18003 /* Lottie */; };
+		AFE59BF82553987400A18003 /* LottieAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE59BF72553987400A18003 /* LottieAnimationView.swift */; };
+		AFE59C072553B53E00A18003 /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE59C062553B53E00A18003 /* ActivityIndicatorPresenter.swift */; };
+		AFE59C0C2553B5B800A18003 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE59C0B2553B5B800A18003 /* UIApplication+Extension.swift */; };
+		AFE59C122553B76200A18003 /* loading_indicator.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE59C112553B76200A18003 /* loading_indicator.json */; };
 		AFE5BCFB25523FEC00C0F390 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BCFA25523FEC00C0F390 /* StoreViewController.swift */; };
 		AFE5BD0625523FF700C0F390 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD0525523FF700C0F390 /* StoreViewModel.swift */; };
 		AFE5BD0B25523FFF00C0F390 /* DirectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD0A25523FFF00C0F390 /* DirectViewController.swift */; };
@@ -232,6 +237,10 @@
 		AFE11E4F254AC915003EB6E5 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		AFE59BE32552F49500A18003 /* QrcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeViewController.swift; sourceTree = "<group>"; };
 		AFE59BE82552F49B00A18003 /* QrcodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeViewModel.swift; sourceTree = "<group>"; };
+		AFE59BF72553987400A18003 /* LottieAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationView.swift; sourceTree = "<group>"; };
+		AFE59C062553B53E00A18003 /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		AFE59C0B2553B5B800A18003 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		AFE59C112553B76200A18003 /* loading_indicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_indicator.json; sourceTree = "<group>"; };
 		AFE5BCFA25523FEC00C0F390 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		AFE5BD0525523FF700C0F390 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		AFE5BD0A25523FFF00C0F390 /* DirectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +269,7 @@
 				AFE11D30254A925F003EB6E5 /* SnapKit in Frameworks */,
 				AFE11D26254A9220003EB6E5 /* RxRelay in Frameworks */,
 				AFE11D22254A9220003EB6E5 /* RxSwift in Frameworks */,
+				AFE59BF0255397D400A18003 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +297,7 @@
 			children = (
 				AF31141C2550288E0005F6E7 /* PageBar.swift */,
 				AF31140A25501C000005F6E7 /* PageBarItem.swift */,
+				AFE59BF72553987400A18003 /* LottieAnimationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -513,6 +524,7 @@
 			children = (
 				AF6CBD43254D3DB9000B2AA7 /* Colors.xcassets */,
 				AFE11CE0254A8F39003EB6E5 /* Images.xcassets */,
+				AFE59C102553B75400A18003 /* Lotties */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -544,6 +556,7 @@
 		AFE11D6C254AA19A003EB6E5 /* Uitilities */ = {
 			isa = PBXGroup;
 			children = (
+				AFE59C052553B53000A18003 /* Indicator */,
 				AF6CBD32254D37B0000B2AA7 /* Networking */,
 				AF6CBD17254D2B48000B2AA7 /* Logging */,
 				AF6CBCE2254B27F2000B2AA7 /* Constants */,
@@ -668,6 +681,7 @@
 			children = (
 				AFE5BD5325525DD800C0F390 /* BarButtonItemStyle.swift */,
 				AFE5BD4E25525D6B00C0F390 /* UIViewController+Extension.swift */,
+				AFE59C0B2553B5B800A18003 /* UIApplication+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -708,6 +722,22 @@
 				AFE11E34254AC206003EB6E5 /* Home.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AFE59C052553B53000A18003 /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				AFE59C062553B53E00A18003 /* ActivityIndicatorPresenter.swift */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
+		AFE59C102553B75400A18003 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				AFE59C112553B76200A18003 /* loading_indicator.json */,
+			);
+			path = Lotties;
 			sourceTree = "<group>";
 		};
 		AFE5BCF725523F8100C0F390 /* Store */ = {
@@ -795,6 +825,7 @@
 				AFE11D27254A9220003EB6E5 /* RxCocoa */,
 				AFE11D2F254A925F003EB6E5 /* SnapKit */,
 				AFE11D35254A92DB003EB6E5 /* RxMoya */,
+				AFE59BEF255397D400A18003 /* Lottie */,
 			);
 			productName = baemin;
 			productReference = AFE11CD4254A8F37003EB6E5 /* baemin.app */;
@@ -876,6 +907,7 @@
 				AFE11D20254A9220003EB6E5 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				AFE11D2E254A925F003EB6E5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AFE11D34254A92DB003EB6E5 /* XCRemoteSwiftPackageReference "Moya" */,
+				AFE59BEE255397D400A18003 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = AFE11CD5254A8F37003EB6E5 /* Products */;
 			projectDirPath = "";
@@ -893,6 +925,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE59C122553B76200A18003 /* loading_indicator.json in Resources */,
 				AF6CBE03254F9BBA000B2AA7 /* Localizable.strings in Resources */,
 				AFE11CE4254A8F39003EB6E5 /* LaunchScreen.storyboard in Resources */,
 				AF6CBD44254D3DB9000B2AA7 /* Colors.xcassets in Resources */,
@@ -938,6 +971,7 @@
 				AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */,
 				AF6CBE15254F9D26000B2AA7 /* Text.swift in Sources */,
 				AF6CBD9F254D40A6000B2AA7 /* UserViewModel.swift in Sources */,
+				AFE59BF82553987400A18003 /* LottieAnimationView.swift in Sources */,
 				AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */,
 				AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */,
 				AFE11E35254AC206003EB6E5 /* Home.swift in Sources */,
@@ -955,6 +989,7 @@
 				AF6CBD7E254D4070000B2AA7 /* ListViewModel.swift in Sources */,
 				AFE11D60254AA187003EB6E5 /* SplashInteractor.swift in Sources */,
 				AF6CBDD5254EEAC8000B2AA7 /* Image.swift in Sources */,
+				AFE59C072553B53E00A18003 /* ActivityIndicatorPresenter.swift in Sources */,
 				AF6CBD9A254D40A0000B2AA7 /* UserViewController.swift in Sources */,
 				AF6CBD6F254D405C000B2AA7 /* SuggestViewModel.swift in Sources */,
 				AF6CBD8B254D408C000B2AA7 /* LikeViewController.swift in Sources */,
@@ -1005,6 +1040,7 @@
 				AF31140B25501C000005F6E7 /* PageBarItem.swift in Sources */,
 				AFE5BD442552460500C0F390 /* BmartListViewController.swift in Sources */,
 				AFE59BE42552F49500A18003 /* QrcodeViewController.swift in Sources */,
+				AFE59C0C2553B5B800A18003 /* UIApplication+Extension.swift in Sources */,
 				AFE11D7A254AA21C003EB6E5 /* UIViewController+Chainable.swift in Sources */,
 				AF3114052550190C0005F6E7 /* UITabBar+Chainable.swift in Sources */,
 				AF31141D2550288E0005F6E7 /* PageBar.swift in Sources */,
@@ -1109,6 +1145,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1171,6 +1208,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1380,6 +1418,14 @@
 				minimumVersion = 14.0.0;
 			};
 		};
+		AFE59BEE255397D400A18003 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1417,6 +1463,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AFE11D34254A92DB003EB6E5 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		AFE59BEF255397D400A18003 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFE59BEE255397D400A18003 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

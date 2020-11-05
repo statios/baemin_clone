@@ -12,24 +12,23 @@ class SplashViewController: BaseViewController {
   @Injected var viewModel: SplashViewModel
   @Injected var navigator: SplashNavigator
   
-  var midLogoImageView: BaseImageView!
-  var bottomLogoImageView: BaseImageView!
+  var midLogoImageView = BaseImageView()
+  var bottomLogoImageView = BaseImageView()
 }
 
 extension SplashViewController {
   override func setupUI() {
     super.setupUI()
-    midLogoImageView = BaseImageView()
-      .asChainable()
+    midLogoImageView.asChainable()
       .background(color: Color.empty)
       .add(to: view)
       .makeConstraints { make in
         make.center.equalToSuperview()
         make.width.equalTo(160)
         make.height.equalTo(72)
-      }.origin
-    bottomLogoImageView = BaseImageView()
-      .asChainable()
+      }
+    
+    bottomLogoImageView.asChainable()
       .background(color: Color.empty)
       .add(to: view)
       .makeConstraints { make in
@@ -37,7 +36,7 @@ extension SplashViewController {
         make.bottom.equalToSuperview().offset(-Padding.large)
         make.width.equalTo(128)
         make.height.equalTo(64)
-      }.origin
+      }
   }
 }
 

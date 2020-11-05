@@ -21,6 +21,7 @@ struct BaeminService {
     indicator: Bool = false)
   -> Single<BaeminResponse<T>> {
     return provider.request(router, indicator: indicator)
+      .showIndicator(indicator)
       .map(BaeminResponse<T>.self)
   }
   

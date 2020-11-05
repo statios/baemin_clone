@@ -54,5 +54,16 @@ extension Chain where Origin: UIView {
     return self
   }
 
+  @discardableResult
+  func clipToBounds(_ by: Bool) -> Chain {
+    self.origin.clipsToBounds = by
+    return self
+  }
+  
+  @discardableResult
+  func contentMode(_ by: UIView.ContentMode) -> Chain {
+    self.origin.contentMode = by
+    return self
+  }
 }
 

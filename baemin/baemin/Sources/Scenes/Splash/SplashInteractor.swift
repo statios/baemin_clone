@@ -17,6 +17,7 @@ class SplashInteractor: SplashInteractable {
   @Injected var baeminService: BaeminService
   
   func requestHome() -> Single<BaeminResponse<Splash>> {
-    return baeminService.request(to: .splash, type: Splash.self)
+    Log.verbose("requestHome")
+    return baeminService.request(to: .splash, type: Splash.self, indicator: true)
   }
 }

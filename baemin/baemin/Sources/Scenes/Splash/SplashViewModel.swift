@@ -38,7 +38,7 @@ extension SplashViewModel {
   func requestHome(trigger: Observable<Void>) -> Observable<BaeminResponse<Splash>> {
     trigger
       .compactMap { [weak self] in self?.splashInteractor }
-      .flatMapLatest { $0.requestHome() }
+      .flatMap { $0.requestHome() }
       .share()
   }
 }
