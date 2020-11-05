@@ -11,15 +11,16 @@ import RxCocoa
 class ListViewModel: ViewModel {
   @Injected var mainInteractor: MainInteractable
   @Injected var listInteractor: ListInteractable
-}
-
-extension ListViewModel {
+  
   struct Event {
+    let tapRefresh: Observable<Void>
   }
   
   struct State {
   }
-  
+}
+
+extension ListViewModel {
   func reduce(event: Event) -> State {
     return State()
   }

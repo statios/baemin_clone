@@ -19,5 +19,7 @@ struct Image {
     static let back24 = UIImage(named: "back24")
     static let close24 = UIImage(named: "close24")
     static let refresh24 = UIImage(named: "refresh24")
+    static let flashOn24 = UIImage(named: "flashOn24")
+    static let flashOff24 = UIImage(named: "flashOff24")
   }
 }

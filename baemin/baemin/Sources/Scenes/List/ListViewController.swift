@@ -33,7 +33,9 @@ extension ListViewController {
 extension ListViewController {
   override func setupBinding() {
     super.setupBinding()
-    let event = ListViewModel.Event()
+    let event = ListViewModel.Event(
+      tapRefresh: refreshButton.rx.tap.void()
+    )
     let state = viewModel.reduce(event: event)
   }
 }

@@ -9,26 +9,53 @@ import UIKit
 import RxSwift
 
 class QrcodeViewController: BaseViewController {
-  
   @Injected var viewModel: QrcodeViewModel
   @Injected var navigator: HomeNavigator
   
+  let closeButton = UIButton()
+  let flashButton = UIButton()
 }
 
 extension QrcodeViewController {
   override func setupUI() {
     super.setupUI()
+    
     self.asChainable()
       .title(Text.qrcodeOrder)
-    view.backgroundColor = .systemPink
+    
+    view.asChainable()
+      .background(color: .systemPink)
+    
+    closeButton.asChainable()
+      .image(Image.Icon.close24, for: .normal)
+      .addBarButtonItem(self, position: .left)
+    
+    flashButton.asChainable()
+      .addBarButtonItem(self, position: .right)
   }
 }
 
 extension QrcodeViewController {
   override func setupBinding() {
     super.setupBinding()
-    let event = QrcodeViewModel.Event()
+    let event = QrcodeViewModel.Event(
+      tapFlash: flashButton.rx.tap.void(),
+      tapClose: closeButton.rx.tap.void()
+    )
     let state = viewModel.reduce(event: event)
+    
+    state.flash
+      .drive(onNext: { [weak self] in
+        self?.flashButton.setImage(
+          $0 ? Image.Icon.flashOn24
+             : Image.Icon.flashOff24,
+          for: .normal)
+      }).disposed(by: disposeBag)
+    
+    state.popToHome
+      .drive(onNext: { [weak self] in
+        self?.navigator.popToHomeFromQrcode()
+      }).disposed(by: disposeBag)
   }
 }
 
