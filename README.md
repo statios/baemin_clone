@@ -1,2 +1,9 @@
 # baemin_clone
-배달의민족_클론
+
+Xcode 12.1
+Swift 5.2
+
+Lottie
+Moya
+RxSwift
+SnapKit
