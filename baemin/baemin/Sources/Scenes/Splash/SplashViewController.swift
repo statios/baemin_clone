@@ -20,16 +20,18 @@ extension SplashViewController {
   override func setupUI() {
     super.setupUI()
     midLogoImageView.asChainable()
-      .background(color: Color.empty)
+      .image(Image.Illust.splashLogo)
+      .contentMode(.scaleAspectFit)
       .add(to: view)
       .makeConstraints { make in
         make.center.equalToSuperview()
-        make.width.equalTo(160)
-        make.height.equalTo(72)
+        make.width.equalTo(220)
+        make.height.equalTo(120)
       }
     
     bottomLogoImageView.asChainable()
-      .background(color: Color.empty)
+      .image(Image.Illust.splashLogoBottom)
+      .contentMode(.scaleAspectFit)
       .add(to: view)
       .makeConstraints { make in
         make.centerX.equalToSuperview()

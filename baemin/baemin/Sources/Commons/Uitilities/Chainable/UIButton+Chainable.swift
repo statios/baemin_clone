@@ -32,7 +32,9 @@ extension Chain where Origin: UIButton {
   }
 }
 
-enum Direction {
-  case left
-  case right
+enum Direction: Int, Codable {
+  case left = 0
+  case right = 1
+  case top = 2
+  case bottom = 3
 }

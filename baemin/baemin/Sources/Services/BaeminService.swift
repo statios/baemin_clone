@@ -13,7 +13,7 @@ import RxMoya
 
 struct BaeminService {
   
-  let provider = NetworkProvider<BaeminAPI>()
+  private let provider = NetworkProvider<BaeminAPI>()
   
   public func request<T: Codable>(
     to router: BaeminAPI,

@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIApplication {
-  var keyWindow: UIWindow? {
-    return self.windows.first { $0.isKeyWindow }
+  var window: UIWindow? {
+    return self.windows.first
   }
 }

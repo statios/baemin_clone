@@ -21,10 +21,10 @@ class MainNavigator: BaseNavigator {
 extension MainNavigator {
   private func build() {
     Dependencies {
+      Dependency { HomeInteractor() }
       Dependency { HomeNavigator() }
       Dependency { HomeViewController() }
       Dependency { HomeViewModel() }
-      Dependency { HomeInteractor() }
       Dependency { SuggestNavigator() }
       Dependency { SuggestViewController() }
       Dependency { SuggestViewModel() }

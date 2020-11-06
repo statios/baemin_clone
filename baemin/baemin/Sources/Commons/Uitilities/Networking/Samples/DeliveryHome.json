@@ -1,0 +1,20 @@
+{
+  "code": 0,
+  "message": "",
+  "data": {
+    "topBanners": [
+      {
+        "image": "image url",
+        "page": "http://google.com",
+      },
+      {
+        "image": "image url",
+        "page": "http://google.com",
+      },
+      {
+        "image": "image url",
+        "page": "http://google.com",
+      },
+    ]
+  }
+}

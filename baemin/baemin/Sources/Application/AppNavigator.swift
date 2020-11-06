@@ -11,6 +11,7 @@ class AppNavigator {
   static let shared = AppNavigator()
   
   @Injected var splashViewController: SplashViewController
+  let indicator = ActivityIndicatorPrsenter()
   
   private func build() {
     Dependencies {
@@ -19,7 +20,7 @@ class AppNavigator {
       Dependency { SplashNavigator() }
       Dependency { SplashViewModel() }
       Dependency { SplashViewController() }
-    }.build()
+    }.add()
   }
   
   func presentSplashScene(target: UIWindow?) {

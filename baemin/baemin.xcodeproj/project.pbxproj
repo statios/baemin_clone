@@ -61,6 +61,9 @@
 		AF6CBE2C254FC164000B2AA7 /* VisitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */; };
 		AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */; };
 		AF8041DC2550DF0E0050E35D /* HomePageBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */; };
+		AF8D5F4C255534C800B15B67 /* DeliveryHome.json in Resources */ = {isa = PBXBuildFile; fileRef = AF8D5F4B255534C800B15B67 /* DeliveryHome.json */; };
+		AF8D5F5D2555408700B15B67 /* UIImageView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */; };
+		AF8D5F652555430E00B15B67 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D5F642555430E00B15B67 /* Banner.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Images.xcassets */; };
@@ -96,7 +99,7 @@
 		AFE11E15254AB880003EB6E5 /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E14254AB880003EB6E5 /* RxSwift.swift */; };
 		AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E1A254AB93B003EB6E5 /* BaeminAPI.swift */; };
 		AFE11E28254ABE14003EB6E5 /* BaeminResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E27254ABE14003EB6E5 /* BaeminResponse.swift */; };
-		AFE11E35254AC206003EB6E5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E34254AC206003EB6E5 /* Home.swift */; };
+		AFE11E35254AC206003EB6E5 /* DeliveryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E34254AC206003EB6E5 /* DeliveryHome.swift */; };
 		AFE11E40254AC6F5003EB6E5 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE11E3F254AC6F5003EB6E5 /* Splash.json */; };
 		AFE11E50254AC915003EB6E5 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E4F254AC915003EB6E5 /* Splash.swift */; };
 		AFE59BE42552F49500A18003 /* QrcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE59BE32552F49500A18003 /* QrcodeViewController.swift */; };
@@ -198,6 +201,9 @@
 		AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewModel.swift; sourceTree = "<group>"; };
 		AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageBarItem.swift; sourceTree = "<group>"; };
+		AF8D5F4B255534C800B15B67 /* DeliveryHome.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeliveryHome.json; sourceTree = "<group>"; };
+		AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Chainable.swift"; sourceTree = "<group>"; };
+		AF8D5F642555430E00B15B67 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -232,7 +238,7 @@
 		AFE11E14254AB880003EB6E5 /* RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift.swift; sourceTree = "<group>"; };
 		AFE11E1A254AB93B003EB6E5 /* BaeminAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminAPI.swift; sourceTree = "<group>"; };
 		AFE11E27254ABE14003EB6E5 /* BaeminResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminResponse.swift; sourceTree = "<group>"; };
-		AFE11E34254AC206003EB6E5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		AFE11E34254AC206003EB6E5 /* DeliveryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHome.swift; sourceTree = "<group>"; };
 		AFE11E3F254AC6F5003EB6E5 /* Splash.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		AFE11E4F254AC915003EB6E5 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		AFE59BE32552F49500A18003 /* QrcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeViewController.swift; sourceTree = "<group>"; };
@@ -345,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE11E3F254AC6F5003EB6E5 /* Splash.json */,
+				AF8D5F4B255534C800B15B67 /* DeliveryHome.json */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -579,6 +586,7 @@
 				AF3114042550190C0005F6E7 /* UITabBar+Chainable.swift */,
 				AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */,
 				AF19454725516530004AE30A /* UIButton+Chainable.swift */,
+				AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */,
 			);
 			path = Chainable;
 			sourceTree = "<group>";
@@ -719,7 +727,8 @@
 			children = (
 				AFE11E27254ABE14003EB6E5 /* BaeminResponse.swift */,
 				AFE11E4F254AC915003EB6E5 /* Splash.swift */,
-				AFE11E34254AC206003EB6E5 /* Home.swift */,
+				AF8D5F642555430E00B15B67 /* Banner.swift */,
+				AFE11E34254AC206003EB6E5 /* DeliveryHome.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -926,6 +935,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFE59C122553B76200A18003 /* loading_indicator.json in Resources */,
+				AF8D5F4C255534C800B15B67 /* DeliveryHome.json in Resources */,
 				AF6CBE03254F9BBA000B2AA7 /* Localizable.strings in Resources */,
 				AFE11CE4254A8F39003EB6E5 /* LaunchScreen.storyboard in Resources */,
 				AF6CBD44254D3DB9000B2AA7 /* Colors.xcassets in Resources */,
@@ -974,7 +984,7 @@
 				AFE59BF82553987400A18003 /* LottieAnimationView.swift in Sources */,
 				AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */,
 				AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */,
-				AFE11E35254AC206003EB6E5 /* Home.swift in Sources */,
+				AFE11E35254AC206003EB6E5 /* DeliveryHome.swift in Sources */,
 				AFE5BD492552460E00C0F390 /* BmartListViewModel.swift in Sources */,
 				AF6CBDCB254EC010000B2AA7 /* BaseNavigationController.swift in Sources */,
 				AFE11DD1254AA5CC003EB6E5 /* BaseNavigator.swift in Sources */,
@@ -1006,6 +1016,7 @@
 				AF6CBD6A254D4056000B2AA7 /* SuggestViewController.swift in Sources */,
 				AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */,
 				AF6CBE22254FC151000B2AA7 /* DeliveryViewModel.swift in Sources */,
+				AF8D5F652555430E00B15B67 /* Banner.swift in Sources */,
 				AFE11DBF254AA49C003EB6E5 /* Dependency.swift in Sources */,
 				AF6CBE0D254F9D0A000B2AA7 /* String.swift in Sources */,
 				AF6CBE27254FC15B000B2AA7 /* VisitViewController.swift in Sources */,
@@ -1027,6 +1038,7 @@
 				AFE11E28254ABE14003EB6E5 /* BaeminResponse.swift in Sources */,
 				AF31141825501D180005F6E7 /* UIStackView+Chainable.swift in Sources */,
 				AF6CBDC6254D441B000B2AA7 /* UserInteractor.swift in Sources */,
+				AF8D5F5D2555408700B15B67 /* UIImageView+Chainable.swift in Sources */,
 				AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */,
 				AF6CBCCF254B2701000B2AA7 /* MainNavigator.swift in Sources */,
 				AFE5BD102552400600C0F390 /* DirectViewModel.swift in Sources */,

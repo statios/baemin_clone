@@ -28,8 +28,8 @@ final class ActivityIndicatorPrsenter {
     guard indicatorState != .shown else {
       return
     }
-    UIApplication.shared.keyWindow?.isUserInteractionEnabled = false
-    UIApplication.shared.keyWindow?.addSubview(animationView)
+    UIApplication.shared.window?.isUserInteractionEnabled = false
+    UIApplication.shared.window?.addSubview(animationView)
     indicatorState = .shown
     animationView.playAnimation()
     animationView.snp.makeConstraints { (make) in
@@ -42,7 +42,7 @@ final class ActivityIndicatorPrsenter {
     guard indicatorState != .hidden else {
       return
     }
-    UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
+    UIApplication.shared.window?.isUserInteractionEnabled = true
     indicatorState = .hidden
     animationView.stopAnimation()
     animationView.removeFromSuperview()

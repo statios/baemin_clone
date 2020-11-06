@@ -19,7 +19,6 @@ extension SplashNavigator {
       Dependency { MainViewController() }
       Dependency { MainViewModel() }
       Dependency { MainInteractor() }
-      Dependency { BaeminService() }
     }.add()
   }
   func presentMainScene(target: UIViewController?) {

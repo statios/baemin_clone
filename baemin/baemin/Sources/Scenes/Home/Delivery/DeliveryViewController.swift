@@ -15,15 +15,25 @@ class DeliveryViewController: BaseViewController {
 extension DeliveryViewController {
   override func setupUI() {
     super.setupUI()
-    view.backgroundColor = .red
   }
 }
 
 extension DeliveryViewController {
   override func setupBinding() {
     super.setupBinding()
-    let event = DeliveryViewModel.Event()
+    let event = DeliveryViewModel.Event(
+      onAppear: rx.viewWillAppear.void()
+    )
     let state = viewModel.reduce(event: event)
+    state.topBanners
+      .debug()
+      .drive()
+      .disposed(by: disposeBag)
+    
+    state.errorMessage
+      .drive(onNext: { _ in
+        //do error feedback
+      }).disposed(by: disposeBag)
   }
 }
 

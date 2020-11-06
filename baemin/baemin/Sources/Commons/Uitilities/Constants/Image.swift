@@ -22,4 +22,8 @@ struct Image {
     static let flashOn24 = UIImage(named: "flashOn24")
     static let flashOff24 = UIImage(named: "flashOff24")
   }
+  struct Illust {
+    static let splashLogo = UIImage(named: "splash_logo")
+    static let splashLogoBottom = UIImage(named: "splash_logo_bottom")
+  }
 }
