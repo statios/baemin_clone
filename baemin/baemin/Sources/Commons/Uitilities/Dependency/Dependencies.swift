@@ -66,6 +66,7 @@ class Dependencies {
   
   func resolve<T>() -> T {
     guard let dependency = dependencies.first(where: { $0.value is T })?.value as? T else {
+      Log.error(T.self)
       fatalError("Can't resolve \(T.self)")
     }
     return dependency
