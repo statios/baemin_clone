@@ -33,4 +33,13 @@ extension MainTabBarItem {
     case .user: return Image.Icon.user
     }
   }
+  var viewController: UIViewController {
+    switch self {
+    case .home: return HomeViewController()
+    case .suggest: return SuggestViewController()
+    case .like: return LikeViewController()
+    case .list: return ListViewController()
+    case .user: return UserViewController()
+    }
+  }
 }

@@ -11,7 +11,6 @@ import Resolver
 import UIKit
 
 class HomeNavigator: BaseNavigator {
-
   
   func setPageViewControllers(target: HomeViewController) {
     Resolver.registerDeliveryScene()
@@ -29,17 +28,9 @@ class HomeNavigator: BaseNavigator {
     target?.navigationController?.pushViewController(AlarmViewController(), animated: true)
   }
   
-  func popToHomeFromAlarm(target: UIViewController?) {
-    target?.navigationController?.popViewController(animated: true)
-  }
-  
   func pushToQrcodeScene(target: UIViewController?) {
     Resolver.registerQrcodeScene()
     target?.navigationController?.pushViewController(QrcodeViewController(), animated: true)
-  }
-//  
-  func popToHomeFromQrcode(target: UIViewController?) {
-    target?.navigationController?.popViewController(animated: true)
   }
 }
 

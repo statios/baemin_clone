@@ -24,7 +24,7 @@ class DeliveryViewModel: ViewModel {
 
 extension DeliveryViewModel {
   func reduce(event: Event) -> State {
-    let deliveryHomeRequest = requestDeliveryHome(trigger: event.onAppear)
+    let deliveryHomeRequest = requestDeliveryHome(trigger: event.onAppear.take(1))
     let deliveryHomeResponse = deliveryHomeRequest.filter { $0.isSuccess }.compactMap { $0.data }
     let deliveryHomeFailure = deliveryHomeRequest.filter { !$0.isSuccess }.compactMap { $0.message }
     let topBanners = deliveryHomeResponse.map { $0.topBanners }.filter { !$0.isEmpty }

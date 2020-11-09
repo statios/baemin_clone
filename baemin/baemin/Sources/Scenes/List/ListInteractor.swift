@@ -13,7 +13,7 @@ protocol ListInteractable {
   var baeminService: BaeminService { get set }
 }
 
-final class ListInteractor {
+final class ListInteractor: ListInteractable {
   @Injected var baeminService: BaeminService
 }
 

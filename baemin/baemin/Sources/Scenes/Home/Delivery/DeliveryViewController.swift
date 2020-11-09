@@ -27,7 +27,6 @@ extension DeliveryViewController {
     )
     let state = viewModel.reduce(event: event)
     state.topBanners
-      .debug()
       .drive()
       .disposed(by: disposeBag)
     

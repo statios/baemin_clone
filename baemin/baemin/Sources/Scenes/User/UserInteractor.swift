@@ -13,6 +13,6 @@ protocol UserInteractable {
   var baeminService: BaeminService { get set }
 }
 
-final class UserInteractor {
+final class UserInteractor: UserInteractable {
   @Injected var baeminService: BaeminService
 }

@@ -7,15 +7,24 @@
 import Resolver
 
 class ListNavigator: BaseNavigator {
-  @Injected var deliveryListViewController: DeliveryListViewController
-  @Injected var bmartListViewController: BmartListViewController
+}
+
+extension Resolver {
+  fileprivate static func registerDeliveryListScene() {
+    register { DeliveryListViewModel() }
+  }
+  fileprivate static func registerBmartListScene() {
+    register { BmartListViewModel() }
+  }
 }
 
 extension ListNavigator {
   
   func setPageViewControllers(target: ListViewController) {
+    Resolver.registerDeliveryListScene()
+    Resolver.registerBmartListScene()
     let listPageBarItems = ListPageBarItem.allCases
-    let viewControllers = [deliveryListViewController, bmartListViewController]
+    let viewControllers = [DeliveryListViewController(), BmartListViewController()]
     viewControllers.enumerated().forEach { (offset, viewController) in
       viewController.title = listPageBarItems[offset].title
     }

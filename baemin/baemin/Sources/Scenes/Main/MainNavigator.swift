@@ -22,18 +22,62 @@ extension Resolver {
     register { HomeNavigator() }
       .scope(application)
   }
+  fileprivate static func registerSuggestScene() {
+    register { SuggestInteractor() }
+      .implements(SuggestInteractable.self)
+      .scope(application)
+    register { SuggestViewModel() }
+      .scope(application)
+    register { SuggestNavigator() }
+      .scope(application)
+  }
+  fileprivate static func registerLikeScene() {
+    register { LikeInteractor() }
+      .implements(LikeInteractable.self)
+      .scope(application)
+    register { LikeViewModel() }
+      .scope(application)
+    register { LikeNavigator() }
+      .scope(application)
+  }
+  fileprivate static func registerListScene() {
+    register { ListInteractor() }
+      .implements(ListInteractable.self)
+      .scope(application)
+    register { ListViewModel() }
+      .scope(application)
+    register { ListNavigator() }
+      .scope(application)
+  }
+  fileprivate static func registerUserScene() {
+    register { UserInteractor() }
+      .implements(UserInteractable.self)
+      .scope(application)
+    register { UserViewModel() }
+      .scope(application)
+    register { UserNavigator() }
+      .scope(application)
+  }
 }
 
 extension MainNavigator {
   func setViewController(target: MainViewController) {
     Resolver.registerHomeScene()
+    Resolver.registerSuggestScene()
+    Resolver.registerLikeScene()
+    Resolver.registerListScene()
+    Resolver.registerUserScene()
     let mainTabBarItmes = MainTabBarItem.allCases
     let homeViewController = HomeViewController()
-    let navigationControllers = [homeViewController]//,
-//                                 suggestViewController,
-//                                 likeViewController,
-//                                 listViewController,
-//                                 userViewController]
+    let suggestViewController = SuggestViewController()
+    let likeViewController = LikeViewController()
+    let listViewController = ListViewController()
+    let userViewController = UserViewController()
+    let navigationControllers = [homeViewController,
+                                 suggestViewController,
+                                 likeViewController,
+                                 listViewController,
+                                 userViewController]
       .enumerated().map { (offset, viewController) -> BaseNavigationController in
         let navigationController = BaseNavigationController(rootViewController: viewController)
         viewController.title = mainTabBarItmes[offset].title
@@ -41,8 +85,8 @@ extension MainNavigator {
         return navigationController
       }
     homeViewController.navigator.setPageViewControllers(target: homeViewController)
-//    likeNavigator.setPageViewControllers(target: likeViewController)
-//    listNavigator.setPageViewControllers(target: listViewController)
+    likeViewController.navigator.setPageViewControllers(target: likeViewController)
+    listViewController.navigator.setPageViewControllers(target: listViewController)
     target.setViewControllers(navigationControllers, animated: true)
   }
 }

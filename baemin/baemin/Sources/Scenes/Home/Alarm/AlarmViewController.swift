@@ -38,7 +38,7 @@ extension AlarmViewController {
     
     state.popToHome
       .drive(onNext: { [weak self] in
-        self?.navigator.popToHomeFromAlarm(target: self)
+        self?.navigationController?.popViewController(animated: true)
       }).disposed(by: disposeBag)
   }
 }

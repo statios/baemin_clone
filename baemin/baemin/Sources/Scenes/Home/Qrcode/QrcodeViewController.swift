@@ -55,7 +55,7 @@ extension QrcodeViewController {
     
     state.popToHome
       .drive(onNext: { [weak self] in
-        self?.navigator.popToHomeFromQrcode(target: self)
+        self?.navigationController?.popViewController(animated: true)
       }).disposed(by: disposeBag)
   }
 }

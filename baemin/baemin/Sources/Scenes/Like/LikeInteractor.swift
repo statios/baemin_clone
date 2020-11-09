@@ -13,7 +13,7 @@ protocol LikeInteractable {
   var baeminService: BaeminService { get set }
 }
 
-final class LikeInteractor {
+final class LikeInteractor: LikeInteractable {
   @Injected var baeminService: BaeminService
 }
 
