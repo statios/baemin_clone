@@ -6,27 +6,31 @@
 //
 
 import UIKit
+import Resolver
 
 class SplashNavigator: BaseNavigator {
-  @Injected var mainNavigator: MainNavigator
-  @Injected var mainViewController: MainViewController
+}
+
+extension Resolver {
+  fileprivate static func registerMainScene() {
+    register { MainInteractor() }
+      .implements(MainInteractable.self)
+      .scope(application)
+    register { MainViewModel() }
+      .scope(application)
+    register { MainNavigator() }
+      .scope(application)
+  }
 }
 
 extension SplashNavigator {
-  private func build() {
-    Dependencies {
-      Dependency { MainNavigator() }
-      Dependency { MainViewController() }
-      Dependency { MainViewModel() }
-      Dependency { MainInteractor() }
-    }.add()
-  }
   func presentMainScene(target: UIViewController?) {
-    build()
-    mainViewController.modalTransitionStyle = .crossDissolve
-    mainViewController.modalPresentationStyle = .overFullScreen
-    mainNavigator.setViewController(target: mainViewController)
-    target?.present(mainViewController, animated: true)
+    Resolver.registerMainScene()
+    let viewController = MainViewController()
+    viewController.modalTransitionStyle = .crossDissolve
+    viewController.modalPresentationStyle = .overFullScreen
+    viewController.navigator.setViewController(target: viewController)
+    target?.present(viewController, animated: true)
   }
 }
 

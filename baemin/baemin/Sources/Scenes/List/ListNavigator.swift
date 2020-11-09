@@ -4,6 +4,7 @@
 //
 //  Created by Stat.So on 2020/10/31.
 //
+import Resolver
 
 class ListNavigator: BaseNavigator {
   @Injected var deliveryListViewController: DeliveryListViewController
@@ -11,16 +12,8 @@ class ListNavigator: BaseNavigator {
 }
 
 extension ListNavigator {
-  private func build() {
-    Dependencies {
-      Dependency{ DeliveryListViewController() }
-      Dependency{ DeliveryListViewModel() }
-      Dependency{ BmartListViewController() }
-      Dependency{ BmartListViewModel() }
-    }.add()
-  }
+  
   func setPageViewControllers(target: ListViewController) {
-    build()
     let listPageBarItems = ListPageBarItem.allCases
     let viewControllers = [deliveryListViewController, bmartListViewController]
     viewControllers.enumerated().forEach { (offset, viewController) in

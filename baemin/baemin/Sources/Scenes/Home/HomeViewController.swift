@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class HomeViewController: BasePageViewController {
   @Injected var viewModel: HomeViewModel
@@ -46,12 +47,12 @@ extension HomeViewController {
     
     state.pushToAlarm
       .drive(onNext: { [weak self] in
-        self?.navigator.pushToAlarmScene()
+        self?.navigator.pushToAlarmScene(target: self)
       }).disposed(by: disposeBag)
     
     state.pushToQrcode
       .drive(onNext: { [weak self] in
-        self?.navigator.pushToQrcodeScene()
+        self?.navigator.pushToQrcodeScene(target: self)
       }).disposed(by: disposeBag)
   }
 }

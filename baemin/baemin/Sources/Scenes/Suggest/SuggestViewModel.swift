@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import Resolver
 
 class SuggestViewModel: ViewModel {
   @Injected var mainInteractor: MainInteractable

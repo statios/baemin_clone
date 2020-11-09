@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import Resolver
 
 class VisitViewModel: ViewModel {
   @Injected var homeInteractor: HomeInteractable

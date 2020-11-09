@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class SuggestViewController: BaseViewController {
   @Injected var viewModel: SuggestViewModel

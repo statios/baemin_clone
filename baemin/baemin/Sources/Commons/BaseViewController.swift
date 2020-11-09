@@ -22,6 +22,7 @@ class BaseViewController: UIViewController {
   
   init() {
     super.init(nibName: nil, bundle: nil)
+    Log.verbose("INIT: \(self.className)")
     initialize()
   }
   

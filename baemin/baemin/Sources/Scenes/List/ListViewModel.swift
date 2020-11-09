@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import Resolver
 
 class ListViewModel: ViewModel {
   @Injected var mainInteractor: MainInteractable

@@ -5,6 +5,8 @@
 //  Created by Stat.So on 2020/10/31.
 //
 
+import Resolver
+
 class LikeNavigator: BaseNavigator {
   @Injected var storeViewController: StoreViewController
   @Injected var directViewController: DirectViewController
@@ -12,18 +14,7 @@ class LikeNavigator: BaseNavigator {
 }
 
 extension LikeNavigator {
-  private func build() {
-    Dependencies {
-      Dependency { StoreViewController() }
-      Dependency { StoreViewModel() }
-      Dependency { DirectViewController() }
-      Dependency { DirectViewModel() }
-      Dependency { PhoneViewController() }
-      Dependency { PhoneViewModel() }
-    }.add()
-  }
   func setPageViewControllers(target: LikeViewController) {
-    build()
     let likePageBarItems = LikePageBarItem.allCases
     let viewControllers = [storeViewController, directViewController, phoneViewController]
     viewControllers.enumerated().forEach { (offset, viewController) in

@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class VisitViewController: BaseViewController {
   

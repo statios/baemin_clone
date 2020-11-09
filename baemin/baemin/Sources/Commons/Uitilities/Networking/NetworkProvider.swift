@@ -45,11 +45,11 @@ extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
     return self
       .observeOn(MainScheduler.asyncInstance)
       .do(onSuccess: { _ in
-        AppNavigator.shared.indicator.hide()
+        //TODO
       }, onError: { _ in
-        AppNavigator.shared.indicator.hide()
+        //TODO
       }, onSubscribe: {
-        AppNavigator.shared.indicator.show()
+        //TODO
       })
   }
 }

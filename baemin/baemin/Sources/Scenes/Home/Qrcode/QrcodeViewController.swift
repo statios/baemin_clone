@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class QrcodeViewController: BaseViewController {
   @Injected var viewModel: QrcodeViewModel
@@ -54,7 +55,7 @@ extension QrcodeViewController {
     
     state.popToHome
       .drive(onNext: { [weak self] in
-        self?.navigator.popToHomeFromQrcode()
+        self?.navigator.popToHomeFromQrcode(target: self)
       }).disposed(by: disposeBag)
   }
 }

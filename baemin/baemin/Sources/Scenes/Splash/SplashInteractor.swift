@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import Resolver
 
 protocol SplashInteractable {
   var baeminService: BaeminService { get set }

@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class DeliveryViewController: BaseViewController {
   @Injected var viewModel: DeliveryViewModel

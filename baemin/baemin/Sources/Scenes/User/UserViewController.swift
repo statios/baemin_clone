@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class UserViewController: BaseViewController {
   @Injected var viewModel: UserViewModel

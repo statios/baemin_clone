@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class SplashViewController: BaseViewController {
   @Injected var viewModel: SplashViewModel

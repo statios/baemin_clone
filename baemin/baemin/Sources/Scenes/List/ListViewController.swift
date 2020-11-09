@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class ListViewController: BasePageViewController {
   @Injected var viewModel: ListViewModel

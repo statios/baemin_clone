@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Resolver
 
 class AlarmViewController: BaseViewController {
   @Injected var viewModel: AlarmViewModel
@@ -37,7 +38,7 @@ extension AlarmViewController {
     
     state.popToHome
       .drive(onNext: { [weak self] in
-        self?.navigator.popToHomeFromAlarm()
+        self?.navigator.popToHomeFromAlarm(target: self)
       }).disposed(by: disposeBag)
   }
 }

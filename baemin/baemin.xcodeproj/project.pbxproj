@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF05CF292559434800113C2E /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = AF05CF282559434800113C2E /* Resolver */; };
+		AF05CF37255945B700113C2E /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05CF36255945B700113C2E /* AppDelegate+Injection.swift */; };
 		AF19453E25512927004AE30A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19453D25512927004AE30A /* BaseView.swift */; };
 		AF19454325516217004AE30A /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19454225516217004AE30A /* BaseButton.swift */; };
 		AF19454825516530004AE30A /* UIButton+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19454725516530004AE30A /* UIButton+Chainable.swift */; };
@@ -50,7 +52,6 @@
 		AF6CBDCB254EC010000B2AA7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDCA254EC010000B2AA7 /* BaseNavigationController.swift */; };
 		AF6CBDD0254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */; };
 		AF6CBDD5254EEAC8000B2AA7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDD4254EEAC8000B2AA7 /* Image.swift */; };
-		AF6CBDDF254F012E000B2AA7 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */; };
 		AF6CBDEA254F2177000B2AA7 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBDE9254F2177000B2AA7 /* MainTabBarItem.swift */; };
 		AF6CBE03254F9BBA000B2AA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF6CBE05254F9BBA000B2AA7 /* Localizable.strings */; };
 		AF6CBE0D254F9D0A000B2AA7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE0C254F9D0A000B2AA7 /* String.swift */; };
@@ -88,10 +89,7 @@
 		AFE11D96254AA2F1003EB6E5 /* Rx+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D95254AA2F1003EB6E5 /* Rx+UIViewController.swift */; };
 		AFE11D9B254AA2F7003EB6E5 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D9A254AA2F7003EB6E5 /* Thread.swift */; };
 		AFE11DB0254AA370003EB6E5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DAF254AA370003EB6E5 /* Keyboard.swift */; };
-		AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DB9254AA498003EB6E5 /* Dependencies.swift */; };
-		AFE11DBF254AA49C003EB6E5 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DBE254AA49C003EB6E5 /* Dependency.swift */; };
 		AFE11DC4254AA4CB003EB6E5 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DC3254AA4CB003EB6E5 /* UserDefault.swift */; };
-		AFE11DC9254AA4DD003EB6E5 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DC8254AA4DD003EB6E5 /* Injected.swift */; };
 		AFE11DD1254AA5CC003EB6E5 /* BaseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DD0254AA5CC003EB6E5 /* BaseNavigator.swift */; };
 		AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */; };
 		AFE11DF0254AAA51003EB6E5 /* SplashNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11DEF254AAA51003EB6E5 /* SplashNavigator.swift */; };
@@ -145,6 +143,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF05CF36255945B700113C2E /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		AF19453D25512927004AE30A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AF19454225516217004AE30A /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		AF19454725516530004AE30A /* UIButton+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Chainable.swift"; sourceTree = "<group>"; };
@@ -188,7 +187,6 @@
 		AF6CBDCA254EC010000B2AA7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Chainable.swift"; sourceTree = "<group>"; };
 		AF6CBDD4254EEAC8000B2AA7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		AF6CBDE9254F2177000B2AA7 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		AF6CBDF6254F9B37000B2AA7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AF6CBE0A254F9C2D000B2AA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -227,10 +225,7 @@
 		AFE11D95254AA2F1003EB6E5 /* Rx+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+UIViewController.swift"; sourceTree = "<group>"; };
 		AFE11D9A254AA2F7003EB6E5 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		AFE11DAF254AA370003EB6E5 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
-		AFE11DB9254AA498003EB6E5 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
-		AFE11DBE254AA49C003EB6E5 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		AFE11DC3254AA4CB003EB6E5 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		AFE11DC8254AA4DD003EB6E5 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		AFE11DD0254AA5CC003EB6E5 /* BaseNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigator.swift; sourceTree = "<group>"; };
 		AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		AFE11DEF254AAA51003EB6E5 /* SplashNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashNavigator.swift; sourceTree = "<group>"; };
@@ -275,6 +270,7 @@
 				AFE11D30254A925F003EB6E5 /* SnapKit in Frameworks */,
 				AFE11D26254A9220003EB6E5 /* RxRelay in Frameworks */,
 				AFE11D22254A9220003EB6E5 /* RxSwift in Frameworks */,
+				AF05CF292559434800113C2E /* Resolver in Frameworks */,
 				AFE59BF0255397D400A18003 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,7 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */,
-				AF6CBDDE254F012E000B2AA7 /* AppNavigator.swift */,
+				AF05CF36255945B700113C2E /* AppDelegate+Injection.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -568,7 +564,6 @@
 				AF6CBD17254D2B48000B2AA7 /* Logging */,
 				AF6CBCE2254B27F2000B2AA7 /* Constants */,
 				AFE11D6E254AA1BF003EB6E5 /* Property wrappers */,
-				AFE11DB8254AA45D003EB6E5 /* Dependency */,
 				AFE11D6D254AA1B5003EB6E5 /* Chainable */,
 				AFE11DAE254AA35E003EB6E5 /* Keyboard */,
 			);
@@ -595,7 +590,6 @@
 			isa = PBXGroup;
 			children = (
 				AFE11DC3254AA4CB003EB6E5 /* UserDefault.swift */,
-				AFE11DC8254AA4DD003EB6E5 /* Injected.swift */,
 			);
 			path = "Property wrappers";
 			sourceTree = "<group>";
@@ -662,15 +656,6 @@
 				AFE11DAF254AA370003EB6E5 /* Keyboard.swift */,
 			);
 			path = Keyboard;
-			sourceTree = "<group>";
-		};
-		AFE11DB8254AA45D003EB6E5 /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				AFE11DB9254AA498003EB6E5 /* Dependencies.swift */,
-				AFE11DBE254AA49C003EB6E5 /* Dependency.swift */,
-			);
-			path = Dependency;
 			sourceTree = "<group>";
 		};
 		AFE11DE6254AA814003EB6E5 /* Splash */ = {
@@ -835,6 +820,7 @@
 				AFE11D2F254A925F003EB6E5 /* SnapKit */,
 				AFE11D35254A92DB003EB6E5 /* RxMoya */,
 				AFE59BEF255397D400A18003 /* Lottie */,
+				AF05CF282559434800113C2E /* Resolver */,
 			);
 			productName = baemin;
 			productReference = AFE11CD4254A8F37003EB6E5 /* baemin.app */;
@@ -917,6 +903,7 @@
 				AFE11D2E254A925F003EB6E5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AFE11D34254A92DB003EB6E5 /* XCRemoteSwiftPackageReference "Moya" */,
 				AFE59BEE255397D400A18003 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				AF05CF272559434800113C2E /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = AFE11CD5254A8F37003EB6E5 /* Products */;
 			projectDirPath = "";
@@ -969,7 +956,6 @@
 				AFE11D70254AA1D7003EB6E5 /* Chainable.swift in Sources */,
 				AFE11DD6254AA66C003EB6E5 /* BaseViewModel.swift in Sources */,
 				AF6CBE1D254FC146000B2AA7 /* DeliveryViewController.swift in Sources */,
-				AF6CBDDF254F012E000B2AA7 /* AppNavigator.swift in Sources */,
 				AF6CBCEC254B2825000B2AA7 /* Font.swift in Sources */,
 				AF19454825516530004AE30A /* UIButton+Chainable.swift in Sources */,
 				AF6CBDC1254D4415000B2AA7 /* LikeInteractor.swift in Sources */,
@@ -982,7 +968,6 @@
 				AF6CBE15254F9D26000B2AA7 /* Text.swift in Sources */,
 				AF6CBD9F254D40A6000B2AA7 /* UserViewModel.swift in Sources */,
 				AFE59BF82553987400A18003 /* LottieAnimationView.swift in Sources */,
-				AFE11DBA254AA498003EB6E5 /* Dependencies.swift in Sources */,
 				AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */,
 				AFE11E35254AC206003EB6E5 /* DeliveryHome.swift in Sources */,
 				AFE5BD492552460E00C0F390 /* BmartListViewModel.swift in Sources */,
@@ -994,6 +979,7 @@
 				AFE11E50254AC915003EB6E5 /* Splash.swift in Sources */,
 				AFE11D96254AA2F1003EB6E5 /* Rx+UIViewController.swift in Sources */,
 				AF6CBD50254D4031000B2AA7 /* HomeNavigator.swift in Sources */,
+				AF05CF37255945B700113C2E /* AppDelegate+Injection.swift in Sources */,
 				AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */,
 				AF6CBCFD254D20F7000B2AA7 /* Log.swift in Sources */,
 				AF6CBD7E254D4070000B2AA7 /* ListViewModel.swift in Sources */,
@@ -1017,7 +1003,6 @@
 				AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */,
 				AF6CBE22254FC151000B2AA7 /* DeliveryViewModel.swift in Sources */,
 				AF8D5F652555430E00B15B67 /* Banner.swift in Sources */,
-				AFE11DBF254AA49C003EB6E5 /* Dependency.swift in Sources */,
 				AF6CBE0D254F9D0A000B2AA7 /* String.swift in Sources */,
 				AF6CBE27254FC15B000B2AA7 /* VisitViewController.swift in Sources */,
 				AF6CBD74254D4064000B2AA7 /* ListNavigator.swift in Sources */,
@@ -1047,7 +1032,6 @@
 				AFE11D9B254AA2F7003EB6E5 /* Thread.swift in Sources */,
 				AFE5BD1F255240E600C0F390 /* LikePageBarItem.swift in Sources */,
 				AFE5BD152552400E00C0F390 /* PhoneViewController.swift in Sources */,
-				AFE11DC9254AA4DD003EB6E5 /* Injected.swift in Sources */,
 				AFE5BD692552759900C0F390 /* AlarmViewModel.swift in Sources */,
 				AF31140B25501C000005F6E7 /* PageBarItem.swift in Sources */,
 				AFE5BD442552460500C0F390 /* BmartListViewController.swift in Sources */,
@@ -1406,6 +1390,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AF05CF272559434800113C2E /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
 		AFE11D20254A9220003EB6E5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -1441,6 +1433,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AF05CF282559434800113C2E /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF05CF272559434800113C2E /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
 		AFE11D21254A9220003EB6E5 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AFE11D20254A9220003EB6E5 /* XCRemoteSwiftPackageReference "RxSwift" */;

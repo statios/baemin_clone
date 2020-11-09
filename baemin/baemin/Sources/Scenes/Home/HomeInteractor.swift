@@ -7,13 +7,14 @@
 
 import RxSwift
 import RxCocoa
+import Resolver
 
 protocol HomeInteractable {
   var baeminService: BaeminService { get set }
   func requestDeliveryHome() -> Single<BaeminResponse<DeliveryHome>>
 }
 
-final class HomeInteractor {
+final class HomeInteractor: HomeInteractable {
   @Injected var baeminService: BaeminService
   
   func requestDeliveryHome() -> Single<BaeminResponse<DeliveryHome>> {
