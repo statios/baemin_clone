@@ -16,7 +16,8 @@ class BaeminRefresh: UIRefreshControl {
   let contentOffset = PublishRelay<CGPoint>()
   
   private let pullLabel = UILabel()
-  private let scrollView = UIScrollView()
+  private let pickLabel = UILabel()
+  let menus = ["사과", "바나나", "딸기", "초코", "아이스크림"]
   
   override init() {
     super.init(frame: .zero)
@@ -39,11 +40,18 @@ class BaeminRefresh: UIRefreshControl {
       .font(Font.extraLarge.bold())
       .add(to: self)
       .makeConstraints { (make) in
-        make.leading.equalTo(self.snp.centerX)
+        make.leading.equalTo(self.snp.centerX).offset(Padding.small)
         make.centerY.equalToSuperview()
       }
-    scrollView.asChainable()
+    
+    pickLabel.asChainable()
+      .font(Font.extraLarge.bold())
+      .textAlignment(.right)
       .add(to: self)
+      .makeConstraints { (make) in
+        make.trailing.equalTo(self.snp.centerX).offset(-Padding.small)
+        make.centerY.equalToSuperview()
+      }
   }
   
   func setupBinding() {
@@ -54,8 +62,13 @@ class BaeminRefresh: UIRefreshControl {
       }).disposed(by: disposeBag)
     
     contentOffset
-      .subscribe()
-      .disposed(by: disposeBag)
+      .map { $0.y }
+      .filter { $0 < 0}
+      .map { Int($0/15) }
+      .distinctUntilChanged()
+      .subscribe(onNext: { [weak self] _ in
+        self?.pickLabel.text = self?.menus.randomElement()
+      }).disposed(by: disposeBag)
   }
 }
 
