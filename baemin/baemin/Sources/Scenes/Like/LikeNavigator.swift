@@ -27,11 +27,7 @@ extension LikeNavigator {
     Resolver.registerStoreScene()
     Resolver.registerDirectScene()
     Resolver.registerPhoneScene()
-    let likePageBarItems = LikePageBarItem.allCases
-    let viewControllers = [StoreViewController(), DirectViewController(), PhoneViewController()]
-    viewControllers.enumerated().forEach { (offset, viewController) in
-      viewController.title = likePageBarItems[offset].title
-    }
-    target.setPageViewControllers(viewControllers)
+    let likePageBarItems = LikePageBarItem.allCases.map { $0.viewController }
+    target.setPageViewControllers(likePageBarItems)
   }
 }

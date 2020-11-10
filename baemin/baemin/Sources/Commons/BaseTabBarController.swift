@@ -18,6 +18,7 @@ class BaseTabBarController: UITabBarController {
   
   init() {
     super.init(nibName: nil, bundle: nil)
+    initialize()
   }
   
   required init?(coder: NSCoder) {
@@ -33,6 +34,10 @@ class BaseTabBarController: UITabBarController {
         self?.setupUI()
         self?.setupBinding()
       }).disposed(by: disposeBag)
+  }
+  
+  @objc dynamic func initialize() {
+    //Don't call view in here
   }
   
   @objc dynamic func setupUI() {

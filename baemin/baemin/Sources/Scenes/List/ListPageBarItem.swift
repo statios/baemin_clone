@@ -17,4 +17,13 @@ extension ListPageBarItem {
     case .bmart: return Text.bmart
     }
   }
+  var viewController: UIViewController {
+    var viewController: UIViewController
+    switch self {
+    case .delivery: viewController = DeliveryListViewController()
+    case .bmart: viewController = BmartListViewController()
+    }
+    viewController.title = self.title
+    return viewController
+  }
 }

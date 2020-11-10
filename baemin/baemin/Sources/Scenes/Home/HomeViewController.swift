@@ -18,6 +18,10 @@ class HomeViewController: BasePageViewController {
 }
 
 extension HomeViewController {
+  override func initialize() {
+    super.initialize()
+    navigator.setPageViewControllers(target: self)
+  }
   override func setupUI() {
     super.setupUI()
     pageBar(style: .fill)

@@ -68,26 +68,8 @@ extension MainNavigator {
     Resolver.registerListScene()
     Resolver.registerUserScene()
     let mainTabBarItmes = MainTabBarItem.allCases
-    let homeViewController = HomeViewController()
-    let suggestViewController = SuggestViewController()
-    let likeViewController = LikeViewController()
-    let listViewController = ListViewController()
-    let userViewController = UserViewController()
-    let navigationControllers = [homeViewController,
-                                 suggestViewController,
-                                 likeViewController,
-                                 listViewController,
-                                 userViewController]
-      .enumerated().map { (offset, viewController) -> BaseNavigationController in
-        let navigationController = BaseNavigationController(rootViewController: viewController)
-        viewController.title = mainTabBarItmes[offset].title
-        viewController.tabBarItem.image = mainTabBarItmes[offset].image
-        return navigationController
-      }
-    homeViewController.navigator.setPageViewControllers(target: homeViewController)
-    likeViewController.navigator.setPageViewControllers(target: likeViewController)
-    listViewController.navigator.setPageViewControllers(target: listViewController)
-    target.setViewControllers(navigationControllers, animated: true)
+      .map { BaseNavigationController(rootViewController: $0.viewController)}
+    target.setViewControllers(mainTabBarItmes, animated: true)
   }
 }
 

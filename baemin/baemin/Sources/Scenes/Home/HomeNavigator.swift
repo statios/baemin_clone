@@ -15,12 +15,8 @@ class HomeNavigator: BaseNavigator {
   func setPageViewControllers(target: HomeViewController) {
     Resolver.registerDeliveryScene()
     Resolver.registerVisitScene()
-    let homePageBarItems = HomePageBarItem.allCases
-    let viewControllers = [DeliveryViewController(), VisitViewController()]
-    viewControllers.enumerated().forEach { (offset, viewController) in
-      viewController.title = homePageBarItems[offset].title
-    }
-    target.setPageViewControllers(viewControllers)
+    let homePageBarItems = HomePageBarItem.allCases.map { $0.viewController }
+    target.setPageViewControllers(homePageBarItems)
   }
   
   func pushToAlarmScene(target: UIViewController?) {

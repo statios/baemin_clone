@@ -29,7 +29,6 @@ extension SplashNavigator {
     let viewController = MainViewController()
     viewController.modalTransitionStyle = .crossDissolve
     viewController.modalPresentationStyle = .overFullScreen
-    viewController.navigator.setViewController(target: viewController)
     target?.present(viewController, animated: true)
   }
 }

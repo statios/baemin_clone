@@ -17,6 +17,10 @@ class LikeViewController: BasePageViewController {
 }
 
 extension LikeViewController {
+  override func initialize() {
+    super.initialize()
+    navigator.setPageViewControllers(target: self)
+  }
   override func setupUI() {
     super.setupUI()
     pageBar(style: .fit)

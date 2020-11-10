@@ -18,4 +18,13 @@ extension HomePageBarItem {
     case .visit: return Text.packVisit
     }
   }
+  var viewController: UIViewController {
+    var viewController: UIViewController
+    switch self {
+    case .delivery: viewController = DeliveryViewController()
+    case .visit: viewController = VisitViewController()
+    }
+    viewController.title = self.title
+    return viewController
+  }
 }

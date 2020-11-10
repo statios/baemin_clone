@@ -17,6 +17,11 @@ class ListViewController: BasePageViewController {
 }
 
 extension ListViewController {
+  override func initialize() {
+    super.initialize()
+    navigator.setPageViewControllers(target: self)
+  }
+  
   override func setupUI() {
     super.setupUI()
     pageBar(style: .fit)

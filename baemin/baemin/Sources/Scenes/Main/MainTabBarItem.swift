@@ -34,12 +34,16 @@ extension MainTabBarItem {
     }
   }
   var viewController: UIViewController {
+    var viewController: UIViewController
     switch self {
-    case .home: return HomeViewController()
-    case .suggest: return SuggestViewController()
-    case .like: return LikeViewController()
-    case .list: return ListViewController()
-    case .user: return UserViewController()
+    case .home: viewController = HomeViewController()
+    case .suggest: viewController = SuggestViewController()
+    case .like: viewController = LikeViewController()
+    case .list: viewController = ListViewController()
+    case .user: viewController = UserViewController()
     }
+    viewController.title = self.title
+    viewController.tabBarItem.image = self.image
+    return viewController
   }
 }
