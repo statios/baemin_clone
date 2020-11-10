@@ -63,6 +63,7 @@
 		AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */; };
 		AF75B28C255A49770080832B /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF75B28B255A49770080832B /* BaseService.swift */; };
 		AF75B291255A497F0080832B /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF75B290255A497F0080832B /* BaseInteractor.swift */; };
+		AF75B29F255A5E060080832B /* BasePageViewController+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF75B29E255A5E060080832B /* BasePageViewController+Chainable.swift */; };
 		AF8041DC2550DF0E0050E35D /* HomePageBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */; };
 		AF8D5F4C255534C800B15B67 /* DeliveryHome.json in Resources */ = {isa = PBXBuildFile; fileRef = AF8D5F4B255534C800B15B67 /* DeliveryHome.json */; };
 		AF8D5F5D2555408700B15B67 /* UIImageView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */; };
@@ -202,6 +203,7 @@
 		AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		AF75B28B255A49770080832B /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		AF75B290255A497F0080832B /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		AF75B29E255A5E060080832B /* BasePageViewController+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasePageViewController+Chainable.swift"; sourceTree = "<group>"; };
 		AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageBarItem.swift; sourceTree = "<group>"; };
 		AF8D5F4B255534C800B15B67 /* DeliveryHome.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeliveryHome.json; sourceTree = "<group>"; };
 		AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Chainable.swift"; sourceTree = "<group>"; };
@@ -611,6 +613,7 @@
 				AF6CBDCF254EC6C0000B2AA7 /* UITabBarItem+Chainable.swift */,
 				AF19454725516530004AE30A /* UIButton+Chainable.swift */,
 				AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */,
+				AF75B29E255A5E060080832B /* BasePageViewController+Chainable.swift */,
 			);
 			path = Chainable;
 			sourceTree = "<group>";
@@ -1002,6 +1005,7 @@
 				AFE11D96254AA2F1003EB6E5 /* Rx+UIViewController.swift in Sources */,
 				AF6CBD50254D4031000B2AA7 /* HomeNavigator.swift in Sources */,
 				AF05CF37255945B700113C2E /* AppDelegate+Injection.swift in Sources */,
+				AF75B29F255A5E060080832B /* BasePageViewController+Chainable.swift in Sources */,
 				AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */,
 				AF6CBCFD254D20F7000B2AA7 /* Log.swift in Sources */,
 				AF6CBD7E254D4070000B2AA7 /* ListViewModel.swift in Sources */,

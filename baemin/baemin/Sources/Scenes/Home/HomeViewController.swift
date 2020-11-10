@@ -24,11 +24,12 @@ extension HomeViewController {
   }
   override func setupUI() {
     super.setupUI()
-    pageBar(style: .fill)
-    selectedText(color: Color.cyan)
-    unselectedText(color: Color.black)
-    selected(font: Font.medium.bold())
-    unselected(font: Font.medium)
+    self.asChainable()
+      .pageBar(style: .fill)
+      .selectedText(color: Color.cyan)
+      .selectedText(font: Font.medium.bold())
+      .unselectedText(color: Color.black)
+      .unselectedText(font: Font.medium)
     
     alarmButton.asChainable()
       .image(Image.Icon.alarm24, for: .normal)

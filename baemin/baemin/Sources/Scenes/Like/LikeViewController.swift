@@ -23,11 +23,12 @@ extension LikeViewController {
   }
   override func setupUI() {
     super.setupUI()
-    pageBar(style: .fit)
-    selectedText(color: Color.black)
-    unselectedText(color: Color.doveGray)
-    selected(font: Font.medium.bold())
-    unselected(font: Font.medium)
+    self.asChainable()
+      .pageBar(style: .fit)
+      .selectedText(color: Color.black)
+      .selectedText(font: Font.medium.bold())
+      .unselectedText(color: Color.doveGray)
+      .unselectedText(font: Font.medium)
   }
 }
 

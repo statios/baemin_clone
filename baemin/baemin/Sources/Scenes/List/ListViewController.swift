@@ -24,11 +24,12 @@ extension ListViewController {
   
   override func setupUI() {
     super.setupUI()
-    pageBar(style: .fit)
-    selectedText(color: Color.black)
-    unselectedText(color: Color.doveGray)
-    selected(font: Font.medium.bold())
-    unselected(font: Font.medium)
+    self.asChainable()
+      .pageBar(style: .fit)
+      .selectedText(color: Color.black)
+      .unselectedText(color: Color.doveGray)
+      .selectedText(font: Font.medium.bold())
+      .unselectedText(font: Font.medium)
     
     refreshButton.asChainable()
       .image(Image.Icon.refresh24, for: .normal)

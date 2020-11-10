@@ -36,13 +36,17 @@ extension DeliveryViewController {
         make.height.equalTo(2500)
       }
     
+    
+    let refreshControl = UIRefreshControl()
+    scrollView.addSubview(refreshControl)
+    refreshControl.tintColor = .clear
+    
     UIView().asChainable()
-      .background(color: .systemPurple)
-      .add(to: scrollView)
+      .background(color: .darkGray)
+      .clipToBounds(true)
+      .add(to: refreshControl)
       .makeConstraints { (make) in
-        make.bottom.equalTo(scrollView.snp.top)
-        make.size.equalTo(129)
-        make.centerX.equalTo(100)
+        make.edges.equalToSuperview()
       }
   }
 }
