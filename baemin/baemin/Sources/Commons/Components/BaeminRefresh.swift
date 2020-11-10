@@ -13,8 +13,10 @@ class BaeminRefresh: UIRefreshControl {
   
   var disposeBag = DisposeBag()
   let isAnimating = PublishRelay<Bool>()
+  let contentOffset = PublishRelay<CGPoint>()
   
   private let pullLabel = UILabel()
+  private let scrollView = UIScrollView()
   
   override init() {
     super.init(frame: .zero)
@@ -40,6 +42,8 @@ class BaeminRefresh: UIRefreshControl {
         make.leading.equalTo(self.snp.centerX)
         make.centerY.equalToSuperview()
       }
+    scrollView.asChainable()
+      .add(to: self)
   }
   
   func setupBinding() {
@@ -48,6 +52,10 @@ class BaeminRefresh: UIRefreshControl {
       .subscribe(onNext: { [weak self] _ in
         self?.endRefreshing()
       }).disposed(by: disposeBag)
+    
+    contentOffset
+      .subscribe()
+      .disposed(by: disposeBag)
   }
 }
 
@@ -60,13 +68,19 @@ extension BaeminRefresh {
     
     refreshing
       .map { true }
+      .do(onNext: { scrollView.isUserInteractionEnabled = !$0 })
       .bind(to: isAnimating)
       .disposed(by: disposeBag)
     
     refreshing
       .map { false }
       .delay(.seconds(2), scheduler: MainScheduler.instance)
+      .do(onNext: { scrollView.isUserInteractionEnabled = !$0 })
       .bind(to: isAnimating)
+      .disposed(by: disposeBag)
+    
+    scrollView.rx.contentOffset
+      .bind(to: contentOffset)
       .disposed(by: disposeBag)
   }
 }

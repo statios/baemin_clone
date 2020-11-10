@@ -22,7 +22,9 @@ class HomeNavigator: BaseNavigator {
   }
   
   func pushToQrcodeScene(target: UIViewController?) {
+    target?.hidesBottomBarWhenPushed = true
     target?.navigationController?.pushViewController(QrcodeViewController(), animated: true)
+    target?.hidesBottomBarWhenPushed = false
   }
 }
 
