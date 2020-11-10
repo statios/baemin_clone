@@ -11,11 +11,39 @@ import Resolver
 
 class DeliveryViewController: BaseViewController {
   @Injected var viewModel: DeliveryViewModel
+  
+  private let scrollView = UIScrollView()
+  private let contentView = UIView()
 }
 
 extension DeliveryViewController {
   override func setupUI() {
     super.setupUI()
+    scrollView.asChainable()
+      .add(to: view)
+      .makeConstraints { (make) in
+        make.leading.trailing.equalToSuperview()
+        make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+          .offset(BasePageViewController.Metric.pageBarHeight)
+        make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+      }
+    
+    contentView.asChainable()
+      .background(color: .red)
+      .add(to: scrollView)
+      .makeConstraints { (make) in
+        make.top.bottom.width.equalToSuperview()
+        make.height.equalTo(2500)
+      }
+    
+    UIView().asChainable()
+      .background(color: .systemPurple)
+      .add(to: scrollView)
+      .makeConstraints { (make) in
+        make.bottom.equalTo(scrollView.snp.top)
+        make.size.equalTo(129)
+        make.centerX.equalTo(100)
+      }
   }
 }
 

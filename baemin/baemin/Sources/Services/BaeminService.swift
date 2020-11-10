@@ -11,8 +11,7 @@ import Alamofire
 import Foundation
 import RxMoya
 
-struct BaeminService {
-  
+class BaeminService: BaseService {
   private let provider = NetworkProvider<BaeminAPI>()
   
   public func request<T: Codable>(
@@ -24,5 +23,4 @@ struct BaeminService {
       .showIndicator(indicator)
       .map(BaeminResponse<T>.self)
   }
-  
 }

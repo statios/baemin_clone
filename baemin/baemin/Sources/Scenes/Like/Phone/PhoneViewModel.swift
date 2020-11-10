@@ -8,7 +8,7 @@
 import RxSwift
 import RxCocoa
 
-class PhoneViewModel: ViewModel {
+class PhoneViewModel: BaseViewModel, ViewModel {
   
 }
 

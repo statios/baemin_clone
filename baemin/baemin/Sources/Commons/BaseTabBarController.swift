@@ -18,6 +18,7 @@ class BaseTabBarController: UITabBarController {
   
   init() {
     super.init(nibName: nil, bundle: nil)
+    Log.verbose(String(describing: Self.self))
     initialize()
   }
   
@@ -25,7 +26,9 @@ class BaseTabBarController: UITabBarController {
     fatalError("init(coder:) has not been implemented")
   }
   
-  deinit { }
+  deinit {
+    Log.verbose(String(describing: Self.self))
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -26,11 +26,16 @@ class BasePageViewController: UIPageViewController {
     super.init(transitionStyle: .scroll,
                navigationOrientation: .horizontal,
                options: nil)
+    Log.verbose(String(describing: Self.self))
     initialize()
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  deinit {
+    Log.verbose(String(describing: Self.self))
   }
   
   override func viewDidLoad() {

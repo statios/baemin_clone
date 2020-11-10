@@ -11,18 +11,10 @@ import UIKit
 class BaseViewController: UIViewController {
   
   var disposeBag = DisposeBag()
-  
-  lazy private(set) var className: String = {
-    return type(of: self).description().components(separatedBy: ".").last ?? ""
-  }()
-  
-  var viewController: UIViewController {
-    return self
-  }
-  
+
   init() {
     super.init(nibName: nil, bundle: nil)
-    Log.verbose("INIT: \(self.className)")
+    Log.verbose(String(describing: Self.self))
     initialize()
   }
   
@@ -31,7 +23,7 @@ class BaseViewController: UIViewController {
   }
   
   deinit {
-    Log.verbose("DEINIT: \(self.className)")
+    Log.verbose(String(describing: Self.self))
   }
   
   override func viewDidLoad() {

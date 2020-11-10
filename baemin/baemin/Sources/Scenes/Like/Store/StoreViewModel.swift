@@ -8,7 +8,7 @@
 import RxSwift
 import RxCocoa
 
-class StoreViewModel: ViewModel {
+class StoreViewModel: BaseViewModel, ViewModel {
   
 }
 

@@ -61,6 +61,8 @@
 		AF6CBE27254FC15B000B2AA7 /* VisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE26254FC15B000B2AA7 /* VisitViewController.swift */; };
 		AF6CBE2C254FC164000B2AA7 /* VisitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */; };
 		AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */; };
+		AF75B28C255A49770080832B /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF75B28B255A49770080832B /* BaseService.swift */; };
+		AF75B291255A497F0080832B /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF75B290255A497F0080832B /* BaseInteractor.swift */; };
 		AF8041DC2550DF0E0050E35D /* HomePageBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */; };
 		AF8D5F4C255534C800B15B67 /* DeliveryHome.json in Resources */ = {isa = PBXBuildFile; fileRef = AF8D5F4B255534C800B15B67 /* DeliveryHome.json */; };
 		AF8D5F5D2555408700B15B67 /* UIImageView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */; };
@@ -198,6 +200,8 @@
 		AF6CBE26254FC15B000B2AA7 /* VisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewController.swift; sourceTree = "<group>"; };
 		AF6CBE2B254FC164000B2AA7 /* VisitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewModel.swift; sourceTree = "<group>"; };
 		AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
+		AF75B28B255A49770080832B /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		AF75B290255A497F0080832B /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		AF8041DB2550DF0E0050E35D /* HomePageBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageBarItem.swift; sourceTree = "<group>"; };
 		AF8D5F4B255534C800B15B67 /* DeliveryHome.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeliveryHome.json; sourceTree = "<group>"; };
 		AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Chainable.swift"; sourceTree = "<group>"; };
@@ -429,6 +433,31 @@
 			path = Visit;
 			sourceTree = "<group>";
 		};
+		AF75B295255A49860080832B /* Architecture bases */ = {
+			isa = PBXGroup;
+			children = (
+				AFE11D80254AA257003EB6E5 /* BaseViewController.swift */,
+				AF6CBDCA254EC010000B2AA7 /* BaseNavigationController.swift */,
+				AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */,
+				AF6CBDA3254D43A5000B2AA7 /* BaseTabBarController.swift */,
+				AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */,
+				AFE11DD0254AA5CC003EB6E5 /* BaseNavigator.swift */,
+				AF75B28B255A49770080832B /* BaseService.swift */,
+				AF75B290255A497F0080832B /* BaseInteractor.swift */,
+			);
+			name = "Architecture bases";
+			sourceTree = "<group>";
+		};
+		AF75B296255A499B0080832B /* UIKit bases */ = {
+			isa = PBXGroup;
+			children = (
+				AFE11E0A254AB300003EB6E5 /* BaseImageView.swift */,
+				AF19453D25512927004AE30A /* BaseView.swift */,
+				AF19454225516217004AE30A /* BaseButton.swift */,
+			);
+			name = "UIKit bases";
+			sourceTree = "<group>";
+		};
 		AFE11CCB254A8F37003EB6E5 = {
 			isa = PBXGroup;
 			children = (
@@ -608,15 +637,8 @@
 		AFE11D7F254AA244003EB6E5 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
-				AFE11D80254AA257003EB6E5 /* BaseViewController.swift */,
-				AF6CBDCA254EC010000B2AA7 /* BaseNavigationController.swift */,
-				AF6CBE30254FC1EC000B2AA7 /* BasePageViewController.swift */,
-				AF6CBDA3254D43A5000B2AA7 /* BaseTabBarController.swift */,
-				AFE11DD5254AA66C003EB6E5 /* BaseViewModel.swift */,
-				AFE11DD0254AA5CC003EB6E5 /* BaseNavigator.swift */,
-				AFE11E0A254AB300003EB6E5 /* BaseImageView.swift */,
-				AF19453D25512927004AE30A /* BaseView.swift */,
-				AF19454225516217004AE30A /* BaseButton.swift */,
+				AF75B295255A49860080832B /* Architecture bases */,
+				AF75B296255A499B0080832B /* UIKit bases */,
 			);
 			name = Bases;
 			sourceTree = "<group>";
@@ -699,10 +721,10 @@
 				AF6CBD57254D4037000B2AA7 /* HomeViewController.swift */,
 				AF6CBD5C254D403D000B2AA7 /* HomeViewModel.swift */,
 				AF6CBDB1254D43F4000B2AA7 /* HomeInteractor.swift */,
-				AFE5BD612552757D00C0F390 /* Alarm */,
-				AFE5BD622552758500C0F390 /* Qrcode */,
 				AF6CBE19254FC0FB000B2AA7 /* Delivery */,
 				AF6CBE1B254FC11D000B2AA7 /* Visit */,
+				AFE5BD612552757D00C0F390 /* Alarm */,
+				AFE5BD622552758500C0F390 /* Qrcode */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -993,6 +1015,7 @@
 				AF6CBD79254D406B000B2AA7 /* ListViewController.swift in Sources */,
 				AF6CBDB7254D4400000B2AA7 /* SuggestInteractor.swift in Sources */,
 				AFE5BD0625523FF700C0F390 /* StoreViewModel.swift in Sources */,
+				AF75B291255A497F0080832B /* BaseInteractor.swift in Sources */,
 				AF6CBCF1254B282D000B2AA7 /* Color.swift in Sources */,
 				AF31141325501CB40005F6E7 /* UILabel+Chainable.swift in Sources */,
 				AFE11D81254AA257003EB6E5 /* BaseViewController.swift in Sources */,
@@ -1050,6 +1073,7 @@
 				AFE5BCFB25523FEC00C0F390 /* StoreViewController.swift in Sources */,
 				AF6CBCDE254B272B000B2AA7 /* MainViewModel.swift in Sources */,
 				AF6CBCE4254B2811000B2AA7 /* Padding.swift in Sources */,
+				AF75B28C255A49770080832B /* BaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

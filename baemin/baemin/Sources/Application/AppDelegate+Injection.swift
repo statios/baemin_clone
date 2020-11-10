@@ -12,6 +12,10 @@ extension Resolver: ResolverRegistering {
   public static func registerAllServices() {
     registerWindow()
     registerSplashScene()
+    registerMainScenes()
+    registerHomeScenes()
+    registerLikeScenes()
+    registerListScenes()
   }
   static func registerWindow() {
     register { UIWindow(frame: UIScreen.main.bounds) }
@@ -24,12 +28,8 @@ extension Resolver: ResolverRegistering {
   static func registerSplashScene() {
     register { SplashInteractor() }
       .implements(SplashInteractable.self)
-      .scope(application)
     register { SplashViewModel() }
-      .scope(application)
     register { SplashNavigator() }
-      .scope(application)
-    register { BaeminService() }
-      .scope(application)
+    register { BaeminService() }.scope(shared)
   }
 }

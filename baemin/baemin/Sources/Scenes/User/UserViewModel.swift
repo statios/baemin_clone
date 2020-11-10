@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 import Resolver
 
-class UserViewModel: ViewModel {
+class UserViewModel: BaseViewModel, ViewModel {
   @Injected var mainInteractor: MainInteractable
   @Injected var userInteractor: UserInteractable
 }

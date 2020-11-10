@@ -8,7 +8,7 @@
 import RxSwift
 import RxCocoa
 
-class QrcodeViewModel: ViewModel {
+class QrcodeViewModel: BaseViewModel, ViewModel {
   struct Event {
     let tapFlash: Observable<Void>
     let tapClose: Observable<Void>

@@ -50,11 +50,10 @@ extension SplashViewController {
       onAppear: rx.viewWillAppear.void()
     )
     let state = viewModel.reduce(event: event)
-    state.showMain
+    state.presentMain
       .drive(onNext: { [weak self] in
         self?.navigator.presentMainScene(target: self)
-      })
-      .disposed(by: disposeBag)
+      }).disposed(by: disposeBag)
     
     state.errorMessage
       .drive(onNext: {

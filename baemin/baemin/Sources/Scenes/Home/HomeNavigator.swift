@@ -13,38 +13,24 @@ import UIKit
 class HomeNavigator: BaseNavigator {
   
   func setPageViewControllers(target: HomeViewController) {
-    Resolver.registerDeliveryScene()
-    Resolver.registerVisitScene()
     let homePageBarItems = HomePageBarItem.allCases.map { $0.viewController }
     target.setPageViewControllers(homePageBarItems)
   }
   
   func pushToAlarmScene(target: UIViewController?) {
-    Resolver.registerAlarmScene()
     target?.navigationController?.pushViewController(AlarmViewController(), animated: true)
   }
   
   func pushToQrcodeScene(target: UIViewController?) {
-    Resolver.registerQrcodeScene()
     target?.navigationController?.pushViewController(QrcodeViewController(), animated: true)
   }
 }
 
 extension Resolver {
-  fileprivate static func registerDeliveryScene() {
+  static func registerHomeScenes() {
     register { DeliveryViewModel() }
-      .scope(shared)
-  }
-  fileprivate static func registerVisitScene() {
     register { VisitViewModel() }
-      .scope(shared)
-  }
-  fileprivate static func registerQrcodeScene() {
     register { QrcodeViewModel() }
-      .scope(shared)
-  }
-  fileprivate static func registerAlarmScene() {
     register { AlarmViewModel() }
-      .scope(shared)
   }
 }

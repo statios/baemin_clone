@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 import Resolver
 
-class SplashViewModel: ViewModel {
+class SplashViewModel: BaseViewModel, ViewModel {
   @Injected var splashInteractor: SplashInteractable
 }
 
@@ -19,7 +19,7 @@ extension SplashViewModel {
   }
   
   struct State {
-    let showMain: Driver<Void>
+    let presentMain: Driver<Void>
     let errorMessage: Driver<String>
   }
   
@@ -29,7 +29,7 @@ extension SplashViewModel {
     let splashSuccess = splashRequest.filter { $0.isSuccess }.compactMap { $0.data }
     let splashFailure = splashRequest.filter { !$0.isSuccess}.compactMap { $0.message }
     return State(
-      showMain: Observable.zip(delay, splashSuccess).void().asDriver(),
+      presentMain: Observable.zip(delay, splashSuccess).void().asDriver(),
       errorMessage: splashFailure.asDriver(onErrorJustReturn: "-")
     )
   }

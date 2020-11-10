@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 import Resolver
 
-class DeliveryViewModel: ViewModel {
+class DeliveryViewModel: BaseViewModel, ViewModel {
   @Injected var homeInteractor: HomeInteractable
   
   struct Event {

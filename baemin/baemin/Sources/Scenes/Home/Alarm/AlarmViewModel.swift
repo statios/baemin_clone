@@ -9,13 +9,8 @@ import RxSwift
 import RxCocoa
 import Resolver
 
-class AlarmViewModel: ViewModel {
-  init() {
-    Log.verbose("alarm view model init")
-  }
-  deinit {
-    Log.verbose("alarm view model deinit")
-  }
+class AlarmViewModel: BaseViewModel, ViewModel {
+
 }
 
 extension AlarmViewModel {

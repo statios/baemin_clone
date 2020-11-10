@@ -1,17 +1,11 @@
 //
-//  BaseNavigator.swift
+//  BaseService.swift
 //  baemin
 //
-//  Created by Stat.So on 2020/10/29.
+//  Created by Stat.So on 2020/11/10.
 //
 
-import UIKit
-
-protocol Navigatable {
-  
-}
-
-class BaseNavigator: Navigatable {
+class BaseService {
   init() {
     Log.verbose(String(describing: Self.self))
   }
@@ -19,4 +13,3 @@ class BaseNavigator: Navigatable {
     Log.verbose(String(describing: Self.self))
   }
 }
-
