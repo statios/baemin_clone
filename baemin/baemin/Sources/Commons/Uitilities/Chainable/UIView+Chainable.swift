@@ -65,5 +65,11 @@ extension Chain where Origin: UIView {
     self.origin.contentMode = by
     return self
   }
+  
+  @discardableResult
+  func tintColor(_ by: UIColor?) -> Chain {
+    self.origin.tintColor = by
+    return self
+  }
 }
 

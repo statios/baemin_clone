@@ -14,4 +14,5 @@ struct Color {
   static let white = UIColor.white
   static let wildSand = UIColor(named: "wildSand") ?? UIColor()
   static let doveGray = UIColor(named: "doveGray") ?? UIColor()
+  static let gallery = UIColor(named: "gallery") ?? UIColor()
 }

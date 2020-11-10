@@ -14,12 +14,14 @@ class DeliveryViewController: BaseViewController {
   
   private let scrollView = UIScrollView()
   private let contentView = UIView()
+  private let refreshControl = BaeminRefresh()
 }
 
 extension DeliveryViewController {
   override func setupUI() {
     super.setupUI()
     scrollView.asChainable()
+      .background(color: Color.gallery)
       .add(to: view)
       .makeConstraints { (make) in
         make.leading.trailing.equalToSuperview()
@@ -28,25 +30,16 @@ extension DeliveryViewController {
         make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
       }
     
+    refreshControl.asChainable()
+      .add(to: scrollView)
+      .set(target: scrollView)
+    
     contentView.asChainable()
       .background(color: .red)
       .add(to: scrollView)
       .makeConstraints { (make) in
         make.top.bottom.width.equalToSuperview()
         make.height.equalTo(2500)
-      }
-    
-    
-    let refreshControl = UIRefreshControl()
-    scrollView.addSubview(refreshControl)
-    refreshControl.tintColor = .clear
-    
-    UIView().asChainable()
-      .background(color: .darkGray)
-      .clipToBounds(true)
-      .add(to: refreshControl)
-      .makeConstraints { (make) in
-        make.edges.equalToSuperview()
       }
   }
 }

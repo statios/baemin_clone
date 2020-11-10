@@ -13,9 +13,16 @@ extension Chain where Origin: UILabel {
     self.origin.text = by
     return self
   }
+  
   @discardableResult
   func textAlignment(_ by: NSTextAlignment) -> Chain {
     self.origin.textAlignment = by
+    return self
+  }
+  
+  @discardableResult
+  func font(_ by: UIFont?) -> Chain {
+    self.origin.font = by
     return self
   }
 }
