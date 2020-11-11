@@ -1,10 +1,12 @@
 # baemin_clone
 
-Xcode 12.1
-Swift 5.2
+### environment
+- Xcode 12.1
+- Swift 5.2
 
-Lottie
-Moya
-RxSwift
-SnapKit
-Resolver
+### Libraries
+- Lottie
+- Moya
+- RxSwift
+- SnapKit
+- Resolver
