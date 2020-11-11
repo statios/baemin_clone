@@ -12,3 +12,8 @@
 - Resolver
 
 ### Architecture
+- Navigator
+- ViewController
+- ViewModel
+- Interactor
+- Service
