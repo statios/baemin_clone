@@ -7,3 +7,4 @@ Lottie
 Moya
 RxSwift
 SnapKit
+Resolver
