@@ -19,3 +19,11 @@
 "b_mart" = "B Mart";
 "alarm_center" = "Notifications";
 "qrcode_order" = "QR Code Order";
+"seafood" = "Seafood";
+"fastfood" = "Fast food";
+"chicken" = "Chicken";
+"pizza" = "Pizza";
+"sushi" = "Sushi";
+"rice" = "Rice";
+"bakery" = "Bread";
+"coffee" = "coffee";

@@ -19,3 +19,11 @@
 "b_mart" = "B마트";
 "alarm_center" = "알림센터";
 "qrcode_order" = "배민QR주문";
+"seafood" = "해산물";
+"fastfood" = "패스트푸드";
+"chicken" = "치킨";
+"pizza" = "피자";
+"sushi" = "초밥";
+"rice" = "한식";
+"bakery" = "빵";
+"coffee" = "커피";

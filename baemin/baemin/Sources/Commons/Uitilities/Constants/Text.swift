@@ -6,6 +6,7 @@
 //
 
 struct Text {
+  //ViewController titles
   static let home = "home".localized
   static let whatToEat = "what_to_eat".localized
   static let favoriteStore = "favorite_store".localized
@@ -19,4 +20,13 @@ struct Text {
   static let bmart = "b_mart".localized
   static let alarmCenter = "alarm_center".localized
   static let qrcodeOrder = "qrcode_order".localized
+  //Delivery catogory
+  static let seafood = "seafood".localized
+  static let fastfood = "fastfood".localized
+  static let chicken = "chicken".localized
+  static let pizza = "pizza".localized
+  static let sushi = "sushi".localized
+  static let rice = "rice".localized
+  static let bakery = "bakery".localized
+  static let coffee = "coffee".localized
 }

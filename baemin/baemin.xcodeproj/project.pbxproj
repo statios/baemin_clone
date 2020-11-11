@@ -17,6 +17,8 @@
 		AF31141325501CB40005F6E7 /* UILabel+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31141225501CB40005F6E7 /* UILabel+Chainable.swift */; };
 		AF31141825501D180005F6E7 /* UIStackView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31141725501D180005F6E7 /* UIStackView+Chainable.swift */; };
 		AF31141D2550288E0005F6E7 /* PageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF31141C2550288E0005F6E7 /* PageBar.swift */; };
+		AF67A6D5255B77B600344181 /* DeliveryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67A6D4255B77B600344181 /* DeliveryCategory.swift */; };
+		AF67A6DD255BC07500344181 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67A6DC255BC07500344181 /* Device.swift */; };
 		AF6CBCCF254B2701000B2AA7 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */; };
 		AF6CBCD4254B270A000B2AA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */; };
 		AF6CBCDE254B272B000B2AA7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */; };
@@ -158,6 +160,8 @@
 		AF31141225501CB40005F6E7 /* UILabel+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Chainable.swift"; sourceTree = "<group>"; };
 		AF31141725501D180005F6E7 /* UIStackView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Chainable.swift"; sourceTree = "<group>"; };
 		AF31141C2550288E0005F6E7 /* PageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBar.swift; sourceTree = "<group>"; };
+		AF67A6D4255B77B600344181 /* DeliveryCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCategory.swift; sourceTree = "<group>"; };
+		AF67A6DC255BC07500344181 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		AF6CBCCE254B2701000B2AA7 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		AF6CBCD3254B270A000B2AA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AF6CBCDD254B272B000B2AA7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -325,6 +329,7 @@
 				AF6CBCF0254B282D000B2AA7 /* Color.swift */,
 				AF6CBDD4254EEAC8000B2AA7 /* Image.swift */,
 				AF6CBE14254F9D26000B2AA7 /* Text.swift */,
+				AF67A6DC255BC07500344181 /* Device.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -745,6 +750,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE11E27254ABE14003EB6E5 /* BaeminResponse.swift */,
+				AF67A6D4255B77B600344181 /* DeliveryCategory.swift */,
 				AFE11E4F254AC915003EB6E5 /* Splash.swift */,
 				AF8D5F642555430E00B15B67 /* Banner.swift */,
 				AFE11E34254AC206003EB6E5 /* DeliveryHome.swift */,
@@ -1019,6 +1025,7 @@
 				AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */,
 				AF6CBCFD254D20F7000B2AA7 /* Log.swift in Sources */,
 				AF6CBD7E254D4070000B2AA7 /* ListViewModel.swift in Sources */,
+				AF67A6DD255BC07500344181 /* Device.swift in Sources */,
 				AFE11D60254AA187003EB6E5 /* SplashInteractor.swift in Sources */,
 				AF6CBDD5254EEAC8000B2AA7 /* Image.swift in Sources */,
 				AFE59C072553B53E00A18003 /* ActivityIndicatorPresenter.swift in Sources */,
@@ -1027,6 +1034,7 @@
 				AF6CBD8B254D408C000B2AA7 /* LikeViewController.swift in Sources */,
 				AFE11D75254AA1ED003EB6E5 /* UIView+Chainable.swift in Sources */,
 				AF6CBD79254D406B000B2AA7 /* ListViewController.swift in Sources */,
+				AF67A6D5255B77B600344181 /* DeliveryCategory.swift in Sources */,
 				AF6CBDB7254D4400000B2AA7 /* SuggestInteractor.swift in Sources */,
 				AFE5BD0625523FF700C0F390 /* StoreViewModel.swift in Sources */,
 				AF75B291255A497F0080832B /* BaseInteractor.swift in Sources */,

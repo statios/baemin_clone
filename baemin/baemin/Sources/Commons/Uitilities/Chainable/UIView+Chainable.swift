@@ -71,5 +71,11 @@ extension Chain where Origin: UIView {
     self.origin.tintColor = by
     return self
   }
+  
+  @discardableResult
+  func frame(_ by: CGRect) -> Chain {
+    self.origin.frame = by
+    return self
+  }
 }
 

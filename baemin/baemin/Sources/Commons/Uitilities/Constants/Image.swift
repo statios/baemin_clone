@@ -23,7 +23,17 @@ struct Image {
     static let flashOff24 = UIImage(named: "flashOff24")
   }
   struct Illust {
+    //Logo
     static let splashLogo = UIImage(named: "splash_logo")
     static let splashLogoBottom = UIImage(named: "splash_logo_bottom")
+    //Category
+    static let bakery42 = UIImage(named: "bakery42")
+    static let chicken42 = UIImage(named: "chicken42")
+    static let coffee42 = UIImage(named: "coffee42")
+    static let fastfood42 = UIImage(named: "fastfood42")
+    static let pizza42 = UIImage(named: "pizza42")
+    static let rice42 = UIImage(named: "rice42")
+    static let seafood42 = UIImage(named: "seafood42")
+    static let sushi42 = UIImage(named: "sushi42")
   }
 }

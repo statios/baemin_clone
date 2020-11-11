@@ -25,5 +25,11 @@ extension Chain where Origin: UILabel {
     self.origin.font = by
     return self
   }
+  
+  @discardableResult
+  func color(_ color: UIColor?) -> Chain {
+    self.origin.textColor = color
+    return self
+  }
 }
 
