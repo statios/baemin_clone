@@ -94,15 +94,15 @@ class BaeminRefresh: UIRefreshControl {
       }).disposed(by: disposeBag)
     
     animationEnd
-      .subscribe(onNext: {
-        self.scrollView.isUserInteractionEnabled = true
-        self.endRefreshing()
+      .do(onNext: { [weak self] in self?.scrollView.isUserInteractionEnabled = true })
+      .subscribe(onNext: { [weak self] in
+        self?.endRefreshing()
       }).disposed(by: disposeBag)
 
 
     let canSlideAnimate = Observable.merge(Observable.just(true),
                                            animationStart.map { false },
-                                           animationEnd.map { true })
+                                           scrollView.rx.didEndScrollingAnimation.map { true })
     let slideImage = scrollView.rx.contentOffset.map { $0.y }
       .withLatestFrom(canSlideAnimate) { ($0, $1) }
       .filter { $0.0 <= 0 && $0.1 }
