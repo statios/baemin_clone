@@ -11,10 +11,10 @@ import Alamofire
 import Foundation
 
 final class NetworkProvider<Target: TargetType>: MoyaProvider<Target> {
-  
+
   override init(endpointClosure: @escaping MoyaProvider<Target>.EndpointClosure = MoyaProvider.defaultEndpointMapping,
                 requestClosure: @escaping MoyaProvider<Target>.RequestClosure = MoyaProvider<Target>.defaultRequestMapping,
-                stubClosure: @escaping MoyaProvider<Target>.StubClosure = MoyaProvider.immediatelyStub,
+                stubClosure: @escaping MoyaProvider<Target>.StubClosure = MoyaProvider.neverStub,
                 callbackQueue: DispatchQueue? = nil,
                 session: Session = MoyaProvider<Target>.defaultAlamofireSession(),
                 plugins: [PluginType] = [],
@@ -28,28 +28,15 @@ final class NetworkProvider<Target: TargetType>: MoyaProvider<Target> {
                trackInflights: trackInflights
     )
   }
-  
-  func request(
-    _ target: Target,
-    indicator: Bool)
-  -> Single<Response> {
-    return self.rx.request(target)
-      .showIndicator(indicator)
-  }
 }
 
 extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
-  
   func showIndicator(_ isShow: Bool) -> Single<Element> {
     guard isShow else { return self }
     return self
       .observeOn(MainScheduler.asyncInstance)
-      .do(onSuccess: { _ in
-        //TODO
-      }, onError: { _ in
-        //TODO
-      }, onSubscribe: {
-        //TODO
-      })
+      .do(onSuccess: { _ in ActivityIndicatorPrsenter.shared.show() })
+      .delay(.milliseconds(2000), scheduler: MainScheduler.asyncInstance)
+      .do(onDispose: { ActivityIndicatorPrsenter.shared.hide() })
   }
 }

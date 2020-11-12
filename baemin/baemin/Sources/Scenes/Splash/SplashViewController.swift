@@ -25,7 +25,8 @@ extension SplashViewController {
       .contentMode(.scaleAspectFit)
       .add(to: view)
       .makeConstraints { make in
-        make.center.equalToSuperview()
+        make.centerX.equalToSuperview()
+        make.centerY.equalToSuperview().offset(-Padding.large)
         make.width.equalTo(220)
         make.height.equalTo(120)
       }

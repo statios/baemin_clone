@@ -71,7 +71,7 @@ class BaeminRefresh: UIRefreshControl {
   private func setupBinding() {
     
     let animationStart = scrollView.rx.willBeginDecelerating.filter { [weak self] in self?.isRefreshing == true }
-    let animationEnd = animationStart.delay(.milliseconds(2000), scheduler: MainScheduler.asyncInstance)
+    let animationEnd = animationStart.delay(.milliseconds(2500), scheduler: MainScheduler.asyncInstance)
     
     animationStart
       .do(onNext: { [weak self] in self?.scrollView.isUserInteractionEnabled = false })
@@ -88,7 +88,7 @@ class BaeminRefresh: UIRefreshControl {
           self.pickImage.isHidden = true
           self.pickLabel.text = self.deliveryCategories.randomElement()?.title
           UIView.animate(withDuration: 0.3) {
-            self.pickLabel.frame.origin.y -= 42
+            self.pickLabel.frame.origin.y -= Metric.slideLength
           }
         }
       }).disposed(by: disposeBag)

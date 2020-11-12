@@ -16,36 +16,36 @@ final class ActivityIndicatorPrsenter {
   }
   
   var indicatorState = State.hidden
+  static let shared = ActivityIndicatorPrsenter()
   
   let animationView: LottieAnimationView = {
     let view = LottieAnimationView()
     view.setup(animationName: "loading_indicator", loopMode: .loop)
-    view.layer.borderWidth = 1
     return view
   }()
   
-  public func show() {
-    guard indicatorState != .shown else {
-      return
-    }
-    UIApplication.shared.window?.isUserInteractionEnabled = false
-    UIApplication.shared.window?.addSubview(animationView)
-    indicatorState = .shown
-    animationView.playAnimation()
-    animationView.snp.makeConstraints { (make) in
-      make.center.equalToSuperview()
-      make.size.equalTo(64)
+  func show() {
+    DispatchQueue.main.async {
+      guard self.indicatorState != .shown else { return }
+      UIApplication.shared.window?.isUserInteractionEnabled = false
+      UIApplication.shared.window?.addSubview(self.animationView)
+      self.indicatorState = .shown
+      self.animationView.playAnimation()
+      self.animationView.snp.makeConstraints { (make) in
+        make.center.equalToSuperview()
+        make.size.equalTo(64)
+      }
     }
   }
   
-  public func hide() {
-    guard indicatorState != .hidden else {
-      return
+  func hide() {
+    DispatchQueue.main.async {
+      guard self.indicatorState != .hidden else { return }
+      UIApplication.shared.window?.isUserInteractionEnabled = true
+      self.indicatorState = .hidden
+      self.animationView.stopAnimation()
+      self.animationView.removeFromSuperview()
     }
-    UIApplication.shared.window?.isUserInteractionEnabled = true
-    indicatorState = .hidden
-    animationView.stopAnimation()
-    animationView.removeFromSuperview()
   }
   
 }

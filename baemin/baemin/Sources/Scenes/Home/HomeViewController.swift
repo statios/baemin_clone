@@ -20,10 +20,12 @@ class HomeViewController: BasePageViewController {
 extension HomeViewController {
   override func initialize() {
     super.initialize()
+    Log.warning("")
     navigator.setPageViewControllers(target: self)
   }
   override func setupUI() {
     super.setupUI()
+    Log.warning("")
     self.asChainable()
       .pageBar(style: .fill)
       .selectedText(color: Color.cyan)
