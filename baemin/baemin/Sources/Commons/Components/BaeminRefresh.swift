@@ -73,6 +73,13 @@ class BaeminRefresh: UIRefreshControl {
     let animationStart = scrollView.rx.willBeginDecelerating.filter { [weak self] in self?.isRefreshing == true }
     let animationEnd = animationStart.delay(.milliseconds(2500), scheduler: MainScheduler.asyncInstance)
     
+    scrollView.rx.didEndDragging
+      .filter { !$0 }.void()
+      .compactMap { [weak self] in self?.scrollView }
+      .subscribe(onNext: {
+        $0.setContentOffset(CGPoint(), animated: true)
+      }).disposed(by: disposeBag)
+    
     animationStart
       .do(onNext: { [weak self] in self?.scrollView.isUserInteractionEnabled = false })
       .flatMap { Observable<Int>.interval(.milliseconds(100), scheduler: MainScheduler.asyncInstance).take(20) }
@@ -97,6 +104,12 @@ class BaeminRefresh: UIRefreshControl {
       .do(onNext: { [weak self] in self?.scrollView.isUserInteractionEnabled = true })
       .subscribe(onNext: { [weak self] in
         self?.endRefreshing()
+      }).disposed(by: disposeBag)
+    
+    animationEnd.delay(.milliseconds(500), scheduler: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] in
+        self?.pickImage.isHidden = false
+        self?.pickLabel.text = nil
       }).disposed(by: disposeBag)
 
 
@@ -126,11 +139,11 @@ class BaeminRefresh: UIRefreshControl {
         self.pickImage.frame.origin.y = -self.frame.midY - Metric.imageSize.width/2
       }).disposed(by: disposeBag)
     
-    scrollView.rx.didEndScrollingAnimation
-      .subscribe(onNext: { [weak self] in
-        self?.pickImage.isHidden = false
-        self?.pickLabel.text = nil
-      }).disposed(by: disposeBag)
+//    scrollView.rx.didEndScrollingAnimation
+//      .subscribe(onNext: { [weak self] in
+//        self?.pickImage.isHidden = false
+//        self?.pickLabel.text = nil
+//      }).disposed(by: disposeBag)
   }
 }
 
