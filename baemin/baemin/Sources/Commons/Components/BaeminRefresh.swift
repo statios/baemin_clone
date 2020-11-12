@@ -19,21 +19,18 @@ class BaeminRefresh: UIRefreshControl {
   }
   
   var disposeBag = DisposeBag()
-  
-  let contentOffset = PublishRelay<CGPoint>()
-  let willBeginDecelerating = PublishRelay<Void>()
-  let didEndDecelerating = PublishRelay<Void>()
-  let didEndScrollingAnimation = PublishRelay<Void>()
   let deliveryCategories = DeliveryCategory.allCases
   
   private let pullLabel = UILabel()
   private let pickLabel = UILabel()
   private let pickImage = UIImageView()
   
+  var scrollView: UIScrollView!
+  
   override init() {
     super.init(frame: .zero)
     setupUI()
-    setupBinding()
+    //Must call a setupBinding() after set(_: UIScrollView)
   }
   
   required init?(coder: NSCoder) {
@@ -73,35 +70,40 @@ class BaeminRefresh: UIRefreshControl {
   
   private func setupBinding() {
     
-    willBeginDecelerating
+    let animationStart = scrollView.rx.willBeginDecelerating.filter { [weak self] in self?.isRefreshing == true }
+    let animationEnd = animationStart.delay(.milliseconds(2000), scheduler: MainScheduler.asyncInstance)
+    
+    animationStart
+      .do(onNext: { [weak self] in self?.scrollView.isUserInteractionEnabled = false })
       .flatMap { Observable<Int>.interval(.milliseconds(100), scheduler: MainScheduler.asyncInstance).take(20) }
       .subscribe(onNext: { [weak self] in
         guard let `self` = self else { return }
         if $0 < 14 {
           self.pickImage.image = self.deliveryCategories.randomElement()?.image
-          self.pickImage.frame.origin.y -= Metric.slideLength
+          self.pickImage.frame.origin.y += Metric.slideLength
           UIView.animate(withDuration: 0.1) {
-            self.pickImage.frame.origin.y += Metric.slideLength
+            self.pickImage.frame.origin.y -= Metric.slideLength
           }
         } else if $0 == 14 {
           self.pickImage.isHidden = true
           self.pickLabel.text = self.deliveryCategories.randomElement()?.title
           UIView.animate(withDuration: 0.3) {
-            self.pickLabel.frame.origin.y += 42
+            self.pickLabel.frame.origin.y -= 42
           }
         }
       }).disposed(by: disposeBag)
-
-    didEndDecelerating
-      .delay(.milliseconds(2000), scheduler: MainScheduler.instance)
-      .subscribe(onNext: { [weak self] in
-        self?.endRefreshing()
+    
+    animationEnd
+      .subscribe(onNext: {
+        self.scrollView.isUserInteractionEnabled = true
+        self.endRefreshing()
       }).disposed(by: disposeBag)
 
+
     let canSlideAnimate = Observable.merge(Observable.just(true),
-                                           willBeginDecelerating.map { false },
-                                           didEndScrollingAnimation.map { true })
-    let slideImage = contentOffset.map { $0.y }
+                                           animationStart.map { false },
+                                           animationEnd.map { true })
+    let slideImage = scrollView.rx.contentOffset.map { $0.y }
       .withLatestFrom(canSlideAnimate) { ($0, $1) }
       .filter { $0.0 <= 0 && $0.1 }
       .map { Int($0.0/42) }
@@ -118,13 +120,13 @@ class BaeminRefresh: UIRefreshControl {
         }
       }).disposed(by: disposeBag)
     
-    contentOffset
+    scrollView.rx.contentOffset
       .subscribe(onNext: { [weak self] _ in
         guard let `self` = self else { return }
         self.pickImage.frame.origin.y = -self.frame.midY - Metric.imageSize.width/2
       }).disposed(by: disposeBag)
     
-    didEndScrollingAnimation
+    scrollView.rx.didEndScrollingAnimation
       .subscribe(onNext: { [weak self] in
         self?.pickImage.isHidden = false
         self?.pickLabel.text = nil
@@ -134,23 +136,8 @@ class BaeminRefresh: UIRefreshControl {
 
 extension BaeminRefresh {
   func set(to scrollView: UIScrollView) {
-    scrollView.rx.willBeginDecelerating
-      .bind(to: willBeginDecelerating)
-      .disposed(by: disposeBag)
-    
-    scrollView.rx.didEndDecelerating
-      .do(onNext: { scrollView.isUserInteractionEnabled = false })
-      .bind(to: didEndDecelerating)
-      .disposed(by: disposeBag)
-    
-    scrollView.rx.contentOffset
-      .bind(to: contentOffset)
-      .disposed(by: disposeBag)
-    
-    scrollView.rx.didEndScrollingAnimation
-      .do(onNext: { scrollView.isUserInteractionEnabled = true })
-      .bind(to: didEndScrollingAnimation)
-      .disposed(by: disposeBag)
+    self.scrollView = scrollView
+    setupBinding()
   }
 }
 
