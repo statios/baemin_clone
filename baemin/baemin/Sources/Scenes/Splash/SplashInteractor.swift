@@ -10,12 +10,12 @@ import RxCocoa
 import Resolver
 
 protocol SplashInteractable {
-  var baeminService: BaeminService { get set }
+  var baeminService: BaeminServiceType { get set }
   func requestHome() -> Single<BaeminResponse<Splash>>
 }
 
 class SplashInteractor: SplashInteractable {
-  @Injected var baeminService: BaeminService
+  @Injected var baeminService: BaeminServiceType
   
   func requestHome() -> Single<BaeminResponse<Splash>> {
     return baeminService.request(to: .splash, type: Splash.self)

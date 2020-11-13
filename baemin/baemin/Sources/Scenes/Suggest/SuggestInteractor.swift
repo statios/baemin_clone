@@ -10,10 +10,10 @@ import RxCocoa
 import Resolver
 
 protocol SuggestInteractable {
-  var baeminService: BaeminService { get set }
+  var baeminService: BaeminServiceType { get set }
 }
 
 final class SuggestInteractor: SuggestInteractable {
-  @Injected var baeminService: BaeminService
+  @Injected var baeminService: BaeminServiceType
 }
 

@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
-class DeliveryTopBannerCell: BaseCollectionViewCell {
+class DeliveryBannerCell: BaseCollectionViewCell {
   
   let bannerImage = PublishRelay<String>()
   

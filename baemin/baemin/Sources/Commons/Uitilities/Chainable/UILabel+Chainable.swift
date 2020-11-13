@@ -31,5 +31,11 @@ extension Chain where Origin: UILabel {
     self.origin.textColor = color
     return self
   }
+  
+  @discardableResult
+  func numberOfLines(_ lines: Int) -> Chain {
+    self.origin.numberOfLines = lines
+    return self
+  }
 }
 

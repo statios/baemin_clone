@@ -55,5 +55,7 @@ struct Image {
     static let rice42 = UIImage(named: "rice42")
     static let seafood42 = UIImage(named: "seafood42")
     static let sushi42 = UIImage(named: "sushi42")
+    //common
+    static let qrcodeGuide = UIImage(named: "qrcode_guide")
   }
 }

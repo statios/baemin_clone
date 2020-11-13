@@ -10,10 +10,10 @@ import RxCocoa
 import Resolver
 
 protocol ListInteractable {
-  var baeminService: BaeminService { get set }
+  var baeminService: BaeminServiceType { get set }
 }
 
 final class ListInteractor: ListInteractable {
-  @Injected var baeminService: BaeminService
+  @Injected var baeminService: BaeminServiceType
 }
 

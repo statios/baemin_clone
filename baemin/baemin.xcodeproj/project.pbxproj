@@ -74,6 +74,9 @@
 		AF8D5F5D2555408700B15B67 /* UIImageView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */; };
 		AF8D5F652555430E00B15B67 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D5F642555430E00B15B67 /* Banner.swift */; };
 		AFAF927F255E43400003C97A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFAF927E255E43400003C97A /* Kingfisher */; };
+		AFB6F0DE255E9E0800CCCDD0 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F0DD255E9E0800CCCDD0 /* Alarm.swift */; };
+		AFB6F0E9255E9E6300CCCDD0 /* Alarms.json in Resources */ = {isa = PBXBuildFile; fileRef = AFB6F0E8255E9E6300CCCDD0 /* Alarms.json */; };
+		AFB6F0F9255EA1AB00CCCDD0 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F0F8255EA1AB00CCCDD0 /* EmptyView.swift */; };
 		AFE11CD8254A8F37003EB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */; };
 		AFE11CDC254A8F37003EB6E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */; };
 		AFE11CE1254A8F39003EB6E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE11CE0254A8F39003EB6E5 /* Images.xcassets */; };
@@ -88,7 +91,7 @@
 		AFE11D30254A925F003EB6E5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AFE11D2F254A925F003EB6E5 /* SnapKit */; };
 		AFE11D36254A92DB003EB6E5 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AFE11D35254A92DB003EB6E5 /* RxMoya */; };
 		AFE11D4E254A9F83003EB6E5 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D4D254A9F83003EB6E5 /* SplashViewModel.swift */; };
-		AFE11D5A254AA155003EB6E5 /* BaeminService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D59254AA155003EB6E5 /* BaeminService.swift */; };
+		AFE11D5A254AA155003EB6E5 /* BaeminSampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D59254AA155003EB6E5 /* BaeminSampleService.swift */; };
 		AFE11D60254AA187003EB6E5 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D5F254AA187003EB6E5 /* SplashInteractor.swift */; };
 		AFE11D68254AA192003EB6E5 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D67254AA192003EB6E5 /* MainInteractor.swift */; };
 		AFE11D70254AA1D7003EB6E5 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11D6F254AA1D7003EB6E5 /* Chainable.swift */; };
@@ -135,7 +138,7 @@
 		AFE5BD692552759900C0F390 /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5BD682552759900C0F390 /* AlarmViewModel.swift */; };
 		AFE8FD7A255D597A003B345B /* loading_indicator.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE8FD79255D597A003B345B /* loading_indicator.json */; };
 		AFE8FD89255D669B003B345B /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8FD88255D669B003B345B /* BaseCollectionView.swift */; };
-		AFE8FD8E255D6A1D003B345B /* DeliveryTopBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8FD8D255D6A1D003B345B /* DeliveryTopBannerCell.swift */; };
+		AFE8FD8E255D6A1D003B345B /* DeliveryBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8FD8D255D6A1D003B345B /* DeliveryBannerCell.swift */; };
 		AFE8FD9C255D6B00003B345B /* UICollectionView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8FD9B255D6B00003B345B /* UICollectionView+Chainable.swift */; };
 		AFE8FDA1255D6B7F003B345B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8FDA0255D6B7F003B345B /* BaseCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -225,6 +228,9 @@
 		AF8D5F4B255534C800B15B67 /* DeliveryHome.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeliveryHome.json; sourceTree = "<group>"; };
 		AF8D5F5C2555408700B15B67 /* UIImageView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Chainable.swift"; sourceTree = "<group>"; };
 		AF8D5F642555430E00B15B67 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		AFB6F0DD255E9E0800CCCDD0 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		AFB6F0E8255E9E6300CCCDD0 /* Alarms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Alarms.json; sourceTree = "<group>"; };
+		AFB6F0F8255EA1AB00CCCDD0 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		AFE11CD4254A8F37003EB6E5 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE11CD7254A8F37003EB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE11CDB254A8F37003EB6E5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -238,7 +244,7 @@
 		AFE11CF9254A8F39003EB6E5 /* baeminUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baeminUITests.swift; sourceTree = "<group>"; };
 		AFE11CFB254A8F39003EB6E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFE11D4D254A9F83003EB6E5 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
-		AFE11D59254AA155003EB6E5 /* BaeminService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminService.swift; sourceTree = "<group>"; };
+		AFE11D59254AA155003EB6E5 /* BaeminSampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminSampleService.swift; sourceTree = "<group>"; };
 		AFE11D5F254AA187003EB6E5 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		AFE11D67254AA192003EB6E5 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		AFE11D6F254AA1D7003EB6E5 /* Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
@@ -284,7 +290,7 @@
 		AFE5BD682552759900C0F390 /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
 		AFE8FD79255D597A003B345B /* loading_indicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_indicator.json; sourceTree = "<group>"; };
 		AFE8FD88255D669B003B345B /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
-		AFE8FD8D255D6A1D003B345B /* DeliveryTopBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTopBannerCell.swift; sourceTree = "<group>"; };
+		AFE8FD8D255D6A1D003B345B /* DeliveryBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryBannerCell.swift; sourceTree = "<group>"; };
 		AFE8FD9B255D6B00003B345B /* UICollectionView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Chainable.swift"; sourceTree = "<group>"; };
 		AFE8FDA0255D6B7F003B345B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -331,6 +337,7 @@
 				AF31140A25501C000005F6E7 /* PageBarItem.swift */,
 				AFE59BF72553987400A18003 /* LottieAnimationView.swift */,
 				AF75B2BA255A702F0080832B /* BaeminRefresh.swift */,
+				AFB6F0F8255EA1AB00CCCDD0 /* EmptyView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -380,6 +387,7 @@
 			children = (
 				AFE11E3F254AC6F5003EB6E5 /* Splash.json */,
 				AF8D5F4B255534C800B15B67 /* DeliveryHome.json */,
+				AFB6F0E8255E9E6300CCCDD0 /* Alarms.json */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -611,7 +619,7 @@
 		AFE11D58254AA132003EB6E5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AFE11D59254AA155003EB6E5 /* BaeminService.swift */,
+				AFE11D59254AA155003EB6E5 /* BaeminSampleService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -772,6 +780,7 @@
 				AFE11E4F254AC915003EB6E5 /* Splash.swift */,
 				AF8D5F642555430E00B15B67 /* Banner.swift */,
 				AFE11E34254AC206003EB6E5 /* DeliveryHome.swift */,
+				AFB6F0DD255E9E0800CCCDD0 /* Alarm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -779,7 +788,7 @@
 		AFE4CA31255E96BA00E5755A /* subviews */ = {
 			isa = PBXGroup;
 			children = (
-				AFE8FD8D255D6A1D003B345B /* DeliveryTopBannerCell.swift */,
+				AFE8FD8D255D6A1D003B345B /* DeliveryBannerCell.swift */,
 				AFE4CA27255E849A00E5755A /* DeliveryCategoryCell.swift */,
 				AFE4CA2C255E8A5100E5755A /* DeliverySearchBarView.swift */,
 			);
@@ -998,6 +1007,7 @@
 				AFE11CE1254A8F39003EB6E5 /* Images.xcassets in Resources */,
 				AFE8FD7A255D597A003B345B /* loading_indicator.json in Resources */,
 				AFE11E40254AC6F5003EB6E5 /* Splash.json in Resources */,
+				AFB6F0E9255E9E6300CCCDD0 /* Alarms.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,6 +1049,7 @@
 				AF6CBD9F254D40A6000B2AA7 /* UserViewModel.swift in Sources */,
 				AFE8FDA1255D6B7F003B345B /* BaseCollectionViewCell.swift in Sources */,
 				AFE59BF82553987400A18003 /* LottieAnimationView.swift in Sources */,
+				AFB6F0DE255E9E0800CCCDD0 /* Alarm.swift in Sources */,
 				AF6CBE31254FC1EC000B2AA7 /* BasePageViewController.swift in Sources */,
 				AFE11E35254AC206003EB6E5 /* DeliveryHome.swift in Sources */,
 				AFE5BD492552460E00C0F390 /* BmartListViewModel.swift in Sources */,
@@ -1064,7 +1075,7 @@
 				AFE59C072553B53E00A18003 /* ActivityIndicatorPresenter.swift in Sources */,
 				AF6CBD9A254D40A0000B2AA7 /* UserViewController.swift in Sources */,
 				AF6CBD6F254D405C000B2AA7 /* SuggestViewModel.swift in Sources */,
-				AFE8FD8E255D6A1D003B345B /* DeliveryTopBannerCell.swift in Sources */,
+				AFE8FD8E255D6A1D003B345B /* DeliveryBannerCell.swift in Sources */,
 				AF6CBD8B254D408C000B2AA7 /* LikeViewController.swift in Sources */,
 				AFE11D75254AA1ED003EB6E5 /* UIView+Chainable.swift in Sources */,
 				AF6CBD79254D406B000B2AA7 /* ListViewController.swift in Sources */,
@@ -1121,12 +1132,13 @@
 				AFE59C0C2553B5B800A18003 /* UIApplication+Extension.swift in Sources */,
 				AFE11D7A254AA21C003EB6E5 /* UIViewController+Chainable.swift in Sources */,
 				AF3114052550190C0005F6E7 /* UITabBar+Chainable.swift in Sources */,
+				AFB6F0F9255EA1AB00CCCDD0 /* EmptyView.swift in Sources */,
 				AF31141D2550288E0005F6E7 /* PageBar.swift in Sources */,
 				AFE11DC4254AA4CB003EB6E5 /* UserDefault.swift in Sources */,
 				AFE5BD2D255245B000C0F390 /* ListPageBarItem.swift in Sources */,
 				AF6CBD05254D2215000B2AA7 /* Date.swift in Sources */,
 				AF6CBDA4254D43A5000B2AA7 /* BaseTabBarController.swift in Sources */,
-				AFE11D5A254AA155003EB6E5 /* BaeminService.swift in Sources */,
+				AFE11D5A254AA155003EB6E5 /* BaeminSampleService.swift in Sources */,
 				AF75B2BB255A702F0080832B /* BaeminRefresh.swift in Sources */,
 				AF6CBD95254D4098000B2AA7 /* UserNavigator.swift in Sources */,
 				AFE11D68254AA192003EB6E5 /* MainInteractor.swift in Sources */,

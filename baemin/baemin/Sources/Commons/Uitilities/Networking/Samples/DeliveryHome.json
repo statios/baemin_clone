@@ -2,7 +2,7 @@
   "code": 0,
   "message": "",
   "data": {
-    "topBanners": [
+    "banners": [
       {
         "image": "https://firebasestorage.googleapis.com/v0/b/instantcrush-debug.appspot.com/o/private%2F1.jpg?alt=media&token=b52deaf2-3c3a-4f0b-a7c4-1c4321298dc1",
         "page": "https://google.com",

@@ -19,6 +19,13 @@ class DeliveryCategoryCell: BaseCollectionViewCell {
   
   override func setupUI() {
     super.setupUI()
+    
+    contentView.alpha = 0.1
+    UIView.animate(withDuration: 0.5) {
+      self.contentView.alpha = 1.0
+      self.contentView.frame.origin.y -= 42
+    }
+    
     categoryImageView.asChainable()
       .contentMode(.scaleAspectFill)
       .clipToBounds(true)

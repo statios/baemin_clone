@@ -35,7 +35,7 @@ extension DeliveryViewModel {
     let deliveryHomeRequest = requestDeliveryHome(trigger: event.onAppear.take(1))
     let deliveryHomeResponse = deliveryHomeRequest.filter { $0.isSuccess }.compactMap { $0.data }
     let deliveryHomeFailure = deliveryHomeRequest.filter { !$0.isSuccess }.compactMap { $0.message }
-    let topBanners = deliveryHomeResponse.map { $0.topBanners }.filter { !$0.isEmpty }
+    let topBanners = deliveryHomeResponse.map { $0.banners }.filter { !$0.isEmpty }
     let autoScroll = createAutoScroll(trigger: topBanners.void())
     let topBannersCount = topBanners.map { " / " + String($0.count) }
     let topBannersIndex = getTopBannerIndex(trigger: event.scrollBanner)

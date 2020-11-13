@@ -10,9 +10,9 @@ import RxCocoa
 import Resolver
 
 protocol MainInteractable {
-  var baeminService: BaeminService { get set }
+  var baeminService: BaeminServiceType { get set }
 }
 
 class MainInteractor: MainInteractable {
-  @Injected var baeminService: BaeminService
+  @Injected var baeminService: BaeminServiceType
 }

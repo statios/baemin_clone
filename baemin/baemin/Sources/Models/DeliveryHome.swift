@@ -6,5 +6,5 @@
 //
 
 struct DeliveryHome: Codable {
-  let topBanners: [Banner]
+  let banners: [Banner]
 }

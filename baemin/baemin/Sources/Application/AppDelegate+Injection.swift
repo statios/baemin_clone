@@ -30,6 +30,14 @@ extension Resolver: ResolverRegistering {
       .implements(SplashInteractable.self)
     register { SplashViewModel() }
     register { SplashNavigator() }
-    register { BaeminService() }.scope(shared)
+    #if DEBUG
+    register { BaeminSampleService() }
+      .implements(BaeminServiceType.self)
+      .scope(shared)
+    #else
+    register { BaeminService() }
+      .implements(BaeminServiceType.self)
+      .scope(shared)
+    #endif
   }
 }

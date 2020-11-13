@@ -69,7 +69,7 @@ extension DeliveryViewController {
       }
     
     bannerView.asChainable()
-      .register(DeliveryTopBannerCell.self)
+      .register(DeliveryBannerCell.self)
       .isPagingEnabled(true)
       .showsHorizontalScrollIndicator(false)
       .add(to: contentView)
@@ -148,9 +148,9 @@ extension DeliveryViewController {
     state.topBanners.asObservable()
       .do(onNext: { [weak self] _ in self?.contentView.isHidden = false })
       .bind(to: bannerView.rx.items(
-              cellIdentifier: DeliveryTopBannerCell.reuseIdentifier)
+              cellIdentifier: DeliveryBannerCell.reuseIdentifier)
       ) { (index, banner, cell) in
-        guard let cell = cell as? DeliveryTopBannerCell else { return }
+        guard let cell = cell as? DeliveryBannerCell else { return }
         cell.bannerImage.accept(banner.image)
       }.disposed(by: disposeBag)
     

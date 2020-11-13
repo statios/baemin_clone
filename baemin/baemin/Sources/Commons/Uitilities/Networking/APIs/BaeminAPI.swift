@@ -11,18 +11,20 @@ import Moya
 enum BaeminAPI {
   case splash
   case deliveryHome
+  case alarms
 }
 
 extension BaeminAPI: TargetType {
   
-  var baseURL: URL {
-    return URL(string: "http://dev-gateway.api.baemin.com")!
+  var baseURL: URL { //fake
+    return URL(string: "http://api.baemin.com")!
   }
   
-  var path: String {
+  var path: String { //fake
     switch self {
     case .splash: return "/splash"
     case .deliveryHome: return "/delivery/home"
+    case .alarms: return "/alarms"
     }
   }
   
@@ -30,11 +32,12 @@ extension BaeminAPI: TargetType {
     switch self {
     case .splash: return .get
     case .deliveryHome: return .get
+    case .alarms: return .get
     }
   }
   
   var sampleData: Data {
-    switch self {
+    switch self { //TODO refactoring
     case .splash:
       let path = Bundle.main.path(forResource: "Splash", ofType: "json")!
       let url = URL(fileURLWithPath: path)
@@ -45,6 +48,11 @@ extension BaeminAPI: TargetType {
       let url = URL(fileURLWithPath: path)
       let data = try! Data(contentsOf: url)
       return data
+    case .alarms:
+      let path = Bundle.main.path(forResource: "Alarms", ofType: "json")!
+      let url = URL(fileURLWithPath: path)
+      let data = try! Data(contentsOf: url)
+      return data
     }
   }
   
@@ -52,6 +60,7 @@ extension BaeminAPI: TargetType {
     switch self {
     case .splash: return .requestPlain
     case .deliveryHome: return .requestPlain
+    case .alarms: return .requestPlain
     }
   }
   
