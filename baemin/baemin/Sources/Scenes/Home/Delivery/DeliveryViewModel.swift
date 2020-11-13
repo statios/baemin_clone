@@ -15,7 +15,9 @@ class DeliveryViewModel: BaseViewModel, ViewModel {
   
   struct Event {
     let onAppear: Observable<Void>
-    let didScrollTopBanner: Observable<CGPoint>
+    let scrollBanner: Observable<CGPoint>
+    let tapSearch: Observable<Void>
+    let tapAllEvent: Observable<Void>
   }
   
   struct State {
@@ -23,6 +25,7 @@ class DeliveryViewModel: BaseViewModel, ViewModel {
     let topBannersCount: Driver<String>
     let topBannersIndex: Driver<String>
     let autoScroll: Driver<Void>
+    let deliveryCategories: Driver<[DeliveryCategory]>
     let errorMessage: Driver<String>
   }
 }
@@ -35,12 +38,17 @@ extension DeliveryViewModel {
     let topBanners = deliveryHomeResponse.map { $0.topBanners }.filter { !$0.isEmpty }
     let autoScroll = createAutoScroll(trigger: topBanners.void())
     let topBannersCount = topBanners.map { " / " + String($0.count) }
-    let topBannersIndex = getTopBannerIndex(trigger: event.didScrollTopBanner)
+    let topBannersIndex = getTopBannerIndex(trigger: event.scrollBanner)
+    let deliveryCategories = getDeliveryCategories(trigger: deliveryHomeRequest.void())
+    
+    event.tapAllEvent.debug().subscribe()
+    event.tapSearch.debug().subscribe()
     return State(
       topBanners: topBanners.asDriver(onErrorJustReturn: []),
       topBannersCount: topBannersCount.asDriver(onErrorJustReturn: ""),
       topBannersIndex: topBannersIndex.asDriver(onErrorJustReturn: ""),
       autoScroll: autoScroll.asDriver(),
+      deliveryCategories: deliveryCategories.asDriver(onErrorJustReturn: []),
       errorMessage: Observable.merge(deliveryHomeFailure).asDriver(onErrorJustReturn: "-")
     )
   }
@@ -74,6 +82,18 @@ extension DeliveryViewModel {
       .map { Int($0.x/Device.width) + 1 }
       .distinctUntilChanged()
       .map { String($0) }
+  }
+  
+  func getDeliveryCategories(
+    trigger: Observable<Void>)
+  -> Observable<[DeliveryCategory]> {
+    trigger
+      .map { _ -> [DeliveryCategory] in
+        var categories = [DeliveryCategory]()
+        categories.append(contentsOf: DeliveryCategory.allCases)
+        categories.append(contentsOf: DeliveryCategory.allCases)
+        return categories
+      }
   }
 }
 

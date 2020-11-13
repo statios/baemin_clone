@@ -73,12 +73,12 @@ class BaeminRefresh: UIRefreshControl {
     let animationStart = scrollView.rx.willBeginDecelerating.filter { [weak self] in self?.isRefreshing == true }
     let animationEnd = animationStart.delay(.milliseconds(2500), scheduler: MainScheduler.asyncInstance)
     
-    scrollView.rx.didEndDragging
-      .filter { !$0 }.void()
-      .compactMap { [weak self] in self?.scrollView }
-      .subscribe(onNext: {
-        $0.setContentOffset(CGPoint(), animated: true)
-      }).disposed(by: disposeBag)
+//    scrollView.rx.didEndDragging
+//      .filter { !$0 }.void()
+//      .compactMap { [weak self] in self?.scrollView }
+//      .subscribe(onNext: {
+//        $0.setContentOffset(CGPoint(), animated: true)
+//      }).disposed(by: disposeBag)
     
     animationStart
       .do(onNext: { [weak self] in self?.scrollView.isUserInteractionEnabled = false })

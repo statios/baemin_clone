@@ -12,7 +12,7 @@ import Resolver
 class DeliveryViewController: BaseViewController {
   
   struct Metric {
-    static let topBannerHeight = CGFloat(196)
+    static let topBannerHeight = CGFloat(256)
   }
   
   @Injected var viewModel: DeliveryViewModel
@@ -20,8 +20,8 @@ class DeliveryViewController: BaseViewController {
   private let scrollView = UIScrollView()
   private let contentView = UIView()
   private let refreshControl = BaeminRefresh()
-  private let allEventsButton = UIButton()
-  private let topBannerView: BaseCollectionView = {
+  private let allEventButton = UIButton()
+  private let bannerView: BaseCollectionView = {
     let layout = UICollectionViewFlowLayout()
     let view = BaseCollectionView(frame: .zero, collectionViewLayout: layout)
     layout.scrollDirection = .horizontal
@@ -30,8 +30,17 @@ class DeliveryViewController: BaseViewController {
     layout.minimumInteritemSpacing = 0
     return view
   }()
-  private let topBannerCountLabel = UILabel()
-  private let topBannerIndexLabel = UILabel()
+  private let bannerCountLabel = UILabel()
+  private let bannerIndexLabel = UILabel()
+  private let categoryView: BaseCollectionView = {
+    let layout = UICollectionViewFlowLayout()
+    let view = BaseCollectionView(frame: .zero, collectionViewLayout: layout)
+    layout.itemSize = CGSize(width: Device.width/4, height: Device.width/4)
+    layout.minimumLineSpacing = 0
+    layout.minimumInteritemSpacing = 0
+    return view
+  }()
+  private let searchBarView = DeliverySearchBarView()
 }
 
 extension DeliveryViewController {
@@ -52,14 +61,14 @@ extension DeliveryViewController {
       .set(target: scrollView)
     
     contentView.asChainable()
+      .isHidden(true)
       .background(color: Color.white)
       .add(to: scrollView)
       .makeConstraints { (make) in
         make.top.bottom.width.equalToSuperview()
-        make.height.equalTo(2500)
       }
     
-    topBannerView.asChainable()
+    bannerView.asChainable()
       .register(DeliveryTopBannerCell.self)
       .isPagingEnabled(true)
       .showsHorizontalScrollIndicator(false)
@@ -69,43 +78,59 @@ extension DeliveryViewController {
         make.height.equalTo(Metric.topBannerHeight)
       }
     
-    allEventsButton.asChainable()
+    allEventButton.asChainable()
       .background(color: .white)
       .alpha(0.8)
-      .isHidden(true)
-      .corner(radius: 12)
+      .corner(radius: 14)
       .maskedCorners([.layerMinXMinYCorner, .layerMinXMaxYCorner])
       .font(Font.small)
-      .setImage(Image.Icon.back24, for: .normal)
+      .setImage(Image.Icon.arrowRight12, for: .normal)
       .semanticContentAttribute(.forceRightToLeft)
       .contentEdgeInsets(UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 0))
       .setTitleColor(Color.black, for: .normal)
       .setTitle(Text.showAll, for: .normal)
       .add(to: contentView)
       .makeConstraints { (make) in
-        make.trailing.equalTo(topBannerView)
-        make.bottom.equalTo(topBannerView).offset(-Padding.medium)
-        make.height.equalTo(24)
+        make.trailing.equalTo(bannerView)
+        make.bottom.equalTo(bannerView).offset(-Padding.medium)
+        make.height.equalTo(28)
       }
     
-    topBannerCountLabel.asChainable()
+    bannerCountLabel.asChainable()
       .font(Font.small)
       .color(Color.white)
-      .isHidden(true)
       .add(to: contentView)
       .makeConstraints { (make) in
-        make.centerY.equalTo(allEventsButton)
-        make.trailing.equalTo(allEventsButton.snp.leading).offset(-Padding.extraSmall)
+        make.centerY.equalTo(allEventButton)
+        make.trailing.equalTo(allEventButton.snp.leading).offset(-Padding.small)
       }
     
-    topBannerIndexLabel.asChainable()
+    bannerIndexLabel.asChainable()
       .font(Font.small.bold())
       .color(Color.white)
-      .isHidden(true)
       .add(to: contentView)
       .makeConstraints { (make) in
-        make.centerY.equalTo(allEventsButton)
-        make.trailing.equalTo(topBannerCountLabel.snp.leading)
+        make.centerY.equalTo(allEventButton)
+        make.trailing.equalTo(bannerCountLabel.snp.leading)
+      }
+    
+    categoryView.asChainable()
+      .register(DeliveryCategoryCell.self)
+      .add(to: contentView)
+      .makeConstraints { (make) in
+        make.leading.trailing.equalToSuperview()
+        make.top.equalTo(bannerView.snp.bottom)
+        make.height.equalTo(2*Device.width/4*2)
+      }
+    
+    searchBarView.asChainable()
+      .add(to: contentView)
+      .makeConstraints { (make) in
+        make.leading.equalToSuperview().offset(Padding.medium)
+        make.trailing.equalToSuperview().offset(-Padding.medium)
+        make.height.equalTo(48)
+        make.top.equalTo(categoryView.snp.bottom).offset(Padding.medium)
+        make.bottom.equalToSuperview().offset(-Padding.large)
       }
   }
 }
@@ -115,16 +140,14 @@ extension DeliveryViewController {
     super.setupBinding()
     let event = DeliveryViewModel.Event(
       onAppear: rx.viewWillAppear.void(),
-      didScrollTopBanner: topBannerView.rx.contentOffset.asObservable()
+      scrollBanner: bannerView.rx.contentOffset.asObservable(),
+      tapSearch: searchBarView.touchArea.rx.tap.void(),
+      tapAllEvent: allEventButton.rx.tap.void()
     )
     let state = viewModel.reduce(event: event)
     state.topBanners.asObservable()
-      .do(onNext: { [weak self] _ in
-        self?.allEventsButton.isHidden = false
-        self?.topBannerCountLabel.isHidden = false
-        self?.topBannerIndexLabel.isHidden = false
-      })
-      .bind(to: topBannerView.rx.items(
+      .do(onNext: { [weak self] _ in self?.contentView.isHidden = false })
+      .bind(to: bannerView.rx.items(
               cellIdentifier: DeliveryTopBannerCell.reuseIdentifier)
       ) { (index, banner, cell) in
         guard let cell = cell as? DeliveryTopBannerCell else { return }
@@ -132,20 +155,28 @@ extension DeliveryViewController {
       }.disposed(by: disposeBag)
     
     state.topBannersCount
-      .drive(topBannerCountLabel.rx.text)
+      .drive(bannerCountLabel.rx.text)
       .disposed(by: disposeBag)
     
     state.topBannersIndex
-      .drive(topBannerIndexLabel.rx.text)
+      .drive(bannerIndexLabel.rx.text)
       .disposed(by: disposeBag)
     
     state.autoScroll
       .withLatestFrom(state.topBanners)
       .drive(onNext: { [weak self] in
-        let item = self?.topBannerView.indexPathsForVisibleItems.first?.item ?? -1
+        let item = self?.bannerView.indexPathsForVisibleItems.first?.item ?? -1
         let indexPath = IndexPath(item: (item + 1) % $0.count, section: 0)
-        self?.topBannerView.scrollToItem(at: indexPath, at: .left, animated: true)
+        self?.bannerView.scrollToItem(at: indexPath, at: .left, animated: true)
       }).disposed(by: disposeBag)
+    
+    state.deliveryCategories.asObservable()
+      .bind(to: categoryView.rx.items(
+              cellIdentifier: DeliveryCategoryCell.reuseIdentifier)
+      ) { (index, deliveryCategory, cell) in
+        guard let cell = cell as? DeliveryCategoryCell else { return }
+        cell.deliveryCategory.accept(deliveryCategory)
+      }.disposed(by: disposeBag)
     
     state.errorMessage
       .drive(onNext: { _ in

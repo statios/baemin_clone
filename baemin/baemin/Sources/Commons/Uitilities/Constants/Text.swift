@@ -31,4 +31,5 @@ struct Text {
   static let coffee = "coffee".localized
   //Common
   static let showAll = "show_all".localized
+  static let searchMenuStore = "search_menu_store".localized
 }

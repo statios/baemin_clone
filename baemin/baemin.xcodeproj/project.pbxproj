@@ -109,6 +109,8 @@
 		AFE11E35254AC206003EB6E5 /* DeliveryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E34254AC206003EB6E5 /* DeliveryHome.swift */; };
 		AFE11E40254AC6F5003EB6E5 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE11E3F254AC6F5003EB6E5 /* Splash.json */; };
 		AFE11E50254AC915003EB6E5 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE11E4F254AC915003EB6E5 /* Splash.swift */; };
+		AFE4CA28255E849A00E5755A /* DeliveryCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4CA27255E849A00E5755A /* DeliveryCategoryCell.swift */; };
+		AFE4CA2D255E8A5100E5755A /* DeliverySearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4CA2C255E8A5100E5755A /* DeliverySearchBarView.swift */; };
 		AFE59BE42552F49500A18003 /* QrcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE59BE32552F49500A18003 /* QrcodeViewController.swift */; };
 		AFE59BE92552F49B00A18003 /* QrcodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE59BE82552F49B00A18003 /* QrcodeViewModel.swift */; };
 		AFE59BF0255397D400A18003 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AFE59BEF255397D400A18003 /* Lottie */; };
@@ -257,6 +259,8 @@
 		AFE11E34254AC206003EB6E5 /* DeliveryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHome.swift; sourceTree = "<group>"; };
 		AFE11E3F254AC6F5003EB6E5 /* Splash.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		AFE11E4F254AC915003EB6E5 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		AFE4CA27255E849A00E5755A /* DeliveryCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCategoryCell.swift; sourceTree = "<group>"; };
+		AFE4CA2C255E8A5100E5755A /* DeliverySearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverySearchBarView.swift; sourceTree = "<group>"; };
 		AFE59BE32552F49500A18003 /* QrcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeViewController.swift; sourceTree = "<group>"; };
 		AFE59BE82552F49B00A18003 /* QrcodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeViewModel.swift; sourceTree = "<group>"; };
 		AFE59BF72553987400A18003 /* LottieAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationView.swift; sourceTree = "<group>"; };
@@ -444,7 +448,7 @@
 			children = (
 				AF6CBE1C254FC146000B2AA7 /* DeliveryViewController.swift */,
 				AF6CBE21254FC151000B2AA7 /* DeliveryViewModel.swift */,
-				AFE8FD8D255D6A1D003B345B /* DeliveryTopBannerCell.swift */,
+				AFE4CA31255E96BA00E5755A /* subviews */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -772,6 +776,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		AFE4CA31255E96BA00E5755A /* subviews */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8FD8D255D6A1D003B345B /* DeliveryTopBannerCell.swift */,
+				AFE4CA27255E849A00E5755A /* DeliveryCategoryCell.swift */,
+				AFE4CA2C255E8A5100E5755A /* DeliverySearchBarView.swift */,
+			);
+			path = subviews;
+			sourceTree = "<group>";
+		};
 		AFE59C052553B53000A18003 /* Indicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1058,6 +1072,7 @@
 				AF6CBDB7254D4400000B2AA7 /* SuggestInteractor.swift in Sources */,
 				AFE5BD0625523FF700C0F390 /* StoreViewModel.swift in Sources */,
 				AF75B291255A497F0080832B /* BaseInteractor.swift in Sources */,
+				AFE4CA28255E849A00E5755A /* DeliveryCategoryCell.swift in Sources */,
 				AF6CBCF1254B282D000B2AA7 /* Color.swift in Sources */,
 				AF31141325501CB40005F6E7 /* UILabel+Chainable.swift in Sources */,
 				AFE11D81254AA257003EB6E5 /* BaseViewController.swift in Sources */,
@@ -1071,6 +1086,7 @@
 				AF6CBE0D254F9D0A000B2AA7 /* String.swift in Sources */,
 				AF6CBE27254FC15B000B2AA7 /* VisitViewController.swift in Sources */,
 				AF6CBD74254D4064000B2AA7 /* ListNavigator.swift in Sources */,
+				AFE4CA2D255E8A5100E5755A /* DeliverySearchBarView.swift in Sources */,
 				AFE5BD642552759300C0F390 /* AlarmViewController.swift in Sources */,
 				AFE11E1B254AB93B003EB6E5 /* BaeminAPI.swift in Sources */,
 				AFE5BD4F25525D6B00C0F390 /* UIViewController+Extension.swift in Sources */,
