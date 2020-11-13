@@ -28,7 +28,7 @@ extension QrcodeViewController {
       .background(color: .systemPink)
     
     closeButton.asChainable()
-      .image(Image.Icon.close24, for: .normal)
+      .setImage(Image.Icon.close24, for: .normal)
       .addBarButtonItem(self, position: .left)
     
     flashButton.asChainable()

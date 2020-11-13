@@ -77,5 +77,29 @@ extension Chain where Origin: UIView {
     self.origin.frame = by
     return self
   }
+  
+  @discardableResult
+  func isHidden(_ isHidden: Bool) -> Chain {
+    self.origin.isHidden = isHidden
+    return self
+  }
+  
+  @discardableResult
+  func alpha(_ alpha: CGFloat) -> Chain {
+    self.origin.alpha = alpha
+    return self
+  }
+  
+  @discardableResult
+  func maskedCorners(_ mask: CACornerMask) -> Chain {
+    self.origin.layer.maskedCorners = mask
+    return self
+  }
+  
+  @discardableResult
+  func semanticContentAttribute(_ attribute: UISemanticContentAttribute) -> Chain {
+    self.origin.semanticContentAttribute = attribute
+    return self
+  }
 }
 

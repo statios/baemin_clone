@@ -26,7 +26,7 @@ extension PageBarItem {
   override func setupUI() {
     super.setupUI()
     button.asChainable()
-      .color(Color.black, for: .normal)
+      .setTitleColor(Color.black, for: .normal)
       .add(to: self)
       .makeConstraints { (make) in
         make.center.equalToSuperview()

@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class DeliveryTopBannerCell: BaseCollectionViewCell {
   
@@ -24,16 +25,14 @@ class DeliveryTopBannerCell: BaseCollectionViewCell {
       .makeConstraints { (make) in
         make.edges.equalToSuperview()
       }
+    
   }
   
   override func setupBinding() {
     super.setupBinding()
     bannerImage
-      .subscribe(onNext: { url in
-        let imageURL = URL(string: url)
-        var imageData = try! Data.init(contentsOf: imageURL!)
-        var bgImage = UIImage(data: imageData)
-        self.bannerImageView.image = bgImage
+      .subscribe(onNext: { [weak self] url in
+        self?.bannerImageView.kf.setImage(with: URL(string: url))
       }).disposed(by: disposeBag)
   }
 }

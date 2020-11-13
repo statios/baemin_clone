@@ -20,12 +20,11 @@ class HomeViewController: BasePageViewController {
 extension HomeViewController {
   override func initialize() {
     super.initialize()
-    Log.warning("")
     navigator.setPageViewControllers(target: self)
   }
+  
   override func setupUI() {
     super.setupUI()
-    Log.warning("")
     self.asChainable()
       .pageBar(style: .fill)
       .selectedText(color: Color.cyan)
@@ -34,11 +33,11 @@ extension HomeViewController {
       .unselectedText(font: Font.medium)
     
     alarmButton.asChainable()
-      .image(Image.Icon.alarm24, for: .normal)
+      .setImage(Image.Icon.alarm24, for: .normal)
       .addBarButtonItem(self, position: .left)
     
     qrcodeButton.asChainable()
-      .image(Image.Icon.qrcode24, for: .normal)
+      .setImage(Image.Icon.qrcode24, for: .normal)
       .addBarButtonItem(self, position: .right)
   }
 }

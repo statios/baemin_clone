@@ -29,4 +29,6 @@ struct Text {
   static let rice = "rice".localized
   static let bakery = "bakery".localized
   static let coffee = "coffee".localized
+  //Common
+  static let showAll = "show_all".localized
 }

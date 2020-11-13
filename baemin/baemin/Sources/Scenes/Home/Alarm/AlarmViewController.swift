@@ -23,7 +23,7 @@ extension AlarmViewController {
     self.asChainable()
       .title(Text.alarmCenter)
     backButton.asChainable()
-      .image(Image.Icon.back24, for: .normal)
+      .setImage(Image.Icon.back24, for: .normal)
       .addBarButtonItem(self, position: .left)
   }
 }

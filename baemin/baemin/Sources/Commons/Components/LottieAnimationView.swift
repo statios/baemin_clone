@@ -19,7 +19,6 @@ class LottieAnimationView: BaseView {
   
   var animationView = AnimationView()
   
-  private var animation: Animation!
   private var animationStatus: AnimationStatus = .none
   
 }
@@ -44,13 +43,13 @@ extension LottieAnimationView {
 
 extension LottieAnimationView {
   func setup(animationName: String, loopMode: LottieLoopMode = .loop) {
-    self.animation = Animation.named(animationName, bundle: Bundle.main)
+    let animation = Animation.named(animationName, bundle: Bundle.main)
     animationView.loopMode = loopMode
+    animationView.animation = animation
   }
   
   func playAnimation(completion:(() -> Void)? = nil) {
     animationStatus = .play
-    animationView.animation = self.animation
     animationView.play { (bool) in
       completion?()
     }

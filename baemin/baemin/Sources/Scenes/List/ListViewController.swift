@@ -32,7 +32,7 @@ extension ListViewController {
       .unselectedText(font: Font.medium)
     
     refreshButton.asChainable()
-      .image(Image.Icon.refresh24, for: .normal)
+      .setImage(Image.Icon.refresh24, for: .normal)
       .addBarButtonItem(self, position: .right)
   }
 }

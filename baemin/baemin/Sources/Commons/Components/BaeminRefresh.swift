@@ -115,7 +115,7 @@ class BaeminRefresh: UIRefreshControl {
 
     let canSlideAnimate = Observable.merge(Observable.just(true),
                                            animationStart.map { false },
-                                           scrollView.rx.didEndScrollingAnimation.map { true })
+                                           animationEnd.delay(.milliseconds(500), scheduler: MainScheduler.instance).map { true })
     let slideImage = scrollView.rx.contentOffset.map { $0.y }
       .withLatestFrom(canSlideAnimate) { ($0, $1) }
       .filter { $0.0 <= 0 && $0.1 }
