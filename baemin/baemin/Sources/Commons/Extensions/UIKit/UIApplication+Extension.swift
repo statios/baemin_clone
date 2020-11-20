@@ -9,6 +9,6 @@ import UIKit
 
 extension UIApplication {
   var window: UIWindow? {
-    return self.windows.first
+    return self.windows.first { $0.isKeyWindow }
   }
 }

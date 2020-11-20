@@ -630,7 +630,6 @@
 				AFE59C052553B53000A18003 /* Indicator */,
 				AF6CBD32254D37B0000B2AA7 /* Networking */,
 				AF6CBD17254D2B48000B2AA7 /* Logging */,
-				AF6CBCE2254B27F2000B2AA7 /* Constants */,
 				AFE11D6E254AA1BF003EB6E5 /* Property wrappers */,
 				AFE11D6D254AA1B5003EB6E5 /* Chainable */,
 				AFE11DAE254AA35E003EB6E5 /* Keyboard */,
@@ -670,6 +669,7 @@
 			children = (
 				AFE11D7F254AA244003EB6E5 /* Bases */,
 				AF31140925501BEF0005F6E7 /* Components */,
+				AF6CBCE2254B27F2000B2AA7 /* Constants */,
 				AFE11D6C254AA19A003EB6E5 /* Uitilities */,
 				AFE11D92254AA2C6003EB6E5 /* Extensions */,
 			);

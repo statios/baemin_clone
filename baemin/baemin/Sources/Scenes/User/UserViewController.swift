@@ -17,6 +17,14 @@ class UserViewController: BaseViewController {
 extension UserViewController {
   override func setupUI() {
     super.setupUI()
+    UIView().asChainable()
+      .background(color: .red)
+      .add(to: view)
+      .makeConstraints { (make) in
+        make.centerX.equalToSuperview()
+        make.top.equalToSuperview()
+        make.size.equalTo(100)
+      }
   }
 }
 

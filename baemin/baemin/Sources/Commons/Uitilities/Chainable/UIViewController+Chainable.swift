@@ -22,5 +22,4 @@ extension Chain where Origin: UIViewController {
     self.origin.tabBarItem = tabBarItem
     return self
   }
-  
 }
